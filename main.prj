@@ -72,11 +72,51 @@
                 "width": 268,
                 "height": 78
             },
-            "next": {},
+            "next": {
+                "vertices": [],
+                "refId": "30cad0bb-305a-45de-845e-801e5bb026d5"
+            },
             "exception": {},
             "file": "Block2.task",
             "caption": "Block2",
             "desc": "checkholiday",
+            "editorMode": "sourceCode",
+            "breakpoints": {}
+        },
+        {
+            "type": "task",
+            "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
+            "rect": {
+                "x": 736,
+                "y": 601,
+                "width": 268,
+                "height": 78
+            },
+            "next": {
+                "vertices": [],
+                "refId": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108"
+            },
+            "exception": {},
+            "file": "Block3.task",
+            "caption": "Block3",
+            "desc": "closeallchromewindow",
+            "editorMode": "sourceCode",
+            "breakpoints": {}
+        },
+        {
+            "type": "task",
+            "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
+            "rect": {
+                "x": 736,
+                "y": 719,
+                "width": 268,
+                "height": 78
+            },
+            "next": {},
+            "exception": {},
+            "file": "Block4.task",
+            "caption": "Block4",
+            "desc": "DisableCaplock",
             "editorMode": "sourceCode",
             "breakpoints": {}
         }
@@ -109,7 +149,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 1,
+                    "selected": 0,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -193,7 +233,6 @@
                     {
                         "type": "tabset",
                         "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
-                        "selected": 1,
                         "children": [
                             {
                                 "type": "tab",
@@ -206,23 +245,6 @@
                                     "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
                                 },
                                 "enableClose": false,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
-                                "name": "Block3",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block3.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
-                                    "type": "task",
-                                    "selector": [
-                                        "30cad0bb-305a-45de-845e-801e5bb026d5"
-                                    ]
-                                },
-                                "enableClose": true,
                                 "className": ""
                             }
                         ],
@@ -263,7 +285,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1306.3333740234375,
-            "top": 743
+            "top": 943
         }
     }
 }

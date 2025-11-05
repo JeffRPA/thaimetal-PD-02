@@ -1,0 +1,5 @@
+
+
+disablecapslock_iPID = App.Run('''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\disableCapslock.exe''', 0, 1)
+
+
