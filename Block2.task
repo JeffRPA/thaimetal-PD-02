@@ -1,0 +1,14 @@
+
+
+//checkholiday
+
+//holidaycheck (code at the first process of each project)
+file_path = '''E:\Calendar Settings Template.csv'''
+
+isholidaycheckresult = holidaycheck.is_today_in_list(file_path)
+TracePrint(isholidaycheckresult)
+If isholidaycheckresult = true
+    exit()
+End If
+
+
