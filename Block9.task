@@ -1,0 +1,16 @@
+
+
+//EN language
+
+Delay(10)
+
+Dim language,temp
+    language=inputers.keyboardLanguage()
+    language=inputers.hexDecode(language)
+    
+If language = "Thai"
+    Keyboard.Press("Space", "press", ["Win"],{"iDelayAfter": 30, "iDelayBefore": 20, "sSimulate": "simulate"})
+End If
+
+Delay(10)
+

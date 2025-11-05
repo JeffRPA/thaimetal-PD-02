@@ -192,11 +192,31 @@
                 "width": 268,
                 "height": 78
             },
-            "next": {},
+            "next": {
+                "vertices": [],
+                "refId": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3"
+            },
             "exception": {},
             "file": "Block8.task",
             "caption": "Block8",
             "desc": "change redbg",
+            "editorMode": "sourceCode",
+            "breakpoints": {}
+        },
+        {
+            "type": "task",
+            "id": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3",
+            "rect": {
+                "x": 736,
+                "y": 1288,
+                "width": 268,
+                "height": 78
+            },
+            "next": {},
+            "exception": {},
+            "file": "Block9.task",
+            "caption": "Block9",
+            "desc": "EN language",
             "editorMode": "sourceCode",
             "breakpoints": {}
         }
@@ -249,7 +269,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 1,
+                    "selected": 0,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -333,7 +353,6 @@
                     {
                         "type": "tabset",
                         "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
-                        "selected": 1,
                         "children": [
                             {
                                 "type": "tab",
@@ -346,23 +365,6 @@
                                     "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
                                 },
                                 "enableClose": false,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3",
-                                "name": "Block9",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block9.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3",
-                                    "type": "task",
-                                    "selector": [
-                                        "e40adcbe-2c17-48ca-a32d-85edcbb62fc3"
-                                    ]
-                                },
-                                "enableClose": true,
                                 "className": ""
                             }
                         ],
