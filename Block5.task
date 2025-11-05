@@ -1,0 +1,6 @@
+
+//main API url
+
+main_API_url = File.Read('''E:\main_api_url.txt''',"auto")
+TracePrint(main_API_url)
+
