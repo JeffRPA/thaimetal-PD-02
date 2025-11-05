@@ -1,0 +1,11 @@
+
+
+//Close major ERP
+
+Dim sRet
+
+Delay(800)
+
+//close PTS
+sRet = Sys.Command("taskkill /F /IM PTS.exe ")
+Delay(20)
