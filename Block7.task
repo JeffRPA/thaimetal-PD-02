@@ -1,0 +1,12 @@
+
+
+//opentaskbarstring
+
+Try
+    Dim iPIDtaskbarstring
+
+    iPIDtaskbarstring = App.Run('''E:\taskbarappstring\hawb_checkstatus.exe''', 0, 1)    
+Catch exceptionInformation
+    
+End Try
+

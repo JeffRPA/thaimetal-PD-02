@@ -152,11 +152,51 @@
                 "width": 268,
                 "height": 78
             },
-            "next": {},
+            "next": {
+                "vertices": [],
+                "refId": "b7f96c0f-f9bf-415f-ae60-1e864992b231"
+            },
             "exception": {},
             "file": "Block6.task",
             "caption": "Block6",
             "desc": "logprocess_start\n",
+            "editorMode": "sourceCode",
+            "breakpoints": {}
+        },
+        {
+            "type": "task",
+            "id": "b7f96c0f-f9bf-415f-ae60-1e864992b231",
+            "rect": {
+                "x": 736,
+                "y": 1068,
+                "width": 268,
+                "height": 78
+            },
+            "next": {
+                "vertices": [],
+                "refId": "2c99fbd4-397f-4865-a4c3-8e1335012704"
+            },
+            "exception": {},
+            "file": "Block7.task",
+            "caption": "Block7",
+            "desc": "opentaskbarstring",
+            "editorMode": "sourceCode",
+            "breakpoints": {}
+        },
+        {
+            "type": "task",
+            "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
+            "rect": {
+                "x": 736,
+                "y": 1178,
+                "width": 268,
+                "height": 78
+            },
+            "next": {},
+            "exception": {},
+            "file": "Block8.task",
+            "caption": "Block8",
+            "desc": "change redbg",
             "editorMode": "sourceCode",
             "breakpoints": {}
         }
@@ -345,7 +385,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1306.3333740234375,
-            "top": 1243
+            "top": 1443
         }
     }
 }
