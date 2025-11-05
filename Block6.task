@@ -63,7 +63,7 @@ Try
         //APIjsonsRet = HTTP.PostJson("https://btestapi-am67.onrender.com/api/bot/worldair", {"data": resultlistofarrays_allstring}, 60000)
 
         //python method
-        target_url = main_API_url & "/api/bot/greenmooonstest"
+        target_url = main_API_url & "/api/bot/" & main_companyname
         APIjsonsRet = pythonAPI.send_api_data(target_url, resultlistofarrays_allstring)
 
 
