@@ -181,6 +181,11 @@
             "name": "main_error_log_filepath",
             "value": "null",
             "type": "none"
+        },
+        {
+            "name": "main_companyname",
+            "value": "null",
+            "type": "none"
         }
     ],
     "layout": {
@@ -254,7 +259,6 @@
                 },
                 {
                     "type": "border",
-                    "selected": 1,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -289,7 +293,7 @@
                     {
                         "type": "tabset",
                         "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
-                        "selected": 2,
+                        "selected": 1,
                         "children": [
                             {
                                 "type": "tab",
@@ -376,7 +380,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1306.3333740234375,
-            "top": 1143
+            "top": 1243
         }
     }
 }
