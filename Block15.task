@@ -1,0 +1,11 @@
+
+
+//closetaskbarstring
+
+Try
+    Dim closetaskbarstring
+
+    closetaskbarstring = Sys.Command("taskkill /IM hawb_checkstatus.exe /F")    
+Catch exceptionInformation
+    
+End Try

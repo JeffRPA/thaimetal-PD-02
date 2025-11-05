@@ -312,11 +312,51 @@
                 "width": 268,
                 "height": 78
             },
-            "next": {},
+            "next": {
+                "vertices": [],
+                "refId": "ee88d1b5-b327-4652-ab7e-68ca1196e8f6"
+            },
             "exception": {},
             "file": "Block14.task",
             "caption": "Block14",
             "desc": "change blackbg",
+            "editorMode": "sourceCode",
+            "breakpoints": {}
+        },
+        {
+            "type": "task",
+            "id": "ee88d1b5-b327-4652-ab7e-68ca1196e8f6",
+            "rect": {
+                "x": 736,
+                "y": 1994,
+                "width": 268,
+                "height": 78
+            },
+            "next": {
+                "vertices": [],
+                "refId": "c7582570-d75b-4817-857d-d5d14fb116e9"
+            },
+            "exception": {},
+            "file": "Block15.task",
+            "caption": "Block15",
+            "desc": "closetaskbarstring",
+            "editorMode": "sourceCode",
+            "breakpoints": {}
+        },
+        {
+            "type": "task",
+            "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
+            "rect": {
+                "x": 736,
+                "y": 2113,
+                "width": 268,
+                "height": 78
+            },
+            "next": {},
+            "exception": {},
+            "file": "Block16.task",
+            "caption": "Block16",
+            "desc": "logprocess_end",
             "editorMode": "sourceCode",
             "breakpoints": {}
         }
@@ -369,7 +409,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -453,6 +493,7 @@
                     {
                         "type": "tabset",
                         "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
+                        "selected": 1,
                         "children": [
                             {
                                 "type": "tab",
@@ -465,6 +506,40 @@
                                     "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
                                 },
                                 "enableClose": false,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
+                                "name": "Block16",
+                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block16.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
+                                    "type": "task",
+                                    "selector": [
+                                        "c7582570-d75b-4817-857d-d5d14fb116e9"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
+                                "name": "Block5",
+                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block5.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
+                                    "type": "task",
+                                    "selector": [
+                                        "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
+                                    ]
+                                },
+                                "enableClose": true,
                                 "className": ""
                             }
                         ],
@@ -505,7 +580,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1306.3333740234375,
-            "top": 2043
+            "top": 1243
         }
     }
 }
