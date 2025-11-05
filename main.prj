@@ -209,7 +209,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 1,
+                    "selected": 0,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -293,7 +293,6 @@
                     {
                         "type": "tabset",
                         "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
-                        "selected": 1,
                         "children": [
                             {
                                 "type": "tab",
@@ -306,40 +305,6 @@
                                     "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
                                 },
                                 "enableClose": false,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
-                                "name": "Block6",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block6.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
-                                    "type": "task",
-                                    "selector": [
-                                        "ade21187-9b5e-43c0-a9f4-08916ec27d62"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-                                "name": "Block5",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block5.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-                                    "type": "task",
-                                    "selector": [
-                                        "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
-                                    ]
-                                },
-                                "enableClose": true,
                                 "className": ""
                             }
                         ],
