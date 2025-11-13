@@ -1,586 +1,565 @@
 {
-    "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
-    "name": "clean_template_for_allproject",
-    "type": "flow",
-    "build": "",
-    "version": "6.5.1.250516",
-    "flow": [
-        {
-            "id": "start",
-            "rect": {
-                "x": 800,
-                "y": 150,
-                "width": 140,
-                "height": 50
-            },
-            "type": "begin",
-            "next": {
-                "refId": "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c",
-                "vertices": []
-            },
-            "caption": "Start"
-        },
-        {
-            "type": "task",
-            "id": "5ff74500-ba61-11f0-81f8-7befb543be84",
-            "rect": {
-                "x": 736,
-                "y": 370,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "refId": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
-                "vertices": []
-            },
-            "exception": {
-                "refId": "",
-                "vertices": []
-            },
-            "file": "Block.task",
-            "caption": "Block",
-            "desc": "delete_gen_py",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c",
-            "rect": {
-                "x": 736,
-                "y": 247,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "5ff74500-ba61-11f0-81f8-7befb543be84"
-            },
-            "exception": {},
-            "file": "Block1.task",
-            "caption": "Block1",
-            "desc": "for laiye version 6.5+",
-            "editorMode": "visual",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
-            "rect": {
-                "x": 736,
-                "y": 486,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "30cad0bb-305a-45de-845e-801e5bb026d5"
-            },
-            "exception": {},
-            "file": "Block2.task",
-            "caption": "Block2",
-            "desc": "checkholiday",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
-            "rect": {
-                "x": 736,
-                "y": 601,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108"
-            },
-            "exception": {},
-            "file": "Block3.task",
-            "caption": "Block3",
-            "desc": "closeallchromewindow",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
-            "rect": {
-                "x": 736,
-                "y": 719,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
-            },
-            "exception": {},
-            "file": "Block4.task",
-            "caption": "Block4",
-            "desc": "DisableCaplock",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-            "rect": {
-                "x": 736,
-                "y": 844,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "ade21187-9b5e-43c0-a9f4-08916ec27d62"
-            },
-            "exception": {},
-            "file": "Block5.task",
-            "caption": "Block5",
-            "desc": "main API url",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
-            "rect": {
-                "x": 736,
-                "y": 959,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "b7f96c0f-f9bf-415f-ae60-1e864992b231"
-            },
-            "exception": {},
-            "file": "Block6.task",
-            "caption": "Block6",
-            "desc": "logprocess_start\n",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "b7f96c0f-f9bf-415f-ae60-1e864992b231",
-            "rect": {
-                "x": 736,
-                "y": 1068,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "2c99fbd4-397f-4865-a4c3-8e1335012704"
-            },
-            "exception": {},
-            "file": "Block7.task",
-            "caption": "Block7",
-            "desc": "opentaskbarstring",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
-            "rect": {
-                "x": 736,
-                "y": 1178,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3"
-            },
-            "exception": {},
-            "file": "Block8.task",
-            "caption": "Block8",
-            "desc": "change redbg",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3",
-            "rect": {
-                "x": 736,
-                "y": 1288,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "c7007c09-5892-4aec-aace-36df7eb7bd9a"
-            },
-            "exception": {},
-            "file": "Block9.task",
-            "caption": "Block9",
-            "desc": "EN language py",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "c7007c09-5892-4aec-aace-36df7eb7bd9a",
-            "rect": {
-                "x": 736,
-                "y": 1397,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "8a070854-e83b-4a25-b285-3bb17962c785"
-            },
-            "exception": {},
-            "file": "Block10.task",
-            "caption": "Block10",
-            "desc": "EN language cpp",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "8a070854-e83b-4a25-b285-3bb17962c785",
-            "rect": {
-                "x": 736,
-                "y": 1508,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
-            },
-            "exception": {},
-            "file": "Block11.task",
-            "caption": "Block11",
-            "desc": "Login credentials",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
-            "rect": {
-                "x": 736,
-                "y": 1632,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
-            },
-            "exception": {},
-            "file": "Block12.task",
-            "caption": "Block12",
-            "desc": "main work",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "866cfc0a-ad99-410f-a76b-c06d86024bf0",
-            "rect": {
-                "x": 736,
-                "y": 1759,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2"
-            },
-            "exception": {},
-            "file": "Block13.task",
-            "caption": "Block13",
-            "desc": "close major ERP",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2",
-            "rect": {
-                "x": 736,
-                "y": 1878,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "ee88d1b5-b327-4652-ab7e-68ca1196e8f6"
-            },
-            "exception": {},
-            "file": "Block14.task",
-            "caption": "Block14",
-            "desc": "change blackbg",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "ee88d1b5-b327-4652-ab7e-68ca1196e8f6",
-            "rect": {
-                "x": 736,
-                "y": 1994,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": "c7582570-d75b-4817-857d-d5d14fb116e9"
-            },
-            "exception": {},
-            "file": "Block15.task",
-            "caption": "Block15",
-            "desc": "closetaskbarstring",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
-            "rect": {
-                "x": 736,
-                "y": 2113,
-                "width": 268,
-                "height": 78
-            },
-            "next": {},
-            "exception": {},
-            "file": "Block16.task",
-            "caption": "Block16",
-            "desc": "logprocess_end",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        }
-    ],
-    "variables": [
-        {
-            "type": "none",
-            "name": "g_temp",
-            "value": "null"
-        },
-        {
-            "name": "main_API_url",
-            "value": "null",
-            "type": "none"
-        },
-        {
-            "name": "main_process_log_filepath",
-            "value": "null",
-            "type": "none"
-        },
-        {
-            "name": "main_error_log_filepath",
-            "value": "null",
-            "type": "none"
-        },
-        {
-            "name": "main_companyname",
-            "value": "null",
-            "type": "none"
-        }
-    ],
-    "layout": {
-        "config": {
-            "global": {
-                "enableEdgeDock": false,
-                "rootOrientationVertical": true,
-                "enableUseVisibility": true,
-                "splitterSize": 1,
-                "splitterExtra": 8,
-                "tabEnableClose": false,
-                "tabEnableRename": false,
-                "tabSetEnableDrag": false,
-                "tabSetEnableMaximize": false,
-                "tabSetMinWidth": 280,
-                "tabSetMinHeight": 200,
-                "borderBarSize": 24,
-                "borderAutoSelectTabWhenClosed": true,
-                "borderEnableAutoHide": true
-            },
-            "borders": [
-                {
-                    "type": "border",
-                    "selected": 1,
-                    "size": 250,
-                    "minSize": 250,
-                    "enableAutoHide": true,
-                    "location": "left",
-                    "children": [
-                        {
-                            "type": "tab",
-                            "id": "flow",
-                            "name": "Process",
-                            "component": "flowPanel",
-                            "config": {
-                                "i18nKey": "flow"
-                            },
-                            "className": ""
-                        },
-                        {
-                            "type": "tab",
-                            "id": "command",
-                            "name": "Command",
-                            "component": "commandPanel",
-                            "config": {
-                                "i18nKey": "command"
-                            },
-                            "className": ""
-                        },
-                        {
-                            "type": "tab",
-                            "id": "timeline",
-                            "name": "Timeline",
-                            "component": "timeLinePanel",
-                            "config": {
-                                "i18nKey": "timeline"
-                            },
-                            "className": ""
-                        },
-                        {
-                            "type": "tab",
-                            "id": "search",
-                            "name": "Search",
-                            "component": "searchPanel",
-                            "config": {
-                                "i18nKey": "search"
-                            },
-                            "className": ""
-                        }
-                    ]
-                },
-                {
-                    "type": "border",
-                    "size": 280,
-                    "minSize": 280,
-                    "location": "right",
-                    "children": [
-                        {
-                            "type": "tab",
-                            "id": "commandProperty",
-                            "name": "Property",
-                            "component": "commandPropertyPanel",
-                            "config": {
-                                "i18nKey": "property"
-                            },
-                            "className": ""
-                        },
-                        {
-                            "type": "tab",
-                            "id": "commandVariable",
-                            "name": "Variable",
-                            "component": "commandVariablePanel",
-                            "config": {
-                                "i18nKey": "variable"
-                            },
-                            "className": ""
-                        }
-                    ]
-                }
-            ],
-            "layout": {
-                "type": "row",
-                "id": "body",
-                "children": [
-                    {
-                        "type": "tabset",
-                        "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
-                        "selected": 1,
-                        "children": [
-                            {
-                                "type": "tab",
-                                "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
-                                "name": "clean_template_for_allproject",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\main.prj",
-                                "component": "flowEditor",
-                                "config": {
-                                    "type": "project",
-                                    "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
-                                },
-                                "enableClose": false,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
-                                "name": "Block16",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block16.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
-                                    "type": "task",
-                                    "selector": [
-                                        "c7582570-d75b-4817-857d-d5d14fb116e9"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-                                "name": "Block5",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block5.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-                                    "type": "task",
-                                    "selector": [
-                                        "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            }
-                        ],
-                        "active": true
-                    },
-                    {
-                        "type": "tabset",
-                        "id": "button",
-                        "height": 32,
-                        "selected": -1,
-                        "enableDrop": false,
-                        "enableDrag": false,
-                        "enableDivide": false,
-                        "enableClose": false,
-                        "minHeight": 32,
-                        "headerHeight": 32,
-                        "children": [
-                            {
-                                "type": "tab",
-                                "id": "output",
-                                "name": "Output",
-                                "component": "outputPanel",
-                                "config": {
-                                    "i18nKey": "output"
-                                },
-                                "enableDrag": false,
-                                "className": "",
-                                "enableRenderOnDemand": false
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
-        "type": "flow",
-        "version": "1.0.25"
+  "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
+  "name": "clean_template_for_allproject",
+  "type": "flow",
+  "build": "",
+  "version": "6.5.1.250516",
+  "flow": [
+    {
+      "id": "start",
+      "rect": {
+        "x": 800,
+        "y": 150,
+        "width": 140,
+        "height": 50
+      },
+      "type": "begin",
+      "next": {
+        "refId": "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c",
+        "vertices": []
+      },
+      "caption": "Start"
     },
-    "flowConfig": {
-        "scrollbarPosition": {
-            "left": 1306.3333740234375,
-            "top": 1243
-        }
+    {
+      "type": "task",
+      "id": "5ff74500-ba61-11f0-81f8-7befb543be84",
+      "rect": {
+        "x": 736,
+        "y": 370,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "refId": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
+        "vertices": []
+      },
+      "exception": {
+        "refId": "",
+        "vertices": []
+      },
+      "file": "Block.task",
+      "caption": "Block",
+      "desc": "delete_gen_py",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c",
+      "rect": {
+        "x": 736,
+        "y": 247,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "5ff74500-ba61-11f0-81f8-7befb543be84"
+      },
+      "exception": {},
+      "file": "Block1.task",
+      "caption": "Block1",
+      "desc": "for laiye version 6.5+",
+      "editorMode": "visual",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
+      "rect": {
+        "x": 736,
+        "y": 486,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "30cad0bb-305a-45de-845e-801e5bb026d5"
+      },
+      "exception": {},
+      "file": "Block2.task",
+      "caption": "Block2",
+      "desc": "checkholiday",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
+      "rect": {
+        "x": 736,
+        "y": 601,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108"
+      },
+      "exception": {},
+      "file": "Block3.task",
+      "caption": "Block3",
+      "desc": "closeallchromewindow",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
+      "rect": {
+        "x": 736,
+        "y": 719,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
+      },
+      "exception": {},
+      "file": "Block4.task",
+      "caption": "Block4",
+      "desc": "DisableCaplock",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
+      "rect": {
+        "x": 736,
+        "y": 844,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "ade21187-9b5e-43c0-a9f4-08916ec27d62"
+      },
+      "exception": {},
+      "file": "Block5.task",
+      "caption": "Block5",
+      "desc": "main API url",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
+      "rect": {
+        "x": 736,
+        "y": 959,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "b7f96c0f-f9bf-415f-ae60-1e864992b231"
+      },
+      "exception": {},
+      "file": "Block6.task",
+      "caption": "Block6",
+      "desc": "logprocess_start\n",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "b7f96c0f-f9bf-415f-ae60-1e864992b231",
+      "rect": {
+        "x": 736,
+        "y": 1068,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "2c99fbd4-397f-4865-a4c3-8e1335012704"
+      },
+      "exception": {},
+      "file": "Block7.task",
+      "caption": "Block7",
+      "desc": "opentaskbarstring",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
+      "rect": {
+        "x": 736,
+        "y": 1178,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3"
+      },
+      "exception": {},
+      "file": "Block8.task",
+      "caption": "Block8",
+      "desc": "change redbg",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3",
+      "rect": {
+        "x": 736,
+        "y": 1288,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "c7007c09-5892-4aec-aace-36df7eb7bd9a"
+      },
+      "exception": {},
+      "file": "Block9.task",
+      "caption": "Block9",
+      "desc": "EN language py",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "c7007c09-5892-4aec-aace-36df7eb7bd9a",
+      "rect": {
+        "x": 736,
+        "y": 1397,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "8a070854-e83b-4a25-b285-3bb17962c785"
+      },
+      "exception": {},
+      "file": "Block10.task",
+      "caption": "Block10",
+      "desc": "EN language cpp",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "8a070854-e83b-4a25-b285-3bb17962c785",
+      "rect": {
+        "x": 736,
+        "y": 1508,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
+      },
+      "exception": {},
+      "file": "Block11.task",
+      "caption": "Block11",
+      "desc": "Login credentials",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
+      "rect": {
+        "x": 736,
+        "y": 1632,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
+      },
+      "exception": {},
+      "file": "Block12.task",
+      "caption": "Block12",
+      "desc": "main work",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "866cfc0a-ad99-410f-a76b-c06d86024bf0",
+      "rect": {
+        "x": 736,
+        "y": 1759,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2"
+      },
+      "exception": {},
+      "file": "Block13.task",
+      "caption": "Block13",
+      "desc": "close major ERP",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2",
+      "rect": {
+        "x": 736,
+        "y": 1878,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "ee88d1b5-b327-4652-ab7e-68ca1196e8f6"
+      },
+      "exception": {},
+      "file": "Block14.task",
+      "caption": "Block14",
+      "desc": "change blackbg",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "ee88d1b5-b327-4652-ab7e-68ca1196e8f6",
+      "rect": {
+        "x": 736,
+        "y": 1994,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "c7582570-d75b-4817-857d-d5d14fb116e9"
+      },
+      "exception": {},
+      "file": "Block15.task",
+      "caption": "Block15",
+      "desc": "closetaskbarstring",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "task",
+      "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
+      "rect": {
+        "x": 736,
+        "y": 2113,
+        "width": 268,
+        "height": 78
+      },
+      "next": {
+        "vertices": [],
+        "refId": "9294e27f-e721-47b6-acd0-63e2189ee6cd"
+      },
+      "exception": {},
+      "file": "Block16.task",
+      "caption": "Block16",
+      "desc": "logprocess_end",
+      "editorMode": "sourceCode",
+      "breakpoints": {}
+    },
+    {
+      "type": "end",
+      "id": "9294e27f-e721-47b6-acd0-63e2189ee6cd",
+      "rect": {
+        "x": 800,
+        "y": 2242,
+        "width": 140,
+        "height": 50
+      },
+      "caption": "Process end"
     }
+  ],
+  "variables": [
+    {
+      "type": "none",
+      "name": "g_temp",
+      "value": "null"
+    },
+    {
+      "name": "main_API_url",
+      "value": "null",
+      "type": "none"
+    },
+    {
+      "name": "main_process_log_filepath",
+      "value": "null",
+      "type": "none"
+    },
+    {
+      "name": "main_error_log_filepath",
+      "value": "null",
+      "type": "none"
+    },
+    {
+      "name": "main_companyname",
+      "value": "null",
+      "type": "none"
+    }
+  ],
+  "layout": {
+    "config": {
+      "global": {
+        "enableEdgeDock": false,
+        "rootOrientationVertical": true,
+        "enableUseVisibility": true,
+        "splitterSize": 1,
+        "splitterExtra": 8,
+        "tabEnableClose": false,
+        "tabEnableRename": false,
+        "tabSetEnableDrag": false,
+        "tabSetEnableMaximize": false,
+        "tabSetMinWidth": 280,
+        "tabSetMinHeight": 200,
+        "borderBarSize": 24,
+        "borderAutoSelectTabWhenClosed": true,
+        "borderEnableAutoHide": true
+      },
+      "borders": [
+        {
+          "type": "border",
+          "selected": 0,
+          "size": 250,
+          "minSize": 250,
+          "enableAutoHide": true,
+          "location": "left",
+          "children": [
+            {
+              "type": "tab",
+              "id": "flow",
+              "name": "Process",
+              "component": "flowPanel",
+              "config": {
+                "i18nKey": "flow"
+              },
+              "className": ""
+            },
+            {
+              "type": "tab",
+              "id": "command",
+              "name": "Command",
+              "component": "commandPanel",
+              "config": {
+                "i18nKey": "command"
+              },
+              "className": ""
+            },
+            {
+              "type": "tab",
+              "id": "timeline",
+              "name": "Timeline",
+              "component": "timeLinePanel",
+              "config": {
+                "i18nKey": "timeline"
+              },
+              "className": ""
+            },
+            {
+              "type": "tab",
+              "id": "search",
+              "name": "Search",
+              "component": "searchPanel",
+              "config": {
+                "i18nKey": "search"
+              },
+              "className": ""
+            }
+          ]
+        },
+        {
+          "type": "border",
+          "size": 280,
+          "minSize": 280,
+          "location": "right",
+          "children": [
+            {
+              "type": "tab",
+              "id": "commandProperty",
+              "name": "Property",
+              "component": "commandPropertyPanel",
+              "config": {
+                "i18nKey": "property"
+              },
+              "className": ""
+            },
+            {
+              "type": "tab",
+              "id": "commandVariable",
+              "name": "Variable",
+              "component": "commandVariablePanel",
+              "config": {
+                "i18nKey": "variable"
+              },
+              "className": ""
+            }
+          ]
+        }
+      ],
+      "layout": {
+        "type": "row",
+        "id": "body",
+        "children": [
+          {
+            "type": "tabset",
+            "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
+            "children": [
+              {
+                "type": "tab",
+                "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
+                "name": "clean_template_for_allproject",
+                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\main.prj",
+                "component": "flowEditor",
+                "config": {
+                  "type": "project",
+                  "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
+                },
+                "enableClose": false,
+                "className": ""
+              }
+            ],
+            "active": true
+          },
+          {
+            "type": "tabset",
+            "id": "button",
+            "height": 32,
+            "selected": -1,
+            "enableDrop": false,
+            "enableDrag": false,
+            "enableDivide": false,
+            "enableClose": false,
+            "minHeight": 32,
+            "headerHeight": 32,
+            "children": [
+              {
+                "type": "tab",
+                "id": "output",
+                "name": "Output",
+                "component": "outputPanel",
+                "config": {
+                  "i18nKey": "output"
+                },
+                "enableDrag": false,
+                "className": "",
+                "enableRenderOnDemand": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "type": "flow",
+    "version": "1.0.25"
+  },
+  "flowConfig": {
+    "scrollbarPosition": {
+      "left": 1306.3333740234375,
+      "top": 2343
+    }
+  }
 }
