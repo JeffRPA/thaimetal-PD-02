@@ -440,7 +440,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -525,6 +525,7 @@
                         "type": "tabset",
                         "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
                         "weight": 126.87074829931973,
+                        "selected": 7,
                         "children": [
                             {
                                 "type": "tab",
