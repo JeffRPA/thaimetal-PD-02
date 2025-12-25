@@ -1,0 +1,17 @@
+
+//ERP
+For runindex = 0 To 5 Step 1
+    Try
+
+
+
+        //endline
+        Break
+    Catch
+
+        //writegooglesheet log
+        //close ERP
+        //log to greenmoons
+        Continue
+    End Try
+Next

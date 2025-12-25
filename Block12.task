@@ -360,7 +360,10 @@ End Function
 
 Try
 
+    //////////////////////////////////////////////////////////////////////////
     //set default value of pcs_quantity_float as zero
+    //////////////////////////////////////////////////////////////////////////
+
     pcs_quantity_float = 0
     
 
@@ -401,6 +404,10 @@ Try
     specific_extension = ".meta"
     copied = copy_latest_then_cleanup_other_old.copy_latest_then_cleanup(source_directory_metafile, target_directory, specific_extension)
     Delay(300)
+
+
+    //////////////////////////////////////////////////////////////////////////
+
 
 
     //clear files .txt and .xlsx inside D:\Mazuma\mazumaprojects\Ecommerce\Ecommerce_editfile
