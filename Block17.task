@@ -1,4 +1,4 @@
-
+//bot recover
 //ERP
 For runindex = 0 To 5 Step 1
     Try
@@ -8,10 +8,18 @@ For runindex = 0 To 5 Step 1
         //endline
         Break
     Catch
+        If runindex = 5
+            //exit()
+            //close ERP
+        End If
 
-        //writegooglesheet log
+        //writegooglesheet log  //error phase shopee website
         //close ERP
-        //log to greenmoons
+        //log to greenmoons  //attempt to login again
+        //start new ERP
+        Delay(120000)
         Continue
     End Try
 Next
+
+////next process//////
