@@ -524,16 +524,16 @@
                             },
                             {
                                 "type": "tab",
-                                "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
-                                "name": "Block4",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block4.task",
+                                "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
+                                "name": "Block5",
+                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block5.task",
                                 "component": "taskNodeEditor",
                                 "config": {
                                     "selfControl": true,
-                                    "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
+                                    "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
                                     "type": "task",
                                     "selector": [
-                                        "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108"
+                                        "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
                                     ]
                                 },
                                 "enableClose": true,
