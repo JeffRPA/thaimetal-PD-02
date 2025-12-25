@@ -676,7 +676,7 @@ If error <> null
 
     Try
         //(for testing)
-        main_API_url = '''https://greenmoons-rpa.azurewebsites.net'''
+        //main_API_url = '''https://greenmoons-rpa.azurewebsites.net'''
         //main_API_url = '''http://localhost:8080'''
 
         //file_path = '''D:\worldairlogistics\worldair_laiye_errorlog.xlsx'''
