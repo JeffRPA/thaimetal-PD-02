@@ -24,4 +24,43 @@ Function loginwinspeedERP()
     Next
 End Function
 
+
+Try
+    loginwinspeedERP()
+
+
+    ////// excel processes ///////
+    For runindex = 0 To 5 Step 1
+        Try
+
+
+
+            //endline
+            Break
+        Catch
+            If runindex = 5
+                //exit()
+                //close ERP
+            End If
+
+            //writegooglesheet log  //error phase shopee website
+            //close ERP
+            //log to greenmoons  //attempt to login again
+            //start new ERP
+            Delay(120000) //wait 2 minutes
+            Continue
+        End Try
+    Next
+
+    ///// automate to another module //////
+
+
+
+
+
+Catch exceptionInformation
+    
+End Try
+
+
 ////next process//////
