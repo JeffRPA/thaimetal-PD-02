@@ -588,6 +588,23 @@
                                 },
                                 "enableClose": true,
                                 "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2",
+                                "name": "Block14",
+                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block14.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2",
+                                    "type": "task",
+                                    "selector": [
+                                        "fc7edc10-d87f-41fe-ad45-8846cc49c1e2"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
                             }
                         ],
                         "active": true
@@ -626,7 +643,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1306.3333740234375,
-            "top": 1443
+            "top": 2243
         }
     }
 }
