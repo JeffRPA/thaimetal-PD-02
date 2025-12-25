@@ -1,25 +1,27 @@
 //bot recover
 //ERP
-For runindex = 0 To 5 Step 1
-    Try
+Function loginwinspeedERP()
+    For runindex = 0 To 5 Step 1
+        Try
 
 
 
-        //endline
-        Break
-    Catch
-        If runindex = 5
-            //exit()
+            //endline
+            Break
+        Catch
+            If runindex = 5
+                //exit()
+                //close ERP
+            End If
+
+            //writegooglesheet log  //error phase shopee website
             //close ERP
-        End If
-
-        //writegooglesheet log  //error phase shopee website
-        //close ERP
-        //log to greenmoons  //attempt to login again
-        //start new ERP
-        Delay(120000)
-        Continue
-    End Try
-Next
+            //log to greenmoons  //attempt to login again
+            //start new ERP
+            Delay(120000) //wait 2 minutes
+            Continue
+        End Try
+    Next
+End Function
 
 ////next process//////
