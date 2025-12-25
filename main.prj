@@ -508,7 +508,7 @@
                         "type": "tabset",
                         "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
                         "weight": 150.17667844522967,
-                        "selected": 7,
+                        "selected": 8,
                         "children": [
                             {
                                 "type": "tab",
@@ -637,6 +637,23 @@
                                     "type": "task",
                                     "selector": [
                                         "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "72fea8c6-0961-4d33-a88d-cfd7bd6bd1fe",
+                                "name": "Block17",
+                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block17.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "72fea8c6-0961-4d33-a88d-cfd7bd6bd1fe",
+                                    "type": "task",
+                                    "selector": [
+                                        "72fea8c6-0961-4d33-a88d-cfd7bd6bd1fe"
                                     ]
                                 },
                                 "enableClose": true,
