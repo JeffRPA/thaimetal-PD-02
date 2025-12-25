@@ -507,7 +507,8 @@
                     {
                         "type": "tabset",
                         "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
-                        "selected": 8,
+                        "weight": 150.17667844522967,
+                        "selected": 7,
                         "children": [
                             {
                                 "type": "tab",
@@ -626,33 +627,16 @@
                             },
                             {
                                 "type": "tab",
-                                "id": "c7007c09-5892-4aec-aace-36df7eb7bd9a",
-                                "name": "Block10",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block10.task",
+                                "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
+                                "name": "Block12",
+                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block12.task",
                                 "component": "taskNodeEditor",
                                 "config": {
                                     "selfControl": true,
-                                    "id": "c7007c09-5892-4aec-aace-36df7eb7bd9a",
+                                    "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
                                     "type": "task",
                                     "selector": [
-                                        "c7007c09-5892-4aec-aace-36df7eb7bd9a"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "8a070854-e83b-4a25-b285-3bb17962c785",
-                                "name": "Block11",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block11.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "8a070854-e83b-4a25-b285-3bb17962c785",
-                                    "type": "task",
-                                    "selector": [
-                                        "8a070854-e83b-4a25-b285-3bb17962c785"
+                                        "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
                                     ]
                                 },
                                 "enableClose": true,
@@ -664,7 +648,8 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "height": 200,
+                        "weight": 49.82332155477032,
+                        "height": 141,
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,
