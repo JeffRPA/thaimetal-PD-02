@@ -54,8 +54,12 @@ Try
 
     ///// automate to another module //////
 
-
-
+    Try 3
+        Keyboard.InputText(@ui"Inputcontrol<input>","sensodyne",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+    Catch exceptionInformation
+        TracePrint(""&[])
+    End Try
+        
 
 
 Catch exceptionInformation
@@ -64,3 +68,4 @@ End Try
 
 
 ////next process//////
+
