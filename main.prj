@@ -440,7 +440,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 1,
+                    "selected": 0,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -525,7 +525,6 @@
                         "type": "tabset",
                         "id": "#0c9604a9-526e-4fed-adf1-104b4bb0ae87",
                         "weight": 126.87074829931973,
-                        "selected": 7,
                         "children": [
                             {
                                 "type": "tab",
@@ -538,125 +537,6 @@
                                     "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
                                 },
                                 "enableClose": false,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
-                                "name": "Block6",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block6.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
-                                    "type": "task",
-                                    "selector": [
-                                        "ade21187-9b5e-43c0-a9f4-08916ec27d62"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-                                "name": "Block5",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block5.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-                                    "type": "task",
-                                    "selector": [
-                                        "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "b7f96c0f-f9bf-415f-ae60-1e864992b231",
-                                "name": "Block7",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block7.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "b7f96c0f-f9bf-415f-ae60-1e864992b231",
-                                    "type": "task",
-                                    "selector": [
-                                        "b7f96c0f-f9bf-415f-ae60-1e864992b231"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
-                                "name": "Block8",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block8.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
-                                    "type": "task",
-                                    "selector": [
-                                        "2c99fbd4-397f-4865-a4c3-8e1335012704"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2",
-                                "name": "Block14",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block14.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2",
-                                    "type": "task",
-                                    "selector": [
-                                        "fc7edc10-d87f-41fe-ad45-8846cc49c1e2"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3",
-                                "name": "Block9",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block9.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3",
-                                    "type": "task",
-                                    "selector": [
-                                        "e40adcbe-2c17-48ca-a32d-85edcbb62fc3"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
-                                "name": "Block12",
-                                "helpText": "D:\\advance_laiye_code_test_lib\\clean_template_for_allproject\\Block12.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
-                                    "type": "task",
-                                    "selector": [
-                                        "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
-                                    ]
-                                },
-                                "enableClose": true,
                                 "className": ""
                             }
                         ],
@@ -697,7 +577,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1306.3333740234375,
-            "top": 1843
+            "top": 2143
         }
     }
 }
