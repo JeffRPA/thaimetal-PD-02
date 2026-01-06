@@ -8,7 +8,7 @@ Function clickatimage(template_image_path, target_index, maxattempt)
     countattempt = 0
     result = false  //default value to false
     //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\img_cpp\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
     similarity = 80  // 80% similarity threshold
 
     Do While result = false
