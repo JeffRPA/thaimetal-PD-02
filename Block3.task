@@ -1,4 +1,4 @@
 
 
-closeallchrome_iPID = App.Run('''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\closeallchromewindows.exe''', 0, 1)
+closeallchrome_iPID = App.Run('''C:\Users\jeffr\Downloads\ตัวอย่าง_project.zip\ตัวอย่าง_project\mazumaprojects\cpp_commands\closeallchromewindows.exe''', 0, 1)
 
