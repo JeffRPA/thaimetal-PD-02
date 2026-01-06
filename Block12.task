@@ -36,7 +36,7 @@ Function clickatlastimage(template_image_path, maxattempt)
     countattempt = 0
     result = false  //default value to false
     //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\img_cpp\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
     similarity = 80  // 80% similarity threshold
 
     Do While result = false
@@ -68,7 +68,7 @@ End Function
 Function waituntilimageexist(template_image_path, maxattempt)
     countattempt = 0
     //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\img_cpp\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
     similarity = 80  // 80% similarity threshold
     result = false
     Do While result = false
@@ -92,7 +92,7 @@ End Function
 
 Function checkimageexistnow(template_image_path)
     //pp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\img_cpp\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
     similarity = 80  // 80% similarity threshold
     result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
     return result
