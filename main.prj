@@ -1,6 +1,6 @@
 {
     "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
-    "name": "clean_template_for_allproject",
+    "name": "test_project",
     "type": "flow",
     "build": "",
     "version": "6.5.1.250516",
@@ -422,7 +422,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1531,
-            "top": 1243
+            "top": 1343
         }
     }
 }
