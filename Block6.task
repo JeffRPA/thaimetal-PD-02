@@ -47,10 +47,10 @@ Try
     Try
         //(for testing)
         //main_API_url = '''https://greenmoons-rpa.azurewebsites.net'''
-        main_API_url = '''http://localhost:8080'''
+        // main_API_url = '''http://localhost:8080'''
 
         //file_path = '''D:\worldairlogistics\worldair_laiye_processlog.xlsx'''
-        file_path = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\log_allprocess_bydateandtime\worldair_laiye_processlog.xlsx'''
+        file_path = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprocess_bydateandtime\mazuma_laiye_processlog.xlsx'''
         sheet_name = '''Sheet1'''
         resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
         //TracePrint(resultlistofarrays)
