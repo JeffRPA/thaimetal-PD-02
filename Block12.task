@@ -27,7 +27,7 @@ Function clickatimage(template_image_path, target_index, maxattempt)
     TracePrint(result)
     coordinate_to_click = result[target_index]['center']
     Mouse.Move(coordinate_to_click[0], coordinate_to_click[1], false,{"iDelayAfter": 1, "iDelayBefore": 1})
-    Mouse.Click("left", "click", [],{"iDelayAfter": 1, "iDelayBefore": 1})
+    Mouse.Click("left", "dbclick", [],{"iDelayAfter": 1, "iDelayBefore": 1})
 End Function
 
 clickatimage0 = clickatimage('''C:\Users\jeffr\OneDrive\Pictures\test.png''', '0', 3)
