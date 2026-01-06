@@ -7,7 +7,7 @@ Dim objExcelWorkBook
 
 
 Try
-    objExcelWorkBook = Excel.OpenExcel('''D:\Mazuma\mazumaprojects\logincredential\planetonecredentials.xlsx''',false,"Excel","","")
+    objExcelWorkBook = Excel.OpenExcel('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\logincredential\logincredentials.xlsx''',false,"Excel","","")
 
     ptsusername = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
     ptspassword = Excel.ReadCell(objExcelWorkBook,"credentials","B2",true)
@@ -40,7 +40,7 @@ If error <> null
     //errorhandling and record the error track at '''E:\log_allprojecterror_bydateandtime\worldair_laiye_errorlog.xlsx'''
 
 
-    projectname = "hawb_checkstatus"  //must change to the projectname
+    projectname = "test_project"  //must change to the projectname
 
 
     //todaywithoutslash_datestring
