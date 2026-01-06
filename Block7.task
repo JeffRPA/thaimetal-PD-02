@@ -5,7 +5,7 @@
 Try
     Dim iPIDtaskbarstring
 
-    iPIDtaskbarstring = App.Run('''D:\Mazuma\mazumaprojects\taskbarappstring\arrecord.exe''', 0, 1)    
+    iPIDtaskbarstring = App.Run('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\taskbarappstring\test_project.exe''', 0, 1)    
 Catch exceptionInformation
     
 End Try
