@@ -166,13 +166,13 @@ TracePrint(findimage1)
 */
 
 
-Function find_image_centercoordinate(template_image_path, target_index)
-    //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
-    similarity = 80  // 80% similarity threshold
-    result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
-    return result[target_index]['center']
-End Function
+// Function find_image_centercoordinate(template_image_path, target_index)
+//     //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
+//     cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
+//     similarity = 80  // 80% similarity threshold
+//     result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
+//     return result[target_index]['center']
+// End Function
 
 /*
 findimage1 = find_image_centercoordinate('''C:\Users\wingr\OneDrive\Desktop\Newfolder\chromeicon.png''', '0')
