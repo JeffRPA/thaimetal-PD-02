@@ -70,9 +70,11 @@ Try
                 textArr = Array([])
                 For Each subSubSubChildValue In subSubSubChildEll 
                     textEll = UiElement.GetValue(subSubSubChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                    TracePrint(textEll)
-                    insert(textArr, textEll)
+                    Push(textArr, textEll)
                 Next
+                
+                TracePrint(textArr)
+
             Next
         Next      
     Next 
