@@ -64,13 +64,17 @@ Try
         childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         For Each subChildValue In childEll 
             subChildEll =  UiElement.GetChildren(subChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            For Each subSubChildValue In subChildEll 
-                subSubSubChildEll =  UiElement.GetChildren(subSubChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                For Each subSubSubChildValue In subSubSubChildEll 
-                    textEll = UiElement.GetValue(subSubSubChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                    TracePrint(textEll) 
-                Next
-            Next
+            textEll = UiElement.GetValue(subChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            TracePrint(textEll) 
+            
+            
+            // For Each subSubChildValue In subChildEll 
+            //     subSubSubChildEll =  UiElement.GetChildren(subSubChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                // For Each subSubSubChildValue In subSubSubChildEll 
+                //     textEll = UiElement.GetValue(subSubSubChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                //     TracePrint(textEll) 
+                // Next
+            // Next
         Next      
     Next 
 
