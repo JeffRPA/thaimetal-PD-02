@@ -56,16 +56,15 @@ Try
     Mouse.Action(@ui"Button<button>_SignIn","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     
     //// Get Data ////
-    objElement = UiElement.GetParent(@ui"Blocklevelelement<div>_2hoursagohirenjoshiposted12",1,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-    TracePrint(objElement)
-
     arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",2, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-    For Each value, index In arrElement
-    TracePrint('Post 1' & index)
+    TracePrint(arrElement)
+    
+    For Each value In arrElement
+    TracePrint('------------------Post-----------------')
+    TracePrint(value)
+
         childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         For Each subChildValue In childEll 
-
-
             textEll = UiElement.GetValue(subChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
             TracePrint(textEll)    
         Next      
