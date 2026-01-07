@@ -8,11 +8,20 @@ Try
     username = Excel.ReadCell(objExcelWorkBook,"credentials","B14",true)
     password = Excel.ReadCell(objExcelWorkBook,"credentials","B15",true)
 
+    TracePrint(username)
+    TracePrint(password)
+
     Delay(300)
     sRet = Sys.Command("taskkill /F /IM excel.exe")
     Delay(100)
-    
 Catch error
+    
+End Try
+
+Try 
+    
+    
+Catch exceptionInformation
     
 End Try
 

@@ -430,7 +430,7 @@
             "exception": {},
             "file": "Block181.task",
             "caption": "Block181",
-            "desc": "Login ",
+            "desc": "Logout",
             "editorMode": "visual",
             "breakpoints": {}
         }
