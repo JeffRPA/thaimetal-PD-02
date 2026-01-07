@@ -59,27 +59,20 @@ Try
     arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
     For Each value In arrElement
         textEll = UiElement.GetValue(value,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        TracePrint(textEll)
-        If compare_result = StrComp(textEll, "", false)
-        
-            TracePrint('===')
-        
+        If StrComp(textEll, "", false)
+            Continue
         End If
-
-        
+        TracePrint('after if'& textEll)
         childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         For Each subChildValue In childEll 
             subChildEll =  UiElement.GetChildren(subChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            
-            
-            
-            // For Each subSubChildValue In subChildEll 
-            //     subSubSubChildEll =  UiElement.GetChildren(subSubChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                // For Each subSubSubChildValue In subSubSubChildEll 
-                //     textEll = UiElement.GetValue(subSubSubChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                //     TracePrint(textEll) 
-                // Next
-            // Next
+            For Each subSubChildValue In subChildEll 
+                subSubSubChildEll =  UiElement.GetChildren(subSubChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                For Each subSubSubChildValue In subSubSubChildEll 
+                    textEll = UiElement.GetValue(subSubSubChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                    TracePrint(textEll) 
+                Next
+            Next
         Next      
     Next 
 
