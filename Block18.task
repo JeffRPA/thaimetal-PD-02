@@ -51,8 +51,9 @@ Try
     Mouse.Action(@ui"Text<span>_Signin","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     UiElement.Wait(@ui"Inputcontrol<input>_jeffreyzhiyeechong@gmail.com","show",20000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     Keyboard.InputText(@ui"Inputcontrol<input>1",username,true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
-    // Keyboard.InputPwd(@ui"Inputcontrol<input>2",password,true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
-
+    Keyboard.InputText(@ui"Inputcontrol<input>3",password,true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
+    Mouse.Action(@ui"Button<button>_SignIn","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    
 Catch exceptionInformation
 End Try
 
@@ -129,3 +130,4 @@ If error <> null
     End Try
     
 End If
+
