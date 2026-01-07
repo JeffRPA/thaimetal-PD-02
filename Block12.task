@@ -30,7 +30,7 @@ Function clickatimage(template_image_path, target_index, maxattempt)
     Mouse.Click("left", "dbclick", [],{"iDelayAfter": 1, "iDelayBefore": 1})
 End Function
 
-// clickatimage0 = clickatimage('''C:\Users\jeffr\OneDrive\Pictures\test.png''', '0', 3)
+clickatimage0 = clickatimage('''C:\Users\jeffr\OneDrive\Pictures\test.png''', '0', 3)
 
 Function clickatlastimage(template_image_path, maxattempt)
     countattempt = 0

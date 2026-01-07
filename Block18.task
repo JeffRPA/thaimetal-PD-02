@@ -29,8 +29,9 @@ Function clickatimage(template_image_path, target_index, maxattempt)
 End Function
 
 //// Start browser ////
-clickatimage1 = clickatimage('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\images\google_chrome_app.png''', '0', 3)
 Try 
+
+    hWeb = WebBrowser.Create("edge","",5000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
     Delay(1000)
     
     // clickatimage('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\images\guest_mode_chrome.png''', '0', 3)
