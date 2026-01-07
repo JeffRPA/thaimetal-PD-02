@@ -30,7 +30,7 @@ Function clickatimage(template_image_path, target_index, maxattempt)
     Mouse.Click("left", "dbclick", [],{"iDelayAfter": 1, "iDelayBefore": 1})
 End Function
 
-clickatimage0 = clickatimage('''C:\Users\jeffr\OneDrive\Pictures\test.png''', '0', 3)
+// clickatimage0 = clickatimage('''C:\Users\jeffr\OneDrive\Pictures\test.png''', '0', 3)
 
 Function clickatlastimage(template_image_path, maxattempt)
     countattempt = 0
@@ -111,7 +111,7 @@ Function find_image_topleftcoordinate(template_image_path, target_index, maxatte
     countattempt = 0
     result = false  //default value to false
     //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\img_cpp\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
     similarity = 80  // 80% similarity threshold
 
     Do While result = false
@@ -141,7 +141,7 @@ Function find_image_centercoordinate(template_image_path, target_index, maxattem
     countattempt = 0
     result = false  //default value to false
     //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\img_cpp\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
     similarity = 80  // 80% similarity threshold
 
     Do While result = false
@@ -168,7 +168,7 @@ TracePrint(findimage1)
 
 Function find_image_centercoordinate(template_image_path, target_index)
     //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\img_cpp\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
     similarity = 80  // 80% similarity threshold
     result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
     return result[target_index]['center']
@@ -182,7 +182,7 @@ TracePrint(findimage1)
 
 Function clickatimage(template_image_path, target_index)
     //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\img_cpp\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
     similarity = 80  // 80% similarity threshold
     result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
     coordinate_to_click = result[target_index]['center']
@@ -378,7 +378,7 @@ If error <> null
     //errorhandling and record the error track at '''E:\log_allprojecterror_bydateandtime\worldair_laiye_errorlog.xlsx'''
 
 
-    projectname = "hawb_checkstatus"  //must change to the projectname
+    projectname = "test_project"  //must change to the projectname
 
 
     //todaywithoutslash_datestring
@@ -405,7 +405,7 @@ If error <> null
     //type2.2
     //target: create the log file   paste_values_to_excel  in the same row
     //main header is row1   we insert emptyrow and log at row2
-    xlsx_filepath_errorsummary = '''E:\log_allprojecterror_bydateandtime\worldair_laiye_errorlog.xlsx'''
+    xlsx_filepath_errorsummary = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
     sheet_name_errorsummary = "Sheet1"
     row_record_errorsummary = 2  //Insert an empty row at row 2
 
@@ -433,7 +433,7 @@ If error <> null
         //main_API_url = '''http://localhost:8080'''
 
         //file_path = '''D:\worldairlogistics\worldair_laiye_errorlog.xlsx'''
-        file_path = '''E:\log_allprojecterror_bydateandtime\worldair_laiye_errorlog.xlsx'''
+        file_path = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
         sheet_name = '''Sheet1'''
         resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
         //TracePrint(resultlistofarrays)
