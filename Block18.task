@@ -63,7 +63,13 @@ Try
     
     For Each value In arrElement
         childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        TracePrint childEll 
+        
+        For Each childValue In childEll
+            subChildEll = UiElement.GetChildren(childValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        
+            TracePrint subChildEll 
+        Next
+        
     Next 
 
 Catch exceptionInformation
