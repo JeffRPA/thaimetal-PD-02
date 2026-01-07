@@ -180,20 +180,6 @@ TracePrint(findimage1)
 */
 
 
-Function clickatimage(template_image_path, target_index)
-    //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
-    similarity = 80  // 80% similarity threshold
-    result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
-    coordinate_to_click = result[target_index]['center']
-    Mouse.Move(coordinate_to_click[0], coordinate_to_click[1], false,{"iDelayAfter": 1, "iDelayBefore": 1})
-    Mouse.Click("left", "click", [],{"iDelayAfter": 1, "iDelayBefore": 1})
-End Function
-
-//clickcommand1 = clickatimage('''C:\Users\wingr\OneDrive\Desktop\Newfolder\chromeicon.png''', '0')
-
-
-
 
 Dim bRet, CARGOMnumber, convertedterminal, copyto, CustomerCompanyName, customerdata, CustomerEmail, CustomerID, DateDictionary, datestring, Datestringtosearch, Datestringwithoutslash, directoryimages, emailattachment, emailbody, emailsubject, flex_emailsubject, folderexistcreate1, folderexistcreate2, folderexistcreate3, fromsymbol, closeexcel, lastrowcolstring, listofarray, objExcelWorkBook, rowsnumber, waittimeopenexcel, go_exe_path, iRet, pathtxtsave, sName, sourcepathtorun, sPath, sRet, waittime, HAWBnumber, HAWBnumber_original, HAWBnumber_original_array, HAWBnumber_original_string, HouseAWBstring, htmlcode, htmlcode_Note_Airportarraybylines, htmlhawbtable, folder_existance_bool, arrayRet, jsonRet, input_string, iPID, listofarray_customer, listofarraymain, loginaccount, MasterAWBstring, MAWBnumber, MAWBnumber_original, monthstring, mostlikelyterminalstring, Note_Airportarraybylines, pathpy, pdffilepaths_array, pdfkeepdirectory, prefixoflinevalueof_noteairport, prefixofMasterAWBstring, recipient, savefileexistbRet, savepath, savepdfdirectory, scope_array, sender, SendStatus, serverport, smtpserver, sourcepath, sourcepathcustomer, sourcesheetname, sourcesheetnamecustomer, sRetairline, sRetbyone, sRetcustomer, sReteta, sRetetastringnocolon, sRetetd, sRetetddate, sRetetddateDDBBB, sRetetddateDDMMYY, sRetetdstringnocolon, sRetflightno, sRetfrom, sRethawbno, sRetmawb, sRetshipper, sRetshipperfirstline, sRetto, sslencryption, success_suffix_click, successclick, suffix_number, suffix_number_string, terminalstring, topleftstartcolrow, topleftstartcolrowcustomer, yearstring
 

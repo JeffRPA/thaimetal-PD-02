@@ -277,7 +277,7 @@
             },
             "next": {
                 "vertices": [],
-                "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
+                "refId": ""
             },
             "exception": {},
             "file": "Block12.task",
@@ -405,9 +405,12 @@
             },
             "next": {
                 "vertices": [],
-                "refId": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
+                "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
             },
-            "exception": {},
+            "exception": {
+                "vertices": [],
+                "refId": ""
+            },
             "file": "Block18.task",
             "caption": "Block18",
             "desc": "Login",
