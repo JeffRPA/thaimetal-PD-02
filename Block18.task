@@ -58,14 +58,13 @@ Try
     //// Get Data ////
     arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
     For Each value In arrElement
-        // TracePrint('------------------Post-----------------')
-        // ellAttribute = UiElement.GetAttribute(value,"",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        // TracePrint(ellAttribute)
+        textEll = UiElement.GetValue(value,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        TracePrint(textEll) 
+        
         childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         For Each subChildValue In childEll 
             subChildEll =  UiElement.GetChildren(subChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            textEll = UiElement.GetValue(subChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            TracePrint(textEll) 
+            
             
             
             // For Each subSubChildValue In subChildEll 
