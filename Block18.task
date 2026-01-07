@@ -67,6 +67,8 @@ Try
             subChildEll =  UiElement.GetChildren(subChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
             For Each subSubChildValue In subChildEll 
                 subSubSubChildEll =  UiElement.GetChildren(subSubChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})        
+                array_result = Array(3, null)
+
                 textArr = Array([])
                 For Each subSubSubChildValue In subSubSubChildEll 
                     textEll = UiElement.GetValue(subSubSubChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
