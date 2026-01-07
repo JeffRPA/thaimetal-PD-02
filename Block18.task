@@ -56,7 +56,8 @@ Try
     Mouse.Action(@ui"Button<button>_SignIn","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     
     //// Get Data ////
-    
+    arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+    TracePrint(arrElement)
 
 Catch exceptionInformation
 End Try
