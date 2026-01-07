@@ -46,6 +46,7 @@ End Try
 
 //// Start browser ////
 Try 
+    //// Sign In ////
     hWeb = WebBrowser.Create("edge","https://leetcode.com/",5000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
     UiElement.Wait(@ui"Text<span>_Signin1","show",20000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     Mouse.Action(@ui"Text<span>_Signin","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
@@ -54,6 +55,9 @@ Try
     Keyboard.InputText(@ui"Inputcontrol<input>3",password,true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
     Mouse.Action(@ui"Button<button>_SignIn","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     
+    //// Get Data ////
+    
+
 Catch exceptionInformation
 End Try
 
