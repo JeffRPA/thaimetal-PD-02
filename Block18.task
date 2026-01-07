@@ -47,8 +47,18 @@ End Try
 Try 
     // Start browser
     hWeb = WebBrowser.Create("chrome","",30000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
-    clickatimage('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\images\guest_mode_chrome.png''', '0', 3)
     
+    iRet = WebBrowser.WaitPage(hWeb,@ui"Text_Guestmode1",60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
+    TracePrint(isRet)
+
+    If iRet
+        clickatimage('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\images\guest_mode_chrome.png''', '0', 3)
+        TracePrint('Click')
+
+
+    End If    
+
     
 
 Catch exceptionInformation
