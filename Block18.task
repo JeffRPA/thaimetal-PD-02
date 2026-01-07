@@ -35,8 +35,8 @@ Try
     username = Excel.ReadCell(objExcelWorkBook,"credentials","B14",true)
     password = Excel.ReadCell(objExcelWorkBook,"credentials","B15",true)
 
-    TracePrint(username)
-    TracePrint(password)
+    // TracePrint(username)
+    // TracePrint(password)
 
     Delay(300)
     sRet = Sys.Command("taskkill /F /IM excel.exe")
@@ -47,9 +47,9 @@ End Try
 //// Start browser ////
 Try 
     hWeb = WebBrowser.Create("edge","https://leetcode.com/",5000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
-    Delay(2000)
-    UiElement.Wait(@ui"Text<span>_Signin1","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+    UiElement.Wait(@ui"Text<span>_Signin1","show",20000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     Mouse.Action(@ui"Text<span>_Signin","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    UiElement.Wait(@ui"Inputcontrol<input>_jeffreyzhiyeechong@gmail.com","show",20000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     Keyboard.InputText(@ui"Inputcontrol<input>1",username,true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
     Keyboard.InputPwd(@ui"Inputcontrol<input>2",password,true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
 
