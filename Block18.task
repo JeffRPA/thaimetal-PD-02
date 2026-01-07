@@ -57,7 +57,6 @@ Try
     
     //// Get Data ////
     arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",2, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-    // TracePrint(arrElement)
     
     For Each value In arrElement
     TracePrint('------------------Post-----------------')
