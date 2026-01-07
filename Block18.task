@@ -19,7 +19,10 @@ Catch error
 End Try
 
 Try 
-    
+    // Start browser
+    hWeb = WebBrowser.Create("chrome","",30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
+
+
     
 Catch exceptionInformation
     
