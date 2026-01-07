@@ -1,0 +1,453 @@
+
+
+
+//main work
+
+
+Function clickatimage(template_image_path, target_index, maxattempt)
+    countattempt = 0
+    result = false  //default value to false
+    //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
+    similarity = 80  // 80% similarity threshold
+
+    Do While result = false
+        result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
+        TracePrint(result)
+        If result = false
+            countattempt = countattempt + 1
+            If countattempt >= maxattempt
+                //log process before exit
+                //exit()
+                TracePrint("exitprocess")
+                Exit()
+            End If
+        End If
+    Loop
+    TracePrint(result)
+    coordinate_to_click = result[target_index]['center']
+    Mouse.Move(coordinate_to_click[0], coordinate_to_click[1], false,{"iDelayAfter": 1, "iDelayBefore": 1})
+    Mouse.Click("left", "dbclick", [],{"iDelayAfter": 1, "iDelayBefore": 1})
+End Function
+
+// clickatimage0 = clickatimage('''C:\Users\jeffr\OneDrive\Pictures\test.png''', '0', 3)
+
+Function clickatlastimage(template_image_path, maxattempt)
+    countattempt = 0
+    result = false  //default value to false
+    //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
+    similarity = 80  // 80% similarity threshold
+
+    Do While result = false
+        result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
+        TracePrint(result)
+        If result = false
+            countattempt = countattempt + 1
+            If countattempt >= maxattempt
+                //log process before exit
+                //exit()
+                TracePrint("exitprocess")
+                Exit()
+            End If
+        End If
+    Loop
+
+    //get index of the last one   highest_number_key   result is string
+    highest_key = runcppopencv.get_highest_key(result)
+
+    coordinate_to_click = result[highest_key]['center']
+    Mouse.Move(coordinate_to_click[0], coordinate_to_click[1], false,{"iDelayAfter": 1, "iDelayBefore": 1})
+    Mouse.Click("left", "click", [],{"iDelayAfter": 1, "iDelayBefore": 1})
+End Function
+
+//clickatimage0 = clickatlastimage('''C:\Users\wingr\OneDrive\Desktop\Newfolder\startbutton.png''', 5)
+
+
+
+Function waituntilimageexist(template_image_path, maxattempt)
+    countattempt = 0
+    //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
+    similarity = 80  // 80% similarity threshold
+    result = false
+    Do While result = false
+        result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
+        If result = false
+            countattempt = countattempt + 1
+            If countattempt >= maxattempt
+                //log process before exit
+                //exit()
+                TracePrint("exitprocess")
+                Exit()
+            End If
+        End If
+        TracePrint(result)
+    Loop
+    Delay(300)
+End Function
+
+//waitexistedimage1 = waituntilimageexist('''C:\Users\wingr\OneDrive\Desktop\Newfolder\chromeicon.png''', 5)
+
+
+Function checkimageexistnow(template_image_path)
+    //pp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
+    similarity = 80  // 80% similarity threshold
+    result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
+    return result
+End Function
+
+/*
+checkexistedimage1 = checkimageexistnow('''C:\Users\wingr\OneDrive\Desktop\Newfolder\chromeicon.png''')
+TracePrint(checkexistedimage1)
+If checkexistedimage1 = False
+    TracePrint("website image still not appear")
+End If
+*/
+
+
+Function find_image_topleftcoordinate(template_image_path, target_index, maxattempt)
+    countattempt = 0
+    result = false  //default value to false
+    //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
+    similarity = 80  // 80% similarity threshold
+
+    Do While result = false
+        result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
+        TracePrint(result)
+        If result = false
+            countattempt = countattempt + 1
+            If countattempt >= maxattempt
+                TracePrint(countattempt)
+                return false
+            End If
+
+        End If
+    Loop
+    TracePrint("finish")
+    return result[target_index]['top-left']
+End Function
+
+
+/*
+findimage1 = find_image_topleftcoordinate('''C:\Users\wingr\OneDrive\Desktop\Newfolder\chromeicon.png''', '0', 5)
+TracePrint(findimage1)
+*/
+
+
+Function find_image_centercoordinate(template_image_path, target_index, maxattempt)
+    countattempt = 0
+    result = false  //default value to false
+    //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
+    similarity = 80  // 80% similarity threshold
+
+    Do While result = false
+        result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
+        TracePrint(result)
+        If result = false
+            countattempt = countattempt + 1
+            If countattempt >= maxattempt
+                TracePrint(countattempt)
+                return false
+            End If
+
+        End If
+    Loop
+    TracePrint("finish")
+    return result[target_index]['center']
+End Function
+
+/*
+findimage1 = find_image_centercoordinate('''C:\Users\wingr\OneDrive\Desktop\Newfolder\chromeicon.png''', '0', 5)
+TracePrint(findimage1)
+*/
+
+
+// Function find_image_centercoordinate(template_image_path, target_index)
+//     //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
+//     cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
+//     similarity = 80  // 80% similarity threshold
+//     result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
+//     return result[target_index]['center']
+// End Function
+
+/*
+findimage1 = find_image_centercoordinate('''C:\Users\wingr\OneDrive\Desktop\Newfolder\chromeicon.png''', '0')
+TracePrint(findimage1)
+*/
+
+
+Function clickatimage(template_image_path, target_index)
+    //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
+    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
+    similarity = 80  // 80% similarity threshold
+    result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
+    coordinate_to_click = result[target_index]['center']
+    Mouse.Move(coordinate_to_click[0], coordinate_to_click[1], false,{"iDelayAfter": 1, "iDelayBefore": 1})
+    Mouse.Click("left", "click", [],{"iDelayAfter": 1, "iDelayBefore": 1})
+End Function
+
+//clickcommand1 = clickatimage('''C:\Users\wingr\OneDrive\Desktop\Newfolder\chromeicon.png''', '0')
+
+
+
+
+Dim bRet, CARGOMnumber, convertedterminal, copyto, CustomerCompanyName, customerdata, CustomerEmail, CustomerID, DateDictionary, datestring, Datestringtosearch, Datestringwithoutslash, directoryimages, emailattachment, emailbody, emailsubject, flex_emailsubject, folderexistcreate1, folderexistcreate2, folderexistcreate3, fromsymbol, closeexcel, lastrowcolstring, listofarray, objExcelWorkBook, rowsnumber, waittimeopenexcel, go_exe_path, iRet, pathtxtsave, sName, sourcepathtorun, sPath, sRet, waittime, HAWBnumber, HAWBnumber_original, HAWBnumber_original_array, HAWBnumber_original_string, HouseAWBstring, htmlcode, htmlcode_Note_Airportarraybylines, htmlhawbtable, folder_existance_bool, arrayRet, jsonRet, input_string, iPID, listofarray_customer, listofarraymain, loginaccount, MasterAWBstring, MAWBnumber, MAWBnumber_original, monthstring, mostlikelyterminalstring, Note_Airportarraybylines, pathpy, pdffilepaths_array, pdfkeepdirectory, prefixoflinevalueof_noteairport, prefixofMasterAWBstring, recipient, savefileexistbRet, savepath, savepdfdirectory, scope_array, sender, SendStatus, serverport, smtpserver, sourcepath, sourcepathcustomer, sourcesheetname, sourcesheetnamecustomer, sRetairline, sRetbyone, sRetcustomer, sReteta, sRetetastringnocolon, sRetetd, sRetetddate, sRetetddateDDBBB, sRetetddateDDMMYY, sRetetdstringnocolon, sRetflightno, sRetfrom, sRethawbno, sRetmawb, sRetshipper, sRetshipperfirstline, sRetto, sslencryption, success_suffix_click, successclick, suffix_number, suffix_number_string, terminalstring, topleftstartcolrow, topleftstartcolrowcustomer, yearstring
+
+
+//flightaware approach  input flightCode(string)  date(string)
+Function getflightfromflightaware(flightCode, date)
+
+  dTime1 = Time.Now()
+  nexttwentysecondsdTime1 = dTime1 + 0.000232
+
+  output_file_path = '''E:\puppeteer-flight-scraper\output_flight_times.txt'''
+  lastmodifiedtimestringofoutput_beforeprocess = getlastmodifiedtime.get_last_modified_time(output_file_path)
+  lastmodifiedtimestringofoutput_afterprocess = lastmodifiedtimestringofoutput_beforeprocess
+
+  input_txt_filepath = '''E:\puppeteer-flight-scraper\inputflight.txt'''
+  flight_totxt = flighttimeconversion.save_flight_details_laiye_totxtbeforejavascript(flightCode, date, input_txt_filepath)
+
+  Keyboard.Press("R", "press", ["Win"],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+
+  Delay(100)
+  Clipboard.SetText '''node "E:\puppeteer-flight-scraper\flightScraper_allprocess.js"'''
+  Delay(200)
+  Keyboard.Press("V", "press", ["Ctrl"],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+
+  Keyboard.Press("Enter", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+
+  
+  Do While lastmodifiedtimestringofoutput_afterprocess = lastmodifiedtimestringofoutput_beforeprocess
+    lastmodifiedtimestringofoutput_afterprocess = getlastmodifiedtime.get_last_modified_time(output_file_path)
+    Delay(1000)
+    dTime2 = Time.Now()
+    If dTime2 > nexttwentysecondsdTime1
+      return "unable to get flighttime from flightaware"
+    End If
+  Loop
+  
+
+  // Get the converted time array
+  flight_info = flighttimeconversion.import_data_from_txt(output_file_path)
+  time_array = flighttimeconversion.extract_departure_arrival_times(flight_info)
+  TracePrint(time_array)
+  return time_array
+
+End Function
+
+
+
+//google approach
+Function searchflighttime(searchflightstringinput)
+
+    //open maximize leading chrome before real chrome
+    iPIDchrome = App.Run('''E:\cpp_commands\openblankchrome.exe''', 2, 1)
+    Delay(800)
+    iPIDmaxcurrentwindows = App.Run('''E:\cpp_commands\maximizecurrentwindows.exe''', 2, 1)
+    Delay(800)
+
+
+    hWeb = WebBrowser.Create("chrome","about:blank",30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
+    Delay(500)
+    App.Kill(iPIDchrome)
+    Delay(300)
+
+    googlewebsite = '''https://www.google.com/'''
+    //open website
+    iRet = WebBrowser.GoURL(hWeb,googlewebsite,true,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+    Delay(300)
+
+    Keyboard.Press("Esc", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+
+    //move mouse to center point  preventing mouse interrupt the sheet selection
+    Mouse.Move(1072, 536, false,{"iDelayAfter": 350, "iDelayBefore": 200})
+
+    Keyboard.InputText(@ui"Multilinetext<textarea>",searchflightstringinput,true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+
+    Keyboard.Press("Enter", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+
+    Delay(4000)
+
+    //div
+    //class
+    //ZuFvNc
+    arrayclassZuFvNc_string = WebBrowser.RunJS(hWeb,"function(){return Array.from(document.querySelectorAll('.ZuFvNc'), el => el.textContent);}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
+    TracePrint(arrayclassZuFvNc_string)
+
+    arrayclassZuFvNc = getflighttime.stringtoarray(arrayclassZuFvNc_string)
+    filtered_array = getflighttime.filteronlywithcolon(arrayclassZuFvNc)
+    resulttimearray = getflighttime.validate_array_members(filtered_array)
+    TracePrint(resulttimearray)
+
+    switchwindowstochrome = App.Run('''E:\cpp_commands\switchactivewindowstoChrome.exe''', 2, 1)
+    Delay(800)
+    Keyboard.Press("W", "press", ["Ctrl"],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+
+    switchwindowstochrome = App.Run('''E:\cpp_commands\switchactivewindowstoChrome.exe''', 2, 1)
+    Delay(800)
+    Keyboard.Press("W", "press", ["Ctrl"],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+
+    return resulttimearray
+
+End Function
+
+
+
+
+
+Function dowhilestringcontain(input_string)
+    availability = "False"
+    Delay(100)     
+    TracePrint(availability)
+    Do While availability = "False"
+        //Mouse.Wheel(10,"down", [],{"iDelayAfter":150, "iDelayBefore":150})
+        Delay(200)
+        DepartedsRetbool = WebBrowser.RunJS(hWeb,"function() {return document.body.textContent.includes('"&input_string&"');}",true,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100})
+        availability = DepartedsRetbool
+        Delay(200)
+        TracePrint(availability)
+    Loop
+End Function
+
+
+
+
+Function jsclassfocus(classname, indexorder)
+    availability = "False"
+    Delay(200)     
+    Do While availability = "False"
+        jscode = "function(){availbool=!!document.getElementsByClassName('"&classname&"')["&CStr(indexorder)&"];document.getElementsByClassName('"&classname&"')["&CStr(indexorder)&"].focus();return availbool}"
+        //TracePrint(jscode)
+        Try
+            availability = WebBrowser.RunJS(hWeb,jscode,true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        Catch Ex
+            availability = "False"
+        End Try       
+        Delay(200) 
+    Loop
+End Function
+
+
+Function jsidfocus(id)
+    availability = "False"
+    Delay(200)     
+    Do While availability = "False"
+        jscode = "function(){availbool=!!document.getElementById('"&id&"');document.getElementById('"&id&"').focus();return availbool}"
+        //TracePrint(jscode)
+        Try
+            availability = WebBrowser.RunJS(hWeb,jscode,true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        Catch Ex
+            availability = "False"
+        End Try          
+        Delay(200) 
+    Loop
+End Function
+
+
+Function iffoldernotexist_createfolder(folderpath)
+    folder_existance_bool = File.FolderExists(folderpath)
+    If folder_existance_bool = False:
+        File.CreateFolder(folderpath)
+    End If
+End Function
+
+
+
+Try
+    ///// Main Code /////
+    
+
+
+
+
+Catch error
+    
+
+    
+End Try
+
+
+
+If error <> null
+
+    //errorhandling and record the error track at '''E:\log_allprojecterror_bydateandtime\worldair_laiye_errorlog.xlsx'''
+
+
+    projectname = "test_project"  //must change to the projectname
+
+
+    //todaywithoutslash_datestring
+    todaydate_string = errorlogedit.get_date_string_without_slash()
+    //TracePrint(todaydate_string)
+
+    //currenttime_string
+    currenttime_string = errorlogedit.currenttime()
+    //TracePrint(currenttime_string)
+
+    //projectname
+    //TracePrint(projectname)
+
+    //blocknamestring
+    blocknamestring = error["File"]
+    blocknamestring = Replace(blocknamestring,".task","",false)
+    //TracePrint(blocknamestring)
+
+    //errorsummarystring
+    errorsummarystring = "errorLine: "&error["Line"]&" ("&Trim(error["Message"])&")"
+    //TracePrint(errorsummarystring)
+
+
+    //type2.2
+    //target: create the log file   paste_values_to_excel  in the same row
+    //main header is row1   we insert emptyrow and log at row2
+    xlsx_filepath_errorsummary = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+    sheet_name_errorsummary = "Sheet1"
+    row_record_errorsummary = 2  //Insert an empty row at row 2
+
+    //input Value1 into the column A of row2
+    variables_errorsummary = [
+        [todaydate_string, "A"], 
+        [currenttime_string, "B"],     
+        [projectname, "C"],   
+        [blocknamestring, "D"],      
+        [errorsummarystring, "E"]
+    ]
+
+    errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
+
+
+
+
+    //API errorlog send to server
+
+    Delay(200)
+
+    Try
+        //(for testing)
+        //main_API_url = '''https://greenmoons-rpa.azurewebsites.net'''
+        //main_API_url = '''http://localhost:8080'''
+
+        //file_path = '''D:\worldairlogistics\worldair_laiye_errorlog.xlsx'''
+        file_path = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+        sheet_name = '''Sheet1'''
+        resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
+        //TracePrint(resultlistofarrays)
+        resultlistofarrays_notincludeheaderrow = splice(resultlistofarrays,1,Len(resultlistofarrays)-1)
+        //TracePrint(resultlistofarrays_notincludeheaderrow)
+        resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
+        //TracePrint(resultlistofarrays_allstring)
+        APIjsonsRet = HTTP.PostJson(main_API_url & "/api/" & main_companyname, {"data": resultlistofarrays_allstring}, 60000)
+
+    Catch Ex
+        
+
+    End Try
+
+    
+End If
+
