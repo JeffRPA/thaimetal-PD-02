@@ -56,10 +56,10 @@ Try
     Mouse.Action(@ui"Button<button>_SignIn","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     
     //// Get Data ////
-    arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",2, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+    arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
     
     For Each value In arrElement
-        TracePrint('------------------Post-----------------')
+        // TracePrint('------------------Post-----------------')
         // ellAttribute = UiElement.GetAttribute(value,"",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         // TracePrint(ellAttribute)
         childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
