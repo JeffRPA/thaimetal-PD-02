@@ -22,6 +22,7 @@ Try
     // Start browser
     hWeb = WebBrowser.Create("chrome","",30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
 
+    Mouse.Action(@ui"Text_Guestmode","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
 
     
 Catch exceptionInformation
