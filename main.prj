@@ -414,7 +414,7 @@
             "file": "Block18.task",
             "caption": "Block18",
             "desc": "Login",
-            "editorMode": "visual",
+            "editorMode": "sourceCode",
             "breakpoints": {}
         },
         {
@@ -487,8 +487,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1488,
-            "top": 2096
+            "left": 896,
+            "top": 1757
         },
         "zoom": 1
     }

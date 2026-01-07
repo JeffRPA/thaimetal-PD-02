@@ -28,21 +28,6 @@ Function clickatimage(template_image_path, target_index, maxattempt)
     Mouse.Click("left", "dbclick", [],{"iDelayAfter": 1, "iDelayBefore": 1})
 End Function
 
-//// Start browser ////
-Try 
-
-    hWeb = WebBrowser.Create("edge","",5000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
-    Delay(1000)
-    
-    // clickatimage('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\images\guest_mode_chrome.png''', '0', 3)
-    // TracePrint('Click')    
-    
-Catch exceptionInformation
-End Try
-
-
-
-
 //// Credentials ////
 Try
     objExcelWorkBook = Excel.OpenExcel('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\logincredential\logincredentials.xlsx''',false,"Excel","","")
@@ -56,8 +41,18 @@ Try
     Delay(300)
     sRet = Sys.Command("taskkill /F /IM excel.exe")
     Delay(100)
-Catch error
+Catch error    
+End Try
+
+//// Start browser ////
+Try 
+    hWeb = WebBrowser.Create("edge","",5000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
+    Delay(1000)
     
+    // clickatimage('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\images\guest_mode_chrome.png''', '0', 3)
+    // TracePrint('Click')    
+    
+Catch exceptionInformation
 End Try
 
 
