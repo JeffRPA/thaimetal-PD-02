@@ -59,8 +59,12 @@ Try
     objElement = UiElement.GetParent(@ui"Blocklevelelement<div>_2hoursagohirenjoshiposted12",1,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
     TracePrint(objElement)
 
-    arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-    TracePrint(arrElement)
+    arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",2, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+    
+    For Each value In arrElement
+        childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        TracePrint childEll 
+    Next 
 
 Catch exceptionInformation
 End Try
