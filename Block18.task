@@ -62,8 +62,10 @@ Try
     arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",2, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
     For Each value In arrElement
         childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        textEll = UiElement.GetValue(value,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        TracePrint(textEll) 
+        For Each subChildValue In childEll 
+            textEll = UiElement.GetValue(subChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            TracePrint(textEll)    
+        Next      
     Next 
 
 Catch exceptionInformation
