@@ -64,8 +64,11 @@ Try
         // TracePrint(ellAttribute)
         childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         For Each subChildValue In childEll 
-            textEll = UiElement.GetValue(subChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            TracePrint(textEll)    
+            subChildEll =  UiElement.GetChildren(subChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            For Each subSubChildValue In subChildEll 
+                textEll = UiElement.GetValue(subSubChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                TracePrint(textEll) 
+            Next
         Next      
     Next 
 
