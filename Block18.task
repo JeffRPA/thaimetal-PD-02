@@ -5,8 +5,12 @@ Dim objExcelWorkBook
 Try
     objExcelWorkBook = Excel.OpenExcel('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\logincredential\logincredentials.xlsx''',false,"Excel","","")
 
+    username = Excel.ReadCell(objExcelWorkBook,"credentials","B14",true)
+    password = Excel.ReadCell(objExcelWorkBook,"credentials","B15",true)
 
-
+    Delay(300)
+    sRet = Sys.Command("taskkill /F /IM excel.exe")
+    Delay(100)
     
 Catch error
     
