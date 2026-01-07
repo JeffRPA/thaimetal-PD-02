@@ -414,7 +414,7 @@
             "file": "Block18.task",
             "caption": "Block18",
             "desc": "Login",
-            "editorMode": "visual",
+            "editorMode": "sourceCode",
             "breakpoints": {}
         },
         {
