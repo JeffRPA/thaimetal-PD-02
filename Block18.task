@@ -46,12 +46,9 @@ End Try
 
 //// Start browser ////
 Try 
-    hWeb = WebBrowser.Create("edge","",5000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
-    Delay(1000)
-    
-    // clickatimage('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\images\guest_mode_chrome.png''', '0', 3)
-    // TracePrint('Click')    
-    
+    hWeb = WebBrowser.Create("edge","https://leetcode.com/",5000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
+    Delay(2000)
+    Mouse.Action(@ui"Text<span>_Signin","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
 Catch exceptionInformation
 End Try
 
