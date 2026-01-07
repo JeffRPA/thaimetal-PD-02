@@ -9,17 +9,17 @@ Dim objExcelWorkBook
 Try
     objExcelWorkBook = Excel.OpenExcel('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\logincredential\logincredentials.xlsx''',false,"Excel","","")
 
-    ptsusername = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
-    ptspassword = Excel.ReadCell(objExcelWorkBook,"credentials","B2",true)
-    winspeedusername = Excel.ReadCell(objExcelWorkBook,"credentials","B3",true)
-    winspeedpassword = Excel.ReadCell(objExcelWorkBook,"credentials","B4",true)
+    // ptsusername = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
+    // ptspassword = Excel.ReadCell(objExcelWorkBook,"credentials","B2",true)
+    // winspeedusername = Excel.ReadCell(objExcelWorkBook,"credentials","B3",true)
+    // winspeedpassword = Excel.ReadCell(objExcelWorkBook,"credentials","B4",true)
     //planetoneusername = Excel.ReadCell(objExcelWorkBook,"credentials","B5",true)
     //planetonepassword = Excel.ReadCell(objExcelWorkBook,"credentials","B6",true)
 
-    TracePrint(ptsusername)
-    TracePrint(ptspassword)
-    TracePrint(winspeedusername)
-    TracePrint(winspeedpassword)
+    // TracePrint(ptsusername)
+    // TracePrint(ptspassword)
+    // TracePrint(winspeedusername)
+    // TracePrint(winspeedpassword)
 
 
     Delay(300)
