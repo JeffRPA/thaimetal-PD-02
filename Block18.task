@@ -60,9 +60,12 @@ Try
     TracePrint(objElement)
 
     arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",2, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-    For Each value In arrElement
+    For Each value, index In arrElement
+    TracePrint('Post 1' & index)
         childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         For Each subChildValue In childEll 
+
+
             textEll = UiElement.GetValue(subChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
             TracePrint(textEll)    
         Next      
