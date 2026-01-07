@@ -254,9 +254,12 @@
             },
             "next": {
                 "vertices": [],
-                "refId": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
+                "refId": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9"
             },
-            "exception": {},
+            "exception": {
+                "vertices": [],
+                "refId": ""
+            },
             "file": "Block11.task",
             "caption": "Block11",
             "desc": "Login credentials",
@@ -274,7 +277,7 @@
             },
             "next": {
                 "vertices": [],
-                "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
+                "refId": ""
             },
             "exception": {},
             "file": "Block12.task",
@@ -378,8 +381,8 @@
             "type": "task",
             "id": "72fea8c6-0961-4d33-a88d-cfd7bd6bd1fe",
             "rect": {
-                "x": 1029,
-                "y": 1632,
+                "x": 1400,
+                "y": 1650,
                 "width": 268,
                 "height": 78
             },
@@ -389,6 +392,26 @@
             "caption": "Block17",
             "desc": "Block17",
             "editorMode": "sourceCode",
+            "breakpoints": {}
+        },
+        {
+            "type": "task",
+            "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
+            "rect": {
+                "x": 1040,
+                "y": 1632,
+                "width": 268,
+                "height": 78
+            },
+            "next": {
+                "vertices": [],
+                "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
+            },
+            "exception": {},
+            "file": "Block18.task",
+            "caption": "Block18",
+            "desc": "Block18",
+            "editorMode": "visual",
             "breakpoints": {}
         }
     ],
@@ -422,7 +445,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1048,
-            "top": 710
+            "top": 1810
         }
     }
 }
