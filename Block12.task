@@ -36,17 +36,14 @@ Try
     row_record= 2 
 
     // TracePrint(records)
-
-    For Each valueArr In records
-        // input Value1 into the column A of row2
-        variables = [
-            [valueArr[1], "A"], 
-            [valueArr[2], "B"]
+    Do While len(records) > 0
+        item = pop(records)
+          variables = [
+            [item[0], "A"], 
+            [item[1], "B"]
         ]
         errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath, sheet_name, row_record, variables)
-    Next
-
-   
+    Loop 
 
 Catch error
 End Try
