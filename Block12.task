@@ -35,18 +35,18 @@ Try
     sheet_name = "Sheet1"
     row_record= 2 
 
-    TracePrint(records)
+    // TracePrint(records)
 
-    //input Value1 into the column A of row2
-    variables = [
-        [records[1], "A"], 
-        [records[2], "B"]
-    ]
+    For Each valueArr In records
+        // input Value1 into the column A of row2
+        variables = [
+            [valueArr[1], "A"], 
+            [valueArr[2], "B"]
+        ]
+        errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath, sheet_name, row_record, variables)
+    Next
 
-
-
-    // errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath, sheet_name, row_record, variables)
-
+   
 
 Catch error
 End Try
