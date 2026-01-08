@@ -1,0 +1,58 @@
+// Logout
+Try
+    Mouse.Action(@ui"Text<span>","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Mouse.Action(@ui"Listitem<li>_SignOut","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+Catch error
+End Try
+
+If error <> null
+    projectname = "test_project"  //must change to the projectname
+
+    todaydate_string = errorlogedit.get_date_string_without_slash()
+
+    currenttime_string = errorlogedit.currenttime()
+
+    blocknamestring = error["File"]
+    blocknamestring = Replace(blocknamestring,".task","",false)
+
+    errorsummarystring = "errorLine: "&error["Line"]&" ("&Trim(error["Message"])&")"
+
+    //type2.2
+    //target: create the log file   paste_values_to_excel  in the same row
+    //main header is row1   we insert emptyrow and log at row2
+    xlsx_filepath_errorsummary = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+    sheet_name_errorsummary = "Sheet1"
+    row_record_errorsummary = 2  //Insert an empty row at row 2
+
+    //input Value1 into the column A of row2
+    variables_errorsummary = [
+        [todaydate_string, "A"], 
+        [currenttime_string, "B"],     
+        [projectname, "C"],   
+        [blocknamestring, "D"],      
+        [errorsummarystring, "E"]
+    ]
+
+    errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
+
+    // API errorlog send to server
+    Delay(200)
+
+    Try
+        file_path = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+        sheet_name = '''Sheet1'''
+        resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
+        //TracePrint(resultlistofarrays)
+        resultlistofarrays_notincludeheaderrow = splice(resultlistofarrays,1,Len(resultlistofarrays)-1)
+        //TracePrint(resultlistofarrays_notincludeheaderrow)
+        resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
+        //TracePrint(resultlistofarrays_allstring)
+        APIjsonsRet = HTTP.PostJson(main_API_url & "/api/" & main_companyname, {"data": resultlistofarrays_allstring}, 60000)
+
+    Catch Ex
+        
+    End Try
+
+End If
+
+

@@ -434,7 +434,7 @@
             "file": "Block181.task",
             "caption": "Block181",
             "desc": "Logout",
-            "editorMode": "visual",
+            "editorMode": "sourceCode",
             "breakpoints": {}
         },
         {
@@ -453,7 +453,7 @@
             "exception": {},
             "file": "Block121.task",
             "caption": "Block121",
-            "desc": "main work",
+            "desc": "main work copy",
             "editorMode": "sourceCode",
             "breakpoints": {}
         }
@@ -488,7 +488,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 788,
-            "top": 1507
+            "top": 1407
         },
         "zoom": 1
     }

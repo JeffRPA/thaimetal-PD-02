@@ -33,33 +33,16 @@ End Try
 
 
 If error <> null
-
-    //errorhandling and record the error track at '''E:\log_allprojecterror_bydateandtime\worldair_laiye_errorlog.xlsx'''
-
-
     projectname = "test_project"  //must change to the projectname
 
-
-    //todaywithoutslash_datestring
     todaydate_string = errorlogedit.get_date_string_without_slash()
-    //TracePrint(todaydate_string)
 
-    //currenttime_string
     currenttime_string = errorlogedit.currenttime()
-    //TracePrint(currenttime_string)
 
-    //projectname
-    //TracePrint(projectname)
-
-    //blocknamestring
     blocknamestring = error["File"]
     blocknamestring = Replace(blocknamestring,".task","",false)
-    //TracePrint(blocknamestring)
 
-    //errorsummarystring
     errorsummarystring = "errorLine: "&error["Line"]&" ("&Trim(error["Message"])&")"
-    //TracePrint(errorsummarystring)
-
 
     //type2.2
     //target: create the log file   paste_values_to_excel  in the same row
@@ -79,19 +62,10 @@ If error <> null
 
     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
 
-
-
-
     // API errorlog send to server
-
     Delay(200)
 
     Try
-        //(for testing)
-        //main_API_url = '''https://greenmoons-rpa.azurewebsites.net'''
-        //main_API_url = '''http://localhost:8080'''
-
-        //file_path = '''D:\worldairlogistics\worldair_laiye_errorlog.xlsx'''
         file_path = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
         sheet_name = '''Sheet1'''
         resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
@@ -104,9 +78,7 @@ If error <> null
 
     Catch Ex
         
-
     End Try
 
-    
 End If
 
