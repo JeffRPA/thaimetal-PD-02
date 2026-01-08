@@ -2,32 +2,6 @@
 
 Dim objExcelWorkBook
 
-Function clickatimage(template_image_path, target_index, maxattempt)
-    countattempt = 0
-    result = false  //default value to false
-    //cpp_program = '''D:\clickonimage__multiple__customcode_______________________\clickimage_cpp_optimize_version\MatchingImage.exe'''
-    cpp_program = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\img_cpp\MatchingImage.exe'''
-    similarity = 80  // 80% similarity threshold
-
-    Do While result = false
-        result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
-        TracePrint(result)
-        If result = false
-            countattempt = countattempt + 1
-            If countattempt >= maxattempt
-                //log process before exit
-                //exit()
-                TracePrint("exitprocess")
-                Exit()
-            End If
-        End If
-    Loop
-    TracePrint(result)
-    coordinate_to_click = result[target_index]['center']
-    Mouse.Move(coordinate_to_click[0], coordinate_to_click[1], false,{"iDelayAfter": 1, "iDelayBefore": 1})
-    Mouse.Click("left", "dbclick", [],{"iDelayAfter": 1, "iDelayBefore": 1})
-End Function
-
 //// Credentials ////
 Try
     objExcelWorkBook = Excel.OpenExcel('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\logincredential\logincredentials.xlsx''',false,"Excel","","")
@@ -54,34 +28,6 @@ Try
     Keyboard.InputText(@ui"Inputcontrol<input>1",username,true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
     Keyboard.InputText(@ui"Inputcontrol<input>3",password,true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
     Mouse.Action(@ui"Button<button>_SignIn","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    
-    //// Get Data ////
-    
-    arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-    For Each value In arrElement
-        textEll = UiElement.GetValue(value,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        If StrComp(textEll, "", false)
-            Continue
-        End If
-        childEll = UiElement.GetChildren(value,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        For Each subChildValue In childEll 
-            subChildEll =  UiElement.GetChildren(subChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            For Each subSubChildValue In subChildEll 
-                textEll = UiElement.GetValue(subSubChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                If StrComp(textEll, "", false)
-                    Continue
-                End If
-                
-                subSubSubChildEll =  UiElement.GetChildren(subSubChildValue,1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})        
-                textArr = []
-                For Each subSubSubChildValue In subSubSubChildEll 
-                    textEll = UiElement.GetValue(subSubSubChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                    push(textArr, textEll)
-                Next
-                TracePrint(textArr)
-            Next
-        Next      
-    Next 
 
 Catch exceptionInformation
 End Try
