@@ -31,23 +31,18 @@ Try
         Next      
     Next 
 
-    xlsx_filepath_errorsummary = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\output\output_leetcode_records.xlsx'''
-    sheet_name_errorsummary = "Sheet1"
-    row_record_errorsummary = 2  //Insert an empty row at row 2
+    xlsx_filepath = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\output\output_leetcode_records.xlsx'''
+    sheet_name = "Sheet1"
+    row_record= 2 
 
     //input Value1 into the column A of row2
-    variables_errorsummary = [
-        [todaydate_string, "A"], 
-        [currenttime_string, "B"],     
-        [projectname, "C"],   
-        [blocknamestring, "D"],      
-        [errorsummarystring, "E"]
+    variables = [
+        [records[1], "A"], 
+        [records[2], "B"]
     ]
 
-    errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
+    errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath, sheet_name, row_record, variables)
 
-
-    TracePrint(records)
 
 Catch error
 End Try
