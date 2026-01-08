@@ -3,6 +3,9 @@
 Try
     ///// Main Code /////
     arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+    
+    records = []
+    
     For Each value In arrElement
         textEll = UiElement.GetValue(value,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         If StrComp(textEll, "", false)
@@ -23,10 +26,13 @@ Try
                     textEll = UiElement.GetValue(subSubSubChildValue,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                     push(textArr, textEll)
                 Next
-                TracePrint(textArr)
+                push(records, textArr)
             Next
         Next      
     Next 
+
+    TracePrint(records)
+
 Catch error
 End Try
 
