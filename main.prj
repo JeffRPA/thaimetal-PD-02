@@ -487,9 +487,9 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 788,
-            "top": 907
+            "left": 732,
+            "top": 1100
         },
-        "zoom": 1
+        "zoom": 0.7
     }
 }

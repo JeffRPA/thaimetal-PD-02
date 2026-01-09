@@ -4,7 +4,7 @@ Dim objExcelWorkBook
 
 //// Credentials ////
 Try
-    objExcelWorkBook = Excel.OpenExcel('''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\logincredential\logincredentials.xlsx''',false,"Excel","","")
+    objExcelWorkBook = Excel.OpenExcel('''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\logincredential\logincredentials.xlsx''',false,"Excel","","")
 
     username = Excel.ReadCell(objExcelWorkBook,"credentials","B14",true)
     password = Excel.ReadCell(objExcelWorkBook,"credentials","B15",true)
@@ -66,7 +66,7 @@ If error <> null
     //type2.2
     //target: create the log file   paste_values_to_excel  in the same row
     //main header is row1   we insert emptyrow and log at row2
-    xlsx_filepath_errorsummary = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+    xlsx_filepath_errorsummary = '''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
     sheet_name_errorsummary = "Sheet1"
     row_record_errorsummary = 2  //Insert an empty row at row 2
 
@@ -89,7 +89,7 @@ If error <> null
 
     Try
         
-        file_path = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+        file_path = '''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
         sheet_name = '''Sheet1'''
         resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
         //TracePrint(resultlistofarrays)
