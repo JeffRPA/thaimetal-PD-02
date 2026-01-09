@@ -21,7 +21,7 @@ End Try
 //// Start browser ////
 Try 
     //// Sign In ////
-    hWeb = WebBrowser.Create("edge","https://leetcode.com/",5000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
+    hWeb = WebBrowser.Create("chrome","https://leetcode.com/",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"sBrowserPath":"","sStartArgs":""})
     UiElement.Wait(@ui"Text<span>_Signin1","show",20000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     Mouse.Action(@ui"Text<span>_Signin","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     UiElement.Wait(@ui"Inputcontrol<input>_jeffreyzhiyeechong@gmail.com","show",20000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
