@@ -6,7 +6,7 @@ Try
     
     records = []
 
-    bRet = Mail.SendExt({"host":"","port":465,"ssl":false,"authentication":false,"user":"","password":""},"test@gmail.com","jeffreyzhiyeechong@gmail.com","","","",'''testsetsetset''',[])
+    bRet = Mail.SendExt({"host":"smtp.gmail.com","port":465,"ssl":false,"authentication":false,"user":"","password":""},"test@gmail.com","jeffreyzhiyeechong@gmail.com","","","",'''testsetsetset''',[])
 
     
     For Each value In arrElement
