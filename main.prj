@@ -260,7 +260,7 @@
             "file": "Block12.task",
             "caption": "Block12",
             "desc": "main work",
-            "editorMode": "sourceCode",
+            "editorMode": "visual",
             "breakpoints": {}
         },
         {
