@@ -5,6 +5,9 @@ Try
     arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_in4daysJoinournextContestWe",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
     
     records = []
+
+    bRet = Mail.SendExt({"host":"","port":587,"ssl":false,"authentication":false,"user":"","password":""},"","","","","","",[])
+
     
     For Each value In arrElement
         textEll = UiElement.GetValue(value,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})

@@ -1,6 +1,6 @@
 {
     "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
-    "name": "card_reimbursement",
+    "name": "Thaimetal-AC-05",
     "type": "flow",
     "build": "",
     "version": "6.5.1.250516",
@@ -245,29 +245,6 @@
         },
         {
             "type": "task",
-            "id": "8a070854-e83b-4a25-b285-3bb17962c785",
-            "rect": {
-                "x": 1640,
-                "y": 1530,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": ""
-            },
-            "exception": {
-                "vertices": [],
-                "refId": ""
-            },
-            "file": "Block11.task",
-            "caption": "Block11",
-            "desc": "Login credentials",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
             "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
             "rect": {
                 "x": 736,
@@ -379,23 +356,6 @@
         },
         {
             "type": "task",
-            "id": "72fea8c6-0961-4d33-a88d-cfd7bd6bd1fe",
-            "rect": {
-                "x": 1640,
-                "y": 1640,
-                "width": 268,
-                "height": 78
-            },
-            "next": {},
-            "exception": {},
-            "file": "Block17.task",
-            "caption": "Block17",
-            "desc": "Block17",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
             "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
             "rect": {
                 "x": 736,
@@ -436,128 +396,6 @@
             "desc": "Logout",
             "editorMode": "sourceCode",
             "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "f0d47460-eb7d-11f0-99cf-51d0dc7a2065",
-            "rect": {
-                "x": 1640,
-                "y": 1750,
-                "width": 268,
-                "height": 78
-            },
-            "next": {
-                "vertices": [],
-                "refId": ""
-            },
-            "exception": {},
-            "file": "Block121.task",
-            "caption": "Block121",
-            "desc": "main work copy",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "b48e103c-fdf8-43e0-a80d-c2cd5e10abda",
-            "rect": {
-                "x": 1070,
-                "y": 1550,
-                "width": 268,
-                "height": 78
-            },
-            "next": {},
-            "exception": {},
-            "file": "Block19.task",
-            "caption": "Block19",
-            "desc": "Download Meta invoice",
-            "editorMode": "visual",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "b4746e20-f029-11f0-a4ff-f9e9aff9e983",
-            "rect": {
-                "x": 1070,
-                "y": 1640,
-                "width": 268,
-                "height": 78
-            },
-            "next": {},
-            "exception": {},
-            "file": "Block191.task",
-            "caption": "Block191",
-            "desc": "Download Atlassian invoice",
-            "editorMode": "visual",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "ba671ad0-f029-11f0-a4ff-f9e9aff9e983",
-            "rect": {
-                "x": 1070,
-                "y": 1728,
-                "width": 268,
-                "height": 78
-            },
-            "next": {},
-            "exception": {},
-            "file": "Block1911.task",
-            "caption": "Block1911",
-            "desc": "Download Atlassian invoice",
-            "editorMode": "visual",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "d58cb860-f029-11f0-a4ff-f9e9aff9e983",
-            "rect": {
-                "x": 1070,
-                "y": 1879,
-                "width": 268,
-                "height": 78
-            },
-            "next": {},
-            "exception": {},
-            "file": "Block19111.task",
-            "caption": "Block19111",
-            "desc": "Bank Statement OCR",
-            "editorMode": "visual",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "ea54d980-f029-11f0-a4ff-f9e9aff9e983",
-            "rect": {
-                "x": 1080,
-                "y": 2008,
-                "width": 268,
-                "height": 78
-            },
-            "next": {},
-            "exception": {},
-            "file": "Block191111.task",
-            "caption": "Block191111",
-            "desc": "Bank Statement OCR",
-            "editorMode": "visual",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
-            "id": "77e5f300-1730-4559-beda-e94e7bd2fcf5",
-            "rect": {
-                "x": 1102,
-                "y": 2165,
-                "width": 268,
-                "height": 78
-            },
-            "next": {},
-            "exception": {},
-            "file": "Block20.task",
-            "caption": "Block20",
-            "desc": "test python run",
-            "editorMode": "sourceCode",
-            "breakpoints": {}
         }
     ],
     "variables": [
@@ -589,8 +427,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 2264,
-            "top": 2964
+            "left": 2454,
+            "top": 2974
         },
         "zoom": 1.2
     },
@@ -615,7 +453,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -700,11 +538,12 @@
                     {
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
+                        "selected": 1,
                         "children": [
                             {
                                 "type": "tab",
                                 "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
-                                "name": "Thaimetal-AC-",
+                                "name": "Thaimetal-AC-05",
                                 "helpText": "C:\\Greenmoons\\ตัวอย่าง_project\\project_template\\laiye_projects_code\\credit_card_reimbursement\\main.prj",
                                 "component": "flowEditor",
                                 "config": {
@@ -712,6 +551,23 @@
                                     "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
                                 },
                                 "enableClose": false,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
+                                "name": "Block12",
+                                "helpText": "C:\\Greenmoons\\laiye-projects\\laiye_projects_code\\thaimetal\\Block12.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
+                                    "type": "task",
+                                    "selector": [
+                                        "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
+                                    ]
+                                },
+                                "enableClose": true,
                                 "className": ""
                             }
                         ],
