@@ -576,8 +576,7 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "height": 32,
-                        "selected": -1,
+                        "height": 200,
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,
