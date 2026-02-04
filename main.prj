@@ -8,8 +8,8 @@
         {
             "id": "start",
             "rect": {
-                "x": 800,
-                "y": 150,
+                "x": 804,
+                "y": 70,
                 "width": 140,
                 "height": 50
             },
@@ -24,13 +24,13 @@
             "type": "task",
             "id": "5ff74500-ba61-11f0-81f8-7befb543be84",
             "rect": {
-                "x": 736,
-                "y": 370,
+                "x": 740,
+                "y": 270,
                 "width": 268,
                 "height": 78
             },
             "next": {
-                "refId": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
+                "refId": "7f473aa0-0197-11f1-b042-0bee2063a23e",
                 "vertices": []
             },
             "exception": {
@@ -47,8 +47,8 @@
             "type": "task",
             "id": "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c",
             "rect": {
-                "x": 736,
-                "y": 247,
+                "x": 740,
+                "y": 147,
                 "width": 268,
                 "height": 78
             },
@@ -396,6 +396,29 @@
             "desc": "Logout",
             "editorMode": "sourceCode",
             "breakpoints": {}
+        },
+        {
+            "type": "task",
+            "id": "7f473aa0-0197-11f1-b042-0bee2063a23e",
+            "rect": {
+                "x": 740,
+                "y": 370,
+                "width": 268,
+                "height": 78
+            },
+            "next": {
+                "refId": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
+                "vertices": []
+            },
+            "exception": {
+                "refId": "",
+                "vertices": []
+            },
+            "file": "Block11.task",
+            "caption": "Block11",
+            "desc": "Set Paths",
+            "editorMode": "sourceCode",
+            "breakpoints": {}
         }
     ],
     "variables": [
@@ -423,12 +446,17 @@
             "name": "main_companyname",
             "value": "null",
             "type": "none"
+        },
+        {
+            "name": "project_path",
+            "value": "null",
+            "type": "none"
         }
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 2454,
-            "top": 2974
+            "left": 1740,
+            "top": 2478
         },
         "zoom": 1.2
     },
@@ -453,7 +481,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -536,58 +564,125 @@
                 "id": "body",
                 "children": [
                     {
-                        "type": "tabset",
-                        "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
+                        "type": "row",
+                        "id": "#63bb1907-7828-4e51-bdca-f3ec679d8b9e",
                         "children": [
                             {
-                                "type": "tab",
-                                "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
-                                "name": "Thaimetal-AC-05",
-                                "helpText": "C:\\Greenmoons\\ตัวอย่าง_project\\project_template\\laiye_projects_code\\credit_card_reimbursement\\main.prj",
-                                "component": "flowEditor",
-                                "config": {
-                                    "type": "project",
-                                    "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
-                                },
-                                "enableClose": false,
-                                "className": ""
+                                "type": "tabset",
+                                "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
+                                "weight": 25,
+                                "selected": 2,
+                                "children": [
+                                    {
+                                        "type": "tab",
+                                        "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
+                                        "name": "Thaimetal-AC-05",
+                                        "helpText": "C:\\Greenmoons\\ตัวอย่าง_project\\project_template\\laiye_projects_code\\credit_card_reimbursement\\main.prj",
+                                        "component": "flowEditor",
+                                        "config": {
+                                            "type": "project",
+                                            "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
+                                        },
+                                        "enableClose": false,
+                                        "className": ""
+                                    },
+                                    {
+                                        "type": "tab",
+                                        "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
+                                        "name": "Block12",
+                                        "helpText": "C:\\Greenmoons\\project_template\\laiye_projects_code\\AC_05\\Block12.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": true,
+                                            "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
+                                            "type": "task",
+                                            "selector": [
+                                                "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
+                                    },
+                                    {
+                                        "type": "tab",
+                                        "id": "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c",
+                                        "name": "Block1",
+                                        "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Block1.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": true,
+                                            "id": "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c",
+                                            "type": "task",
+                                            "selector": [
+                                                "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
+                                    },
+                                    {
+                                        "type": "tab",
+                                        "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
+                                        "name": "Block5",
+                                        "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Block5.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": true,
+                                            "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
+                                            "type": "task",
+                                            "selector": [
+                                                "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
+                                    }
+                                ]
                             },
                             {
-                                "type": "tab",
-                                "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
-                                "name": "Block12",
-                                "helpText": "C:\\Greenmoons\\project_template\\laiye_projects_code\\AC_05\\Block12.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
-                                    "type": "task",
-                                    "selector": [
-                                        "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
-                            },
-                            {
-                                "type": "tab",
-                                "id": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
-                                "name": "Block2",
-                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Block2.task",
-                                "component": "taskNodeEditor",
-                                "config": {
-                                    "selfControl": true,
-                                    "id": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
-                                    "type": "task",
-                                    "selector": [
-                                        "bfa338d8-f6ec-4362-88d6-5273affbf20d"
-                                    ]
-                                },
-                                "enableClose": true,
-                                "className": ""
+                                "type": "tabset",
+                                "id": "#03fc06f4-9f54-44a6-b715-d4ad4e4208b6",
+                                "weight": 25,
+                                "selected": 1,
+                                "children": [
+                                    {
+                                        "type": "tab",
+                                        "id": "7f473aa0-0197-11f1-b042-0bee2063a23e",
+                                        "name": "Block11",
+                                        "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Block11.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": true,
+                                            "id": "7f473aa0-0197-11f1-b042-0bee2063a23e",
+                                            "type": "task",
+                                            "selector": [
+                                                "7f473aa0-0197-11f1-b042-0bee2063a23e"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
+                                    },
+                                    {
+                                        "type": "tab",
+                                        "id": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
+                                        "name": "Block2",
+                                        "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Block2.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": true,
+                                            "id": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
+                                            "type": "task",
+                                            "selector": [
+                                                "bfa338d8-f6ec-4362-88d6-5273affbf20d"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
+                                    }
+                                ],
+                                "active": true
                             }
-                        ],
-                        "active": true
+                        ]
                     },
                     {
                         "type": "tabset",
