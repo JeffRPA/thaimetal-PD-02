@@ -36,12 +36,6 @@ End Try
 
 If error <> null
 
-    //errorhandling and record the error track at '''E:\log_allprojecterror_bydateandtime\worldair_laiye_errorlog.xlsx'''
-
-
-    project_name = "test_project"  //must change to the project_name
-
-
     //todaywithoutslash_datestring
     todaydate_string = errorlogedit.get_date_string_without_slash()
     //TracePrint(date_string)
@@ -66,7 +60,7 @@ If error <> null
     //type2.2
     //target: create the log file   paste_values_to_excel  in the same row
     //main header is row1   we insert emptyrow and log at row2
-    xlsx_filepath_errorsummary = '''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+    xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
     sheet_name_errorsummary = "Sheet1"
     row_record_errorsummary = 2  //Insert an empty row at row 2
 
@@ -89,7 +83,7 @@ If error <> null
 
     Try
         
-        file_path = '''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+        file_path = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
         sheet_name = '''Sheet1'''
         resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
         //TracePrint(resultlistofarrays)

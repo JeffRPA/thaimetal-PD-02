@@ -1,13 +1,5 @@
-
-
 //logprocess_end
-
 Try
-    
-
-    projectname = "test_project"  //must change to the projectname
-
-
     //todaywithoutslash_datestring
     todaydate_string = errorlogedit.get_date_string_without_slash()
     //TracePrint(date_string)
@@ -16,14 +8,14 @@ Try
     currenttime_string = errorlogedit.currenttime()
     //TracePrint(currenttime_string)
 
-    //projectname
-    //TracePrint(projectname)
+    //project_name
+    //TracePrint(project_name)
 
  
     //type2.2
     //target: create the log file   paste_values_to_excel  in the same row
     //main header is row1   we insert emptyrow and log at row2
-    xlsx_filepath_processsummary = '''"C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprocess_bydateandtime\mazuma_laiye_processlog.xlsx"'''
+    xlsx_filepath_processsummary = project_path & '''\log_allprocess_bydateandtime\mazuma_laiye_processlog.xlsx'''
     sheet_name_processsummary = "Sheet1"
     row_record_processsummary = 2  //Insert an empty row at row 2
 
@@ -31,7 +23,7 @@ Try
     variables_processsummary = [
         [todaydate_string, "A"], 
         [currenttime_string, "B"],     
-        [projectname, "C"],   
+        [project_name, "C"],   
         ["End running", "D"]
     ]
 
@@ -45,7 +37,7 @@ Try
 
     Try
         
-        file_path = '''"C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprocess_bydateandtime\mazuma_laiye_processlog.xlsx"'''
+        file_path = project_path & '''\log_allprocess_bydateandtime\mazuma_laiye_processlog.xlsx'''
         sheet_name = '''Sheet1'''
         resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
         //TracePrint(resultlistofarrays)

@@ -10,8 +10,8 @@ Try
     currenttime_string = errorlogedit.currenttime()
     //TracePrint(currenttime_string)
 
-    //projectname
-    //TracePrint(projectname)
+    //project_name
+    //TracePrint(project_name)
 
  
     //type2.2
@@ -25,7 +25,7 @@ Try
     variables_processsummary = [
         [todaydate_string, "A"], 
         [currenttime_string, "B"],     
-        [projectname, "C"],   
+        [project_name, "C"],   
         ["Start running", "D"]
     ]
 

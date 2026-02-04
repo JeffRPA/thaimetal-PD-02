@@ -4,7 +4,7 @@
 
 //change blackbg    if not found  do nothing
 
-filepaths_list = getfilepath.read_file_paths('''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\changebackgroundtonormalfilepath.txt''')
+filepaths_list = getfilepath.read_file_paths(project_path & '''\changebackgroundtonormalfilepath.txt''')
 TracePrint(filepaths_list)
 
 If Len(filepaths_list) > 0
