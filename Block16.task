@@ -46,9 +46,6 @@ Try
         resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
         //TracePrint(resultlistofarrays_allstring)
 
-        //laiyecode method
-        //APIjsonsRet = HTTP.PostJson("https://btestapi-am67.onrender.com/api/bot/worldair", {"data": resultlistofarrays_allstring}, 60000)
-
         //python method
         target_url = main_API_url & "/api/bot/" & main_companyname
         APIjsonsRet = pythonAPI.send_api_data(target_url, resultlistofarrays_allstring)

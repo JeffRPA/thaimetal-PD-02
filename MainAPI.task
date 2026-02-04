@@ -11,7 +11,7 @@ main_error_log_filepath = project_path & '''\log_allprojecterror_bydateandtime\m
 
 
 //main companyname
-main_companyname = CStr(File.Read(project_path & '''\main_companyname.txt''',"utf-8"))
+main_companyname = CStr(File.Read(project_path & '''\main_company_name.txt''',"utf-8"))
 TracePrint(main_companyname)
 
 

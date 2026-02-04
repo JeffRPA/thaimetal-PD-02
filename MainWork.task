@@ -13,171 +13,11 @@ Try
     waitfirstiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
     Delay(1000)
     waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-
-    // AC-05-01-01 : เข้าสู่หน้าจอ Product receipts not invoiced
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-    // Click extend left menu (if needed)
-    Try 3
-        Mouse.Action(@ui"{Click extend left menu (if needed)}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // Click Procurement and sourcing
-    Try 3
-        Mouse.Action(@ui"{Click Procurement and sourcing}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // Click Purchase Orders
-    Try 3
-        Mouse.Action(@ui"{Click Purchase Orders}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // Click Receiving products
-    Try 3
-        Mouse.Action(@ui"{Click Receiving products}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // Click Product receipts not invoiced
-    Try 3
-        Mouse.Action(@ui"{Click Product receipts not invoiced}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // AC-05-01-02 : Download file Excel
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-    // Click export icon
-    Function clickatimage(template_image_path, target_index, maxattempt)
-        countattempt = 0
-        result = false  //default value to false
-        cpp_program = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\img_cpp\MatchingImage.exe'''
-        similarity = 80  // 80% similarity threshold
-
-        Do While result = false
-            result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
-            TracePrint(result)
-            If result = false
-                countattempt = countattempt + 1
-                If countattempt >= maxattempt
-                    //log process before exit
-                    //exit()
-                    //TracePrint("exitprocess")
-                    //Exit()
-                    Return "not found"
-                End If
-            End If
-        Loop
-        TracePrint(result)
-        coordinate_to_click = result[target_index]['center']
-        Mouse.Move(coordinate_to_click[0], coordinate_to_click[1], false,{"iDelayAfter": 1, "iDelayBefore": 1})
-        Mouse.Click("left", "click", [],{"iDelayAfter": 1, "iDelayBefore": 1})
-    End Function
-
-    clickatimage0 = clickatimage('''C:\test\testimage.png''', '0', 3)
-
-    // Click Vendor product receipts
-    Try 3
-        Mouse.Action(@ui"{Click Vendor product receipts}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // Click Download
-    Try 3
-        Mouse.Action(@ui"{Click Download}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // AC-05-02-01 : เข้าสู่หน้าจอ Pending vendor invoices
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-    // Click extend menu (if needed)
-    Try 3
-        Mouse.Action(@ui"{Click extend menu (if needed)}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // Click Accounts payable
-    Try 3
-        Mouse.Action(@ui"{Click Accounts payable}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // Click Invoices
-    Try 3
-        Mouse.Action(@ui"{Click Invoices}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // Click Pending vendor invoices
-    Try 3
-        Mouse.Action(@ui"{Click Pending vendor invoices}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // AC-05-02-02 : เปิดรายการ Pending invoice
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-    // Click From product receipt
-    Try 3
-        Mouse.Action(@ui"{Click From product receipt}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // AC-05-02-03 : เลือก Purchase Order ตามข้อมูลจากไฟล์ Excel
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-    // Checkbox from Excel by PO number
-    Try 3
-        UiElement.SetCheck(@ui"{Checkbox from Excel by PO number}",true,{"bContinueOnError":true,"iDelayAfter":100,"iDelayBefore":100})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // AC-05-02-04 : กรอกข้อมูลเพิ่มเติมให้กับ Purchase Order ที่เลือก
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-    // Enter Value from Excel
-    Try 3
-        Keyboard.InputText(@ui"{Enter Value from Excel}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // AC-05-02-05 : บันทึก
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-    // Click Save icon
-    Try 3
-        Mouse.Action(@ui"{Click Save icon}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
     
 Catch error
 End Try
 
-
-
 If error <> null
-    projectname = "test_project"  //must change to the projectname
-
     todaydate_string = errorlogedit.get_date_string_without_slash()
 
     currenttime_string = errorlogedit.currenttime()
@@ -190,7 +30,7 @@ If error <> null
     //type2.2
     //target: create the log file   paste_values_to_excel  in the same row
     //main header is row1   we insert emptyrow and log at row2
-    xlsx_filepath_errorsummary = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+    xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
     sheet_name_errorsummary = "Sheet1"
     row_record_errorsummary = 2  //Insert an empty row at row 2
 
@@ -198,7 +38,7 @@ If error <> null
     variables_errorsummary = [
         [todaydate_string, "A"], 
         [currenttime_string, "B"],     
-        [projectname, "C"],   
+        [project_name, "C"],   
         [blocknamestring, "D"],      
         [errorsummarystring, "E"]
     ]
@@ -209,7 +49,7 @@ If error <> null
     Delay(200)
 
     Try
-        file_path = '''C:\Work\greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+        file_path = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
         sheet_name = '''Sheet1'''
         resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
         //TracePrint(resultlistofarrays)
