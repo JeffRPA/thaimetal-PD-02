@@ -482,7 +482,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1300,
-            "top": 1305
+            "top": 1205
         },
         "zoom": 1.2
     },
@@ -507,7 +507,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 1,
+                    "selected": 0,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -557,7 +557,7 @@
                 },
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -592,12 +592,12 @@
                     {
                         "type": "row",
                         "id": "#e0a489ee-5dd8-4724-b290-43c9e6a3363c",
-                        "weight": 85.18518518518519,
+                        "weight": 105.84028605482717,
                         "children": [
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 53.804834377797675,
+                                "weight": 74.93285586392122,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -628,13 +628,31 @@
                                         },
                                         "enableClose": true,
                                         "className": ""
+                                    },
+                                    {
+                                        "type": "tab",
+                                        "id": "7f473aa0-0197-11f1-b042-0bee2063a23e",
+                                        "name": "SetPaths",
+                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\SetPaths.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": true,
+                                            "id": "7f473aa0-0197-11f1-b042-0bee2063a23e",
+                                            "type": "task",
+                                            "selector": [
+                                                "7f473aa0-0197-11f1-b042-0bee2063a23e"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
                                     }
-                                ]
+                                ],
+                                "active": true
                             },
                             {
                                 "type": "tabset",
                                 "id": "#044ac701-d09b-46ff-8e74-3ad77e8e2f59",
-                                "weight": 46.195165622202325,
+                                "weight": 25.06714413607878,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -653,16 +671,15 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             }
                         ]
                     },
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 114.81481481481481,
-                        "height": 465,
+                        "weight": 94.15971394517283,
+                        "height": 395,
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,

@@ -1,5 +1,4 @@
 
-TracePrint(project_path & '''\cpp_commands\disableCapslock.exe''')
 
 disablecapslock_iPID = App.Run(project_path & '''\cpp_commands\disableCapslock.exe''', 0, 1)
 
