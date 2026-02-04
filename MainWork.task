@@ -5,7 +5,9 @@
 // Search Top Searchbar
 
 Try 3
-    Keyboard.InputText(@ui"Inputcontrol<input>3","Product receipts not invoiced",true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
+    Mouse.Action(@ui"Inputcontrol<input>4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Keyboard.InputText(@ui"Inputcontrol<input>4","Product receipts not invoiced",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+    Keyboard.PressKey(@ui"Inputcontrol<input>4","Enter",300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "simulate", "sKeyModifiers": [], "bClickBeforeInput": false})
 Catch Ex 
     TracePrint []&"a"
 End Try
@@ -393,4 +395,5 @@ End Try
 //     End Try
 
 // End If
+
 

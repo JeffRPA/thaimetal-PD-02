@@ -274,7 +274,7 @@
             "file": "MainWork.task",
             "caption": "MainWork",
             "desc": "main work",
-            "editorMode": "visual",
+            "editorMode": "sourceCode",
             "breakpoints": {},
             "out": "Result_Of_MainWork"
         },
