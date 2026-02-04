@@ -275,7 +275,11 @@
             "caption": "MainWork",
             "desc": "main work",
             "editorMode": "sourceCode",
-            "breakpoints": {},
+            "breakpoints": {
+                "31": null,
+                "41": "enable",
+                "44": null
+            },
             "out": "Result_Of_MainWork"
         },
         {
