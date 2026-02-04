@@ -507,7 +507,6 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -596,7 +595,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 57.554417413572345,
+                                "weight": 46.55267512410369,
                                 "selected": 1,
                                 "children": [
                                     {
@@ -629,13 +628,12 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             },
                             {
                                 "type": "tabset",
                                 "id": "#441d598f-08ae-4f21-8b96-359b4eb65735",
-                                "weight": 42.445582586427655,
+                                "weight": 53.44732487589631,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -654,7 +652,8 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ]
+                                ],
+                                "active": true
                             }
                         ]
                     },
