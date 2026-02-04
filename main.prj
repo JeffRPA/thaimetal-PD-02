@@ -482,7 +482,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1448,
-            "top": 2168
+            "top": 2368
         },
         "zoom": 1.2
     },
@@ -507,7 +507,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -663,8 +663,7 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             },
                             {
                                 "type": "row",
@@ -675,7 +674,7 @@
                                         "type": "tabset",
                                         "id": "#913b1ff9-b0d8-4993-87c6-1d6ff933d152",
                                         "weight": 79.50819672131148,
-                                        "selected": 8,
+                                        "selected": 4,
                                         "children": [
                                             {
                                                 "type": "tab",
@@ -864,7 +863,8 @@
                                                 "enableClose": true,
                                                 "className": ""
                                             }
-                                        ]
+                                        ],
+                                        "active": true
                                     },
                                     {
                                         "type": "tabset",
