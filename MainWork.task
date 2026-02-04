@@ -1,6 +1,6 @@
 //main work
 
-// Open MS Dynamics
+// Open TMC Dashboard
 
 website_url = '''https://tmc-web.thaimetal.net/?env=rpa1%40thaimetal.net'''
 
@@ -24,11 +24,11 @@ waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iD
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-// Click extend left menu (if needed)
+// Click MS Dynamic system
 
 Try 3
 
-    Mouse.Action(@ui"{Click extend left menu (if needed)}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Mouse.Action(@ui"URL<a>_MicrosoftDynamics365SB1(น้ำเงิน)","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
 
 Catch Ex 
 
@@ -36,6 +36,32 @@ Catch Ex
 
 End Try
 
+// Click Sign In
+
+Try 3
+
+    Mouse.Action(@ui"URL<a>_MicrosoftDynamics365SB1(น้ำเงิน)","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+Catch Ex 
+
+    TracePrint []&"a"
+
+End Try
+
+
+
+
+// Click extend left menu (if needed)
+
+Try 3
+
+    Mouse.Action(@ui"URL<a>_MicrosoftDynamics365SB1(น้ำเงิน)","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+Catch Ex 
+
+    TracePrint []&"a"
+
+End Try
 
 
 
