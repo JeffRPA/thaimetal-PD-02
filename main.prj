@@ -481,10 +481,10 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1294,
-            "top": 1519
+            "left": 680,
+            "top": 986
         },
-        "zoom": 1
+        "zoom": 0.85
     },
     "layout": {
         "config": {
@@ -558,7 +558,7 @@
                 {
                     "type": "border",
                     "selected": 0,
-                    "size": 603,
+                    "size": 280,
                     "minSize": 280,
                     "location": "right",
                     "children": [
@@ -592,7 +592,7 @@
                     {
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                        "weight": 130.5439330543933,
+                        "weight": 142.46913580246914,
                         "children": [
                             {
                                 "type": "tab",
@@ -715,8 +715,8 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 69.4560669456067,
-                        "height": 332,
+                        "weight": 57.53086419753087,
+                        "height": 233,
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,
