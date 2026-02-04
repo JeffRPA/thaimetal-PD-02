@@ -1,6 +1,6 @@
 {
     "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
-    "name": "cleaned_template",
+    "name": "AC_05",
     "type": "flow",
     "build": "",
     "version": "6.5.1.250516",
@@ -470,21 +470,21 @@
         },
         {
             "name": "project_path",
-            "value": "'''C:\\Greenmoons\\laiye_project_template'''",
+            "value": "'''C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects'''",
             "type": "none"
         },
         {
             "name": "project_name",
-            "value": "\"test_project\"",
+            "value": "\"ThaiMetal_AC_05\"",
             "type": "none"
         }
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1448,
-            "top": 2368
+            "left": 1294,
+            "top": 2319
         },
-        "zoom": 1.2
+        "zoom": 1
     },
     "layout": {
         "config": {
@@ -507,7 +507,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 1,
+                    "selected": 0,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -557,8 +557,8 @@
                 },
                 {
                     "type": "border",
-                    "selected": 1,
-                    "size": 280,
+                    "selected": 0,
+                    "size": 641,
                     "minSize": 280,
                     "location": "right",
                     "children": [
@@ -590,350 +590,82 @@
                 "id": "body",
                 "children": [
                     {
-                        "type": "row",
-                        "id": "#63bb1907-7828-4e51-bdca-f3ec679d8b9e",
-                        "weight": 149.38837920489297,
+                        "type": "tabset",
+                        "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
+                        "weight": 130.5439330543933,
                         "children": [
                             {
-                                "type": "tabset",
-                                "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 23.596358118361152,
-                                "children": [
-                                    {
-                                        "type": "tab",
-                                        "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
-                                        "name": "cleaned_template",
-                                        "helpText": "C:\\Greenmoons\\ตัวอย่าง_project\\project_template\\laiye_projects_code\\credit_card_reimbursement\\main.prj",
-                                        "component": "flowEditor",
-                                        "config": {
-                                            "type": "project",
-                                            "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
-                                        },
-                                        "enableClose": false,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3",
-                                        "name": "ChangeLangePy",
-                                        "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\ChangeLangePy.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3",
-                                            "type": "task",
-                                            "selector": [
-                                                "e40adcbe-2c17-48ca-a32d-85edcbb62fc3"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
-                                        "name": "MainWork",
-                                        "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\MainWork.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
-                                            "type": "task",
-                                            "selector": [
-                                                "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "866cfc0a-ad99-410f-a76b-c06d86024bf0",
-                                        "name": "CloseERP",
-                                        "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\CloseERP.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "866cfc0a-ad99-410f-a76b-c06d86024bf0",
-                                            "type": "task",
-                                            "selector": [
-                                                "866cfc0a-ad99-410f-a76b-c06d86024bf0"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    }
-                                ]
+                                "type": "tab",
+                                "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
+                                "name": "AC_05",
+                                "helpText": "C:\\Greenmoons\\ตัวอย่าง_project\\project_template\\laiye_projects_code\\credit_card_reimbursement\\main.prj",
+                                "component": "flowEditor",
+                                "config": {
+                                    "type": "project",
+                                    "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
+                                },
+                                "enableClose": false,
+                                "className": ""
                             },
                             {
-                                "type": "row",
-                                "id": "#619c1d0e-2884-4fbd-b6da-10a9e481f0dd",
-                                "weight": 26.403641881638848,
-                                "children": [
-                                    {
-                                        "type": "tabset",
-                                        "id": "#913b1ff9-b0d8-4993-87c6-1d6ff933d152",
-                                        "weight": 79.50819672131148,
-                                        "selected": 4,
-                                        "children": [
-                                            {
-                                                "type": "tab",
-                                                "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
-                                                "name": "DisableCaplock",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\DisableCaplock.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-                                                "name": "MainAPI",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\MainAPI.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
-                                                "name": "LogProcessStart",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\LogProcessStart.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "ade21187-9b5e-43c0-a9f4-08916ec27d62"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "b7f96c0f-f9bf-415f-ae60-1e864992b231",
-                                                "name": "OpenTaskbar",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\OpenTaskbar.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "b7f96c0f-f9bf-415f-ae60-1e864992b231",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "b7f96c0f-f9bf-415f-ae60-1e864992b231"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
-                                                "name": "ChangeBgRed",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\ChangeBgRed.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "2c99fbd4-397f-4865-a4c3-8e1335012704"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "c7007c09-5892-4aec-aace-36df7eb7bd9a",
-                                                "name": "ChangeLanguage",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\ChangeLanguage.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "c7007c09-5892-4aec-aace-36df7eb7bd9a",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "c7007c09-5892-4aec-aace-36df7eb7bd9a"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
-                                                "name": "Login",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Login.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "7e0592b0-eb79-11f0-99cf-51d0dc7a2065",
-                                                "name": "Logout",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Logout.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "7e0592b0-eb79-11f0-99cf-51d0dc7a2065",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "7e0592b0-eb79-11f0-99cf-51d0dc7a2065"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2",
-                                                "name": "ChangeBgBlack",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\ChangeBgBlack.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "fc7edc10-d87f-41fe-ad45-8846cc49c1e2"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "ee88d1b5-b327-4652-ab7e-68ca1196e8f6",
-                                                "name": "CloseTaskbar",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\CloseTaskbar.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "ee88d1b5-b327-4652-ab7e-68ca1196e8f6",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "ee88d1b5-b327-4652-ab7e-68ca1196e8f6"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
-                                                "name": "Block16",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Block16.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "c7582570-d75b-4817-857d-d5d14fb116e9"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            }
-                                        ],
-                                        "active": true
-                                    },
-                                    {
-                                        "type": "tabset",
-                                        "id": "#03fc06f4-9f54-44a6-b715-d4ad4e4208b6",
-                                        "weight": 20.491803278688526,
-                                        "selected": 2,
-                                        "children": [
-                                            {
-                                                "type": "tab",
-                                                "id": "7f473aa0-0197-11f1-b042-0bee2063a23e",
-                                                "name": "SetPaths",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\SetPaths.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "7f473aa0-0197-11f1-b042-0bee2063a23e",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "7f473aa0-0197-11f1-b042-0bee2063a23e"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
-                                                "name": "CheckHoliday",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\CheckHoliday.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": false,
-                                                    "id": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "bfa338d8-f6ec-4362-88d6-5273affbf20d"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            },
-                                            {
-                                                "type": "tab",
-                                                "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
-                                                "name": "CloseBrowser",
-                                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\CloseBrowser.task",
-                                                "component": "taskNodeEditor",
-                                                "config": {
-                                                    "selfControl": true,
-                                                    "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
-                                                    "type": "task",
-                                                    "selector": [
-                                                        "30cad0bb-305a-45de-845e-801e5bb026d5"
-                                                    ]
-                                                },
-                                                "enableClose": true,
-                                                "className": ""
-                                            }
-                                        ]
-                                    }
-                                ]
+                                "type": "tab",
+                                "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
+                                "name": "ChangeBgRed",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\ChangeBgRed.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
+                                    "type": "task",
+                                    "selector": [
+                                        "2c99fbd4-397f-4865-a4c3-8e1335012704"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
+                                "name": "MainWork",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\MainWork.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
+                                    "type": "task",
+                                    "selector": [
+                                        "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
+                                "name": "CloseBrowser",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\CloseBrowser.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
+                                    "type": "task",
+                                    "selector": [
+                                        "30cad0bb-305a-45de-845e-801e5bb026d5"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
                             }
-                        ]
+                        ],
+                        "active": true
                     },
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 50.61162079510704,
-                        "height": 331,
+                        "weight": 69.4560669456067,
+                        "height": 332,
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,
