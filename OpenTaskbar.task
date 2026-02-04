@@ -1,0 +1,12 @@
+
+
+//opentaskbarstring
+
+Try
+    Dim iPIDtaskbarstring
+
+    iPIDtaskbarstring = App.Run(project_path & '''\taskbarappstring\test_project.exe''', 0, 1)    
+Catch exceptionInformation
+    
+End Try
+

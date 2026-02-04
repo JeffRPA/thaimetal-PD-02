@@ -1,3 +1,0 @@
-
-
-checkandchangelangENG_iPID = App.Run('''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\cpp_commands\checklanguageandswitchtoENG.exe''', 0, 1)

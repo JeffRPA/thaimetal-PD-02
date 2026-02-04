@@ -1,13 +1,6 @@
-
-
-//change redbg
-
-//(from case worldair)
-//resolve the desktop background bot feature deleted problem
-
 //change redcolor background desktop    if not found  do nothing
 
-filepaths_list = getfilepath.read_file_paths('''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\changebackgroundtoredfilepath.txt''')
+filepaths_list = getfilepath.read_file_paths(project_path & '''\changebackgroundtoredfilepath.txt''')
 TracePrint(filepaths_list)
 
 If Len(filepaths_list) > 0

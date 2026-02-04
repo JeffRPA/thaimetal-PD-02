@@ -4,7 +4,7 @@ Dim objExcelWorkBook
 
 //// Credentials ////
 Try
-    objExcelWorkBook = Excel.OpenExcel('''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\logincredential\logincredentials.xlsx''',false,"Excel","","")
+    objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")
 
     username = Excel.ReadCell(objExcelWorkBook,"credentials","B14",true)
     password = Excel.ReadCell(objExcelWorkBook,"credentials","B15",true)
@@ -39,7 +39,7 @@ If error <> null
     //errorhandling and record the error track at '''E:\log_allprojecterror_bydateandtime\worldair_laiye_errorlog.xlsx'''
 
 
-    projectname = "test_project"  //must change to the projectname
+    project_name = "test_project"  //must change to the project_name
 
 
     //todaywithoutslash_datestring
@@ -50,8 +50,8 @@ If error <> null
     currenttime_string = errorlogedit.currenttime()
     //TracePrint(currenttime_string)
 
-    //projectname
-    //TracePrint(projectname)
+    //project_name
+    //TracePrint(project_name)
 
     //blocknamestring
     blocknamestring = error["File"]
@@ -74,7 +74,7 @@ If error <> null
     variables_errorsummary = [
         [todaydate_string, "A"], 
         [currenttime_string, "B"],     
-        [projectname, "C"],   
+        [project_name, "C"],   
         [blocknamestring, "D"],      
         [errorsummarystring, "E"]
     ]
