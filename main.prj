@@ -482,7 +482,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 680,
-            "top": 986
+            "top": 1186
         },
         "zoom": 0.85
     },
@@ -507,7 +507,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -592,7 +592,8 @@
                     {
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                        "weight": 142.46913580246914,
+                        "weight": 139.01234567901236,
+                        "selected": 9,
                         "children": [
                             {
                                 "type": "tab",
@@ -708,6 +709,57 @@
                                 },
                                 "enableClose": true,
                                 "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
+                                "name": "LogProcessStart",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\LogProcessStart.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
+                                    "type": "task",
+                                    "selector": [
+                                        "ade21187-9b5e-43c0-a9f4-08916ec27d62"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "b7f96c0f-f9bf-415f-ae60-1e864992b231",
+                                "name": "OpenTaskbar",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\OpenTaskbar.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "b7f96c0f-f9bf-415f-ae60-1e864992b231",
+                                    "type": "task",
+                                    "selector": [
+                                        "b7f96c0f-f9bf-415f-ae60-1e864992b231"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "c7007c09-5892-4aec-aace-36df7eb7bd9a",
+                                "name": "ChangeLanguage",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\ChangeLanguage.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "c7007c09-5892-4aec-aace-36df7eb7bd9a",
+                                    "type": "task",
+                                    "selector": [
+                                        "c7007c09-5892-4aec-aace-36df7eb7bd9a"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
                             }
                         ],
                         "active": true
@@ -715,8 +767,8 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 57.53086419753087,
-                        "height": 233,
+                        "weight": 60.98765432098765,
+                        "height": 247,
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,
