@@ -79,7 +79,7 @@
             },
             "next": {
                 "vertices": [],
-                "refId": "30cad0bb-305a-45de-845e-801e5bb026d5"
+                "refId": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108"
             },
             "exception": {},
             "file": "CheckHoliday.task",
@@ -93,14 +93,14 @@
             "type": "task",
             "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
             "rect": {
-                "x": 736,
-                "y": 601,
+                "x": 1050,
+                "y": 600,
                 "width": 268,
                 "height": 78
             },
             "next": {
                 "vertices": [],
-                "refId": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108"
+                "refId": ""
             },
             "exception": {},
             "file": "CloseBrowser.task",
@@ -482,7 +482,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1294,
-            "top": 2319
+            "top": 1519
         },
         "zoom": 1
     },
@@ -558,7 +558,7 @@
                 {
                     "type": "border",
                     "selected": 0,
-                    "size": 641,
+                    "size": 603,
                     "minSize": 280,
                     "location": "right",
                     "children": [
@@ -653,6 +653,57 @@
                                     "type": "task",
                                     "selector": [
                                         "30cad0bb-305a-45de-845e-801e5bb026d5"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
+                                "name": "DisableCaplock",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\DisableCaplock.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
+                                    "type": "task",
+                                    "selector": [
+                                        "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "5ff74500-ba61-11f0-81f8-7befb543be84",
+                                "name": "DeleteGenPy",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\DeleteGenPy.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "5ff74500-ba61-11f0-81f8-7befb543be84",
+                                    "type": "task",
+                                    "selector": [
+                                        "5ff74500-ba61-11f0-81f8-7befb543be84"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
+                                "name": "MainAPI",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\MainAPI.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
+                                    "type": "task",
+                                    "selector": [
+                                        "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
                                     ]
                                 },
                                 "enableClose": true,
