@@ -481,8 +481,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1300,
-            "top": 1205
+            "left": 1291,
+            "top": 2305
         },
         "zoom": 1.2
     },
@@ -557,7 +557,7 @@
                 },
                 {
                     "type": "border",
-                    "selected": 1,
+                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -592,12 +592,12 @@
                     {
                         "type": "row",
                         "id": "#e0a489ee-5dd8-4724-b290-43c9e6a3363c",
-                        "weight": 105.84028605482717,
+                        "weight": 129.9165673420739,
                         "children": [
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 74.93285586392122,
+                                "weight": 49.59713518352731,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -611,40 +611,6 @@
                                         },
                                         "enableClose": false,
                                         "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
-                                        "name": "CloseBrowser",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\CloseBrowser.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "30cad0bb-305a-45de-845e-801e5bb026d5",
-                                            "type": "task",
-                                            "selector": [
-                                                "30cad0bb-305a-45de-845e-801e5bb026d5"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "7f473aa0-0197-11f1-b042-0bee2063a23e",
-                                        "name": "SetPaths",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\SetPaths.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "7f473aa0-0197-11f1-b042-0bee2063a23e",
-                                            "type": "task",
-                                            "selector": [
-                                                "7f473aa0-0197-11f1-b042-0bee2063a23e"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
                                     }
                                 ],
                                 "active": true
@@ -652,7 +618,8 @@
                             {
                                 "type": "tabset",
                                 "id": "#044ac701-d09b-46ff-8e74-3ad77e8e2f59",
-                                "weight": 25.06714413607878,
+                                "weight": 50.40286481647269,
+                                "selected": 1,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -670,6 +637,23 @@
                                         },
                                         "enableClose": true,
                                         "className": ""
+                                    },
+                                    {
+                                        "type": "tab",
+                                        "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
+                                        "name": "ChangeBgRed",
+                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\ChangeBgRed.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": true,
+                                            "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
+                                            "type": "task",
+                                            "selector": [
+                                                "2c99fbd4-397f-4865-a4c3-8e1335012704"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
                                     }
                                 ]
                             }
@@ -678,8 +662,8 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 94.15971394517283,
-                        "height": 395,
+                        "weight": 70.0834326579261,
+                        "height": 294,
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,
