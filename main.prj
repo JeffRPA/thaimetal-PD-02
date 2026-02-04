@@ -247,7 +247,7 @@
             },
             "next": {
                 "vertices": [],
-                "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
+                "refId": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9"
             },
             "exception": {},
             "file": "ChangeLanguage.task",
@@ -376,14 +376,14 @@
             "type": "task",
             "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
             "rect": {
-                "x": 944,
+                "x": 740,
                 "y": 1520,
                 "width": 268,
                 "height": 78
             },
             "next": {
                 "vertices": [],
-                "refId": "7e0592b0-eb79-11f0-99cf-51d0dc7a2065"
+                "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
             },
             "exception": {
                 "vertices": [],
@@ -482,7 +482,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1206,
-            "top": 2485
+            "top": 2385
         },
         "zoom": 1.2
     },
@@ -507,6 +507,7 @@
             "borders": [
                 {
                     "type": "border",
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
