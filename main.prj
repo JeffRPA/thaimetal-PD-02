@@ -556,7 +556,7 @@
                                 "type": "tab",
                                 "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
                                 "name": "Block12",
-                                "helpText": "C:\\Greenmoons\\laiye-projects\\laiye_projects_code\\thaimetal\\Block12.task",
+                                "helpText": "C:\\Greenmoons\\project_template\\laiye_projects_code\\AC_05\\Block12.task",
                                 "component": "taskNodeEditor",
                                 "config": {
                                     "selfControl": true,
@@ -564,6 +564,23 @@
                                     "type": "task",
                                     "selector": [
                                         "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
+                                "name": "Block2",
+                                "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Block2.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "bfa338d8-f6ec-4362-88d6-5273affbf20d",
+                                    "type": "task",
+                                    "selector": [
+                                        "bfa338d8-f6ec-4362-88d6-5273affbf20d"
                                     ]
                                 },
                                 "enableClose": true,

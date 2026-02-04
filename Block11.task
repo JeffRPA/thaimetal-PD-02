@@ -1,0 +1,6 @@
+
+//delete_gen_py
+
+Dim delete_gen_py_command
+
+delete_gen_py_command = delete_gen_py_directory.delete_gen_py_folder()
