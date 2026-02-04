@@ -455,10 +455,10 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 2024,
-            "top": 1888
+            "left": 1689,
+            "top": 2434
         },
-        "zoom": 1.2
+        "zoom": 1.45
     },
     "layout": {
         "config": {
@@ -481,7 +481,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -583,74 +583,6 @@
                                             "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
                                         },
                                         "enableClose": false,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
-                                        "name": "Block12",
-                                        "helpText": "C:\\Greenmoons\\project_template\\laiye_projects_code\\AC_05\\Block12.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
-                                            "type": "task",
-                                            "selector": [
-                                                "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c",
-                                        "name": "Block1",
-                                        "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Block1.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c",
-                                            "type": "task",
-                                            "selector": [
-                                                "aa3b3ba4-521d-4e54-b92f-2a2ae0773e2c"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-                                        "name": "Block5",
-                                        "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Block5.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "26bd419a-0e58-4c59-9db8-b877fae1eaa1",
-                                            "type": "task",
-                                            "selector": [
-                                                "26bd419a-0e58-4c59-9db8-b877fae1eaa1"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
-                                        "name": "Block4",
-                                        "helpText": "C:\\Greenmoons\\laiye_project_template\\laiye_projects_code\\cleaned_template\\Block4.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108",
-                                            "type": "task",
-                                            "selector": [
-                                                "6c14e2b8-f74a-48ab-b1ed-2c7f0824c108"
-                                            ]
-                                        },
-                                        "enableClose": true,
                                         "className": ""
                                     }
                                 ],
