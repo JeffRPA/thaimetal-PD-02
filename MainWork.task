@@ -19,100 +19,37 @@ End Try
 
 // Click export icon
 
-Function clickatimage(template_image_path, target_index, maxattempt)
-
-    countattempt = 0
-
-    result = false  //default value to false
-
-    cpp_program = '''D:\advance_laiye_code_test_lib\template_for_all_project_main_folder\cpp_commands\img_cpp\MatchingImage.exe'''
-
-    similarity = 80  // 80% similarity threshold
-
-
-
-    Do While result = false
-
-        result = runcppopencv.call_cpp_program(template_image_path, similarity, cpp_program)
-
-        TracePrint(result)
-
-        If result = false
-
-            countattempt = countattempt + 1
-
-            If countattempt >= maxattempt
-
-                //log process before exit
-
-                //exit()
-
-                //TracePrint("exitprocess")
-
-                //Exit()
-
-                Return "not found"
-
-            End If
-
-        End If
-
-    Loop
-
-    TracePrint(result)
-
-    coordinate_to_click = result[target_index]['center']
-
-    Mouse.Move(coordinate_to_click[0], coordinate_to_click[1], false,{"iDelayAfter": 1, "iDelayBefore": 1})
-
-    Mouse.Click("left", "click", [],{"iDelayAfter": 1, "iDelayBefore": 1})
-
-End Function
-
-
-clickatimage0 = clickatimage('''C:\test\testimage.png''', '0', 3)
-
-
-Mouse.Action(@ui"Text<span>","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+Try 3
+    Mouse.Action(@ui"Text<span>","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+Catch Ex 
+    TracePrint []&"a"
+End Try
 
 
 // Click Vendor product receipts
 
 Try 3
-
-    Mouse.Action(@ui"{Click Vendor product receipts}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
+    Mouse.Action(@ui"Button<button>_Gridname:GridVendVendorproductrecei","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Delay(100)
 Catch Ex 
-
     TracePrint []&"a"
-
 End Try
-
-
 
 
 
 // Click Download
-
 Try 3
-
-    Mouse.Action(@ui"{Click Download}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
+    UiElement.Wait(@ui"Button<button>_Download1","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+    // Mouse.Action(@ui"Blocklevelelement<div>_VendorproductreceiptsDownlo","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Mouse.Action(@ui"Button<button>_Download1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
 Catch Ex 
-
     TracePrint []&"a"
-
 End Try
-
-
-
 
 
 // AC-05-02-01 : ????????????? Pending vendor invoices
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 
 
