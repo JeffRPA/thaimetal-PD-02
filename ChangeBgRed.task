@@ -1,22 +1,17 @@
 //change redcolor background desktop    if not found  do nothing
 
-filepaths_list = getfilepath.read_file_paths(project_path & '''\changebackgroundtoredfilepath.txt''')
-TracePrint(filepaths_list)
+changedesktopcolor_filepath = project_path & '''\cpp_commands\change_color_desktop_to_red.exe'''
 
-If Len(filepaths_list) > 0
-    changedesktopcolor_filepath = filepaths_list[0]
+exist_bRet = File.FileExists(changedesktopcolor_filepath)
+TracePrint(exist_bRet)
 
-    exist_bRet = File.FileExists(changedesktopcolor_filepath)
-    TracePrint(exist_bRet)
+If Trim(CStr(changedesktopcolor_filepath)) <> ""  AND exist_bRet = true
+    //change redbgcolor
+    Dim iPIDredbgcolor
+    iPIDredbgcolor = App.Run(changedesktopcolor_filepath, 0, 1)
 
-    If Trim(CStr(changedesktopcolor_filepath)) <> ""  AND exist_bRet = true
-        //change redbgcolor
-        Dim iPIDredbgcolor
-        iPIDredbgcolor = App.Run(changedesktopcolor_filepath, 0, 1)
-
-        Delay(100)
-
-    End If
+    Delay(100)
 
 End If
+
 
