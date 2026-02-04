@@ -2,16 +2,16 @@
 
 //main API url
 
-main_API_url = File.Read('''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\main_api_url.txt''',"auto")
+main_API_url = File.Read(project_path & '''\main_api_url.txt''',"auto")
 TracePrint(main_API_url)
 
-main_process_log_filepath = '''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprocess_bydateandtime\mazuma_laiye_processlog.xlsx'''
-main_error_log_filepath = '''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+main_process_log_filepath = project_path & '''\log_allprocess_bydateandtime\mazuma_laiye_processlog.xlsx'''
+main_error_log_filepath = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
 
 
 
 //main companyname
-main_companyname = CStr(File.Read('''C:\Greenmoons\ตัวอย่าง_project\mazumaprojects\main_companyname.txt''',"utf-8"))
+main_companyname = CStr(File.Read(project_path & '''\main_companyname.txt''',"utf-8"))
 TracePrint(main_companyname)
 
 

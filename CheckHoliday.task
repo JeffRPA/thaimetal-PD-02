@@ -6,8 +6,6 @@
 
 file_path = project_path & '''\Calendar Settings Template.csv'''
 
-TracePrint(file_path)
-
 isholidaycheckresult = holidaycheck.is_today_in_list(file_path)
 TracePrint(isholidaycheckresult)
 If isholidaycheckresult = true
