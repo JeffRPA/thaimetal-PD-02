@@ -1,13 +1,10 @@
 //main work
 
-Try
-    // Open MS Dynamics
+// Open MS Dynamics
 
-website_url = '''https://www.udemy.com'''
+website_url = '''https://tmc-web.thaimetal.net/?env=rpa1%40thaimetal.net'''
 
-
-
-hWeb = WebBrowser.Create("chrome",website_url,30000,{"bContinueOnError":false,"iDelayAfter":30,"iDelayBefore":20,"sBrowserPath":"","sStartArgs":""})
+hWeb = WebBrowser.Create("edge",website_url,30000,{"bContinueOnError":false,"iDelayAfter":30,"iDelayBefore":20,"sBrowserPath":"","sStartArgs":""})
 
 Keyboard.Press("Esc", "press", [],{"iDelayAfter": 30, "iDelayBefore": 20, "sSimulate": "simulate"})
 
@@ -23,17 +20,9 @@ Delay(1000)
 
 waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
-
-
-
-
 // AC-05-01-01 : ????????????? Product receipts not invoiced
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 
 // Click extend left menu (if needed)
 
@@ -381,54 +370,54 @@ End Try
 
 
 
-Catch error
-End Try
+// Catch error
+// End Try
 
-If error <> null
-    todaydate_string = errorlogedit.get_date_string_without_slash()
+// If error <> null
+//     todaydate_string = errorlogedit.get_date_string_without_slash()
 
-    currenttime_string = errorlogedit.currenttime()
+//     currenttime_string = errorlogedit.currenttime()
 
-    blocknamestring = error["File"]
-    blocknamestring = Replace(blocknamestring,".task","",false)
+//     blocknamestring = error["File"]
+//     blocknamestring = Replace(blocknamestring,".task","",false)
 
-    errorsummarystring = "errorLine: "&error["Line"]&" ("&Trim(error["Message"])&")"
+//     errorsummarystring = "errorLine: "&error["Line"]&" ("&Trim(error["Message"])&")"
 
-    //type2.2
-    //target: create the log file   paste_values_to_excel  in the same row
-    //main header is row1   we insert emptyrow and log at row2
-    xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
-    sheet_name_errorsummary = "Sheet1"
-    row_record_errorsummary = 2  //Insert an empty row at row 2
+//     //type2.2
+//     //target: create the log file   paste_values_to_excel  in the same row
+//     //main header is row1   we insert emptyrow and log at row2
+//     xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+//     sheet_name_errorsummary = "Sheet1"
+//     row_record_errorsummary = 2  //Insert an empty row at row 2
 
-    //input Value1 into the column A of row2
-    variables_errorsummary = [
-        [todaydate_string, "A"], 
-        [currenttime_string, "B"],     
-        [project_name, "C"],   
-        [blocknamestring, "D"],      
-        [errorsummarystring, "E"]
-    ]
+//     //input Value1 into the column A of row2
+//     variables_errorsummary = [
+//         [todaydate_string, "A"], 
+//         [currenttime_string, "B"],     
+//         [project_name, "C"],   
+//         [blocknamestring, "D"],      
+//         [errorsummarystring, "E"]
+//     ]
 
-    errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
+//     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
 
-    // API errorlog send to server
-    Delay(200)
+//     // API errorlog send to server
+//     Delay(200)
 
-    Try
-        file_path = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
-        sheet_name = '''Sheet1'''
-        resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
-        //TracePrint(resultlistofarrays)
-        resultlistofarrays_notincludeheaderrow = splice(resultlistofarrays,1,Len(resultlistofarrays)-1)
-        //TracePrint(resultlistofarrays_notincludeheaderrow)
-        resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
-        //TracePrint(resultlistofarrays_allstring)
-        APIjsonsRet = HTTP.PostJson(main_API_url & "/api/" & main_companyname, {"data": resultlistofarrays_allstring}, 60000)
+//     Try
+//         file_path = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+//         sheet_name = '''Sheet1'''
+//         resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
+//         //TracePrint(resultlistofarrays)
+//         resultlistofarrays_notincludeheaderrow = splice(resultlistofarrays,1,Len(resultlistofarrays)-1)
+//         //TracePrint(resultlistofarrays_notincludeheaderrow)
+//         resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
+//         //TracePrint(resultlistofarrays_allstring)
+//         APIjsonsRet = HTTP.PostJson(main_API_url & "/api/" & main_companyname, {"data": resultlistofarrays_allstring}, 60000)
 
-    Catch Ex
+//     Catch Ex
         
-    End Try
+//     End Try
 
-End If
+// End If
 
