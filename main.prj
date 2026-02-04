@@ -556,7 +556,7 @@
                 },
                 {
                     "type": "border",
-                    "size": 604,
+                    "size": 280,
                     "minSize": 280,
                     "location": "right",
                     "children": [
@@ -595,7 +595,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 48.04708400214018,
+                                "weight": 38.14874264312466,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -615,7 +615,8 @@
                             {
                                 "type": "tabset",
                                 "id": "#441d598f-08ae-4f21-8b96-359b4eb65735",
-                                "weight": 51.95291599785982,
+                                "weight": 61.85125735687534,
+                                "selected": 1,
                                 "children": [
                                     {
                                         "type": "tab",
