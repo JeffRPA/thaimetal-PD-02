@@ -4,13 +4,13 @@ Dim objExcelWorkBook
 
 //// Credentials ////
 Try
-    objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredentials.xlsx''',false,"Excel","","")
+    objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredentials\logincredentials.xlsx''',false,"Excel","","")
 
     username = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
     password = Excel.ReadCell(objExcelWorkBook,"credentials","B2",true)
 
-    // TracePrint(username)
-    // TracePrint(password)
+    TracePrint(username)
+    TracePrint(password)
 
     Delay(300)
     sRet = Sys.Command("taskkill /F /IM excel.exe")
@@ -28,7 +28,7 @@ Try
 
     Keyboard.Press("Esc", "press", [],{"iDelayAfter": 30, "iDelayBefore": 20, "sSimulate": "simulate"})
 
-    iPID = App.Run('''D:\test\cpp_commands\maximizecurrentwindows.exe''', 2, 1)
+    iPID = App.Run(project_path & '''\cpp_commands\maximizecurrentwindows.exe''', 2, 1)
 
     //move mouse to center point  preventing mouse interrupt the sheet selection
 
@@ -40,10 +40,10 @@ Try
 
     waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
-
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     // Click MS Dynamic system
+    UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
 
     Try 3
         Mouse.Action(@ui"URL<a>_MicrosoftDynamics365SB1(น้ำเงิน)","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
