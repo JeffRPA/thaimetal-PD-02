@@ -482,7 +482,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1300,
-            "top": 1105
+            "top": 1305
         },
         "zoom": 1.2
     },
@@ -507,7 +507,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -592,12 +592,12 @@
                     {
                         "type": "row",
                         "id": "#e0a489ee-5dd8-4724-b290-43c9e6a3363c",
-                        "weight": 131.35802469135803,
+                        "weight": 85.18518518518519,
                         "children": [
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 63.29453894359892,
+                                "weight": 53.804834377797675,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -629,13 +629,12 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             },
                             {
                                 "type": "tabset",
                                 "id": "#044ac701-d09b-46ff-8e74-3ad77e8e2f59",
-                                "weight": 36.70546105640108,
+                                "weight": 46.195165622202325,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -654,15 +653,16 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ]
+                                ],
+                                "active": true
                             }
                         ]
                     },
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 68.64197530864197,
-                        "height": 278,
+                        "weight": 114.81481481481481,
+                        "height": 465,
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,
