@@ -122,8 +122,6 @@ If error <> null
 
     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
 
-
-
     //API errorlog send to server
 
     Delay(200)
@@ -141,9 +139,12 @@ If error <> null
         APIjsonsRet = HTTP.PostJson(main_API_url & "/api/" & main_companyname, {"data": resultlistofarrays_allstring}, 60000)
 
     Catch Ex
-        
-
     End Try
+
+    // Try 
+    //     bRet = Outlook.SendMail("","","","","text",['''C:\Users'''],"","")
+    // Catch Ex
+    // End Try
     
 End If
 

@@ -447,8 +447,8 @@
             "type": "task",
             "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
             "rect": {
-                "x": 940,
-                "y": 1640,
+                "x": 944,
+                "y": 1660,
                 "width": 268,
                 "height": 78
             },
@@ -532,6 +532,7 @@
             "borders": [
                 {
                     "type": "border",
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
