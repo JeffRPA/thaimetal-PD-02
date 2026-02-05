@@ -15,9 +15,7 @@ Try
 
 
     // AC-05-01-02 : Download file Excel
-
     ///////////////////////////////////////////////////////////////////////////////////////////
-
     // Click export icon
 
     Try 3
@@ -49,7 +47,8 @@ Try
                 variable1 = Sys.Command("echo %USERPROFILE%\\Downloads")
                 variable1 = Trim(variable1)&'''\'''
                 variable2 = Sys.PowerShell("Get-ChildItem -Path \"$env:USERPROFILE\\Downloads\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1 | ForEach-Object { $_.Name }")
-                file_path = Trim(variable1&Trim(variable2))
+                PO_file_path = Trim(variable1&Trim(variable2))
+                // TracePrint(PO_file_path)
             Catch Ex
             End Try
        End If

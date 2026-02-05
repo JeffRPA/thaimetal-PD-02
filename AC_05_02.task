@@ -22,6 +22,7 @@ Try
 
     Try 3
         Mouse.Action(@ui"Button<button>_Fromproductreceipt","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        UiElement.Wait(@ui"Blocklevelelement<div>_Selectproductreceipt","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     Catch Ex 
         TracePrint []&"a"
     End Try
