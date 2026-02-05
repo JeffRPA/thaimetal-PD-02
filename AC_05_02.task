@@ -23,8 +23,7 @@ Try
     
     Try 3
         Mouse.Action(@ui"Button<button>_Fromproductreceipt","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        UiElement.Wait(@ui"Blocklevelelement<div>_Selectproductreceipt","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
-    Catch Ex 
+     Catch Ex 
         TracePrint []&"a"
     End Try
 
@@ -48,10 +47,14 @@ Try
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Checkbox from Excel by PO number
     Try
+        UiElement.Wait(@ui"Blocklevelelement<div>_Selectproductreceipt","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
         arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_IncludeInvoiceaccountNamePu",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        sRet1 = UiElement.GetAttribute(arrElement[0],"id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        tableId = sRet1.Split('_')[1]
-        TracePrint(tableId)
+        
+        TracePrint(arrElement)
+
+        sRet = UiElement.GetAttribute(arrElement[0],"id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        tableId = Split(sRet, '_')[1]
+        // TracePrint(tableId)
 
         tableRows = UiElement.GetChildren(arrElement[0],1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         TracePrint(tableRows)
