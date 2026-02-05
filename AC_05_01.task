@@ -2,111 +2,110 @@
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name ='ThaiMetal_AC_05'
 
-// AC-05-01-01 : ????????????? Product receipts not invoiced
-
-// Search Top Searchbar
-
-Try 3
-    Mouse.Action(@ui"Inputcontrol<input>4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Keyboard.InputText(@ui"Inputcontrol<input>4","Product receipts not invoiced",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-    Keyboard.PressKey(@ui"Inputcontrol<input>4","Enter",300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "simulate", "sKeyModifiers": [], "bClickBeforeInput": false})
-Catch Ex 
-    TracePrint []&"a"
-End Try
-
-
-// AC-05-01-02 : Download file Excel
-
-///////////////////////////////////////////////////////////////////////////////////////////
-
-// Click export icon
-
-Try 3
-    Mouse.Action(@ui"Text<span>","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-Catch Ex 
-    TracePrint []&"a"
-End Try
-
-
-// Click Vendor product receipts
-
-Try 3
-    Mouse.Action(@ui"Button<button>_Gridname:GridVendVendorproductrecei","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Delay(100)
-Catch Ex 
-    TracePrint []&"a"
-End Try
-
-
-
-// Click Download
-Try 3
-    Mouse.Action(@ui"Button<button>_Download1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-Catch Ex 
-    TracePrint []&"a"
-End Try
-
-
-// Check downloaded file
 Try 
-    Delay(50)
-    variable1 = Sys.Command("echo %USERPROFILE%\\Downloads")
-    variable1 = Trim(variable1)&'''\'''
-    variable2 = Sys.PowerShell("Get-ChildItem -Path \"$env:USERPROFILE\\Downloads\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1 | ForEach-Object { $_.Name }")
-    file_path = Trim(variable1&Trim(variable2))
-Catch Ex
+    // AC-05-01-01 : ????????????? Product receipts not invoiced
+    // Search Top Searchbar
+    Try 3
+        Mouse.Action(@ui"Inputcontrol<input>4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        Keyboard.InputText(@ui"Inputcontrol<input>4","Product receipts not invoiced",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+        Keyboard.PressKey(@ui"Inputcontrol<input>4","Enter",300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "simulate", "sKeyModifiers": [], "bClickBeforeInput": false})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
+
+
+    // AC-05-01-02 : Download file Excel
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+    // Click export icon
+
+    Try 3
+        Mouse.Action(@ui"Text<span>","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
+
+
+    // Click Vendor product receipts
+
+    Try 3
+        Mouse.Action(@ui"Button<button>_Gridname:GridVendVendorproductrecei","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        Delay(100)
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
+
+
+
+    // Click Download
+    Try 3
+        Mouse.Action(@ui"Button<button>_Download1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
+
+
+    // Check downloaded file
+    Try 
+        Delay(50)
+        variable1 = Sys.Command("echo %USERPROFILE%\\Downloads")
+        variable1 = Trim(variable1)&'''\'''
+        variable2 = Sys.PowerShell("Get-ChildItem -Path \"$env:USERPROFILE\\Downloads\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1 | ForEach-Object { $_.Name }")
+        file_path = Trim(variable1&Trim(variable2))
+    Catch Ex
+        
+    End Try
     
+Catch error
 End Try
 
-// Catch error
-// End Try
+If error <> null
+    todaydate_string = errorlogedit.get_date_string_without_slash()
 
-// If error <> null
-//     todaydate_string = errorlogedit.get_date_string_without_slash()
+    currenttime_string = errorlogedit.currenttime()
 
-//     currenttime_string = errorlogedit.currenttime()
+    blocknamestring = error["File"]
+    blocknamestring = Replace(blocknamestring,".task","",false)
 
-//     blocknamestring = error["File"]
-//     blocknamestring = Replace(blocknamestring,".task","",false)
+    errorsummarystring = "errorLine: "&error["Line"]&" ("&Trim(error["Message"])&")"
 
-//     errorsummarystring = "errorLine: "&error["Line"]&" ("&Trim(error["Message"])&")"
+    //type2.2
+    //target: create the log file   paste_values_to_excel  in the same row
+    //main header is row1   we insert emptyrow and log at row2
+    xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+    sheet_name_errorsummary = "Sheet1"
+    row_record_errorsummary = 2  //Insert an empty row at row 2
 
-//     //type2.2
-//     //target: create the log file   paste_values_to_excel  in the same row
-//     //main header is row1   we insert emptyrow and log at row2
-//     xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
-//     sheet_name_errorsummary = "Sheet1"
-//     row_record_errorsummary = 2  //Insert an empty row at row 2
+    //input Value1 into the column A of row2
+    variables_errorsummary = [
+        [todaydate_string, "A"], 
+        [currenttime_string, "B"],     
+        [project_name, "C"],   
+        [blocknamestring, "D"],      
+        [errorsummarystring, "E"]
+    ]
 
-//     //input Value1 into the column A of row2
-//     variables_errorsummary = [
-//         [todaydate_string, "A"], 
-//         [currenttime_string, "B"],     
-//         [project_name, "C"],   
-//         [blocknamestring, "D"],      
-//         [errorsummarystring, "E"]
-//     ]
+    errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
 
-//     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
+    // API errorlog send to server
+    Delay(200)
 
-//     // API errorlog send to server
-//     Delay(200)
+    Try
+        file_path = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+        sheet_name = '''Sheet1'''
+        resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
+        //TracePrint(resultlistofarrays)
+        resultlistofarrays_notincludeheaderrow = splice(resultlistofarrays,1,Len(resultlistofarrays)-1)
+        //TracePrint(resultlistofarrays_notincludeheaderrow)
+        resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
+        //TracePrint(resultlistofarrays_allstring)
+        APIjsonsRet = HTTP.PostJson(main_API_url & "/api/" & main_companyname, {"data": resultlistofarrays_allstring}, 60000)
 
-//     Try
-//         file_path = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
-//         sheet_name = '''Sheet1'''
-//         resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
-//         //TracePrint(resultlistofarrays)
-//         resultlistofarrays_notincludeheaderrow = splice(resultlistofarrays,1,Len(resultlistofarrays)-1)
-//         //TracePrint(resultlistofarrays_notincludeheaderrow)
-//         resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
-//         //TracePrint(resultlistofarrays_allstring)
-//         APIjsonsRet = HTTP.PostJson(main_API_url & "/api/" & main_companyname, {"data": resultlistofarrays_allstring}, 60000)
-
-//     Catch Ex
+    Catch Ex
         
-//     End Try
+    End Try
 
-// End If
+End If
 
 
