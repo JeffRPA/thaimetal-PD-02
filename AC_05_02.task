@@ -47,7 +47,12 @@ Try
     // AC-05-02-03 : ????? Purchase Order ???????????????? Excel
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Checkbox from Excel by PO number
-    Try 
+    Try
+        arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_IncludeInvoiceaccountNamePu",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
+        TracePrint(arrElement)
+
+
         For Each value In arrayRet
             TracePrint(value)
             // UiElement.SetCheck(@ui"{Checkbox from Excel by PO number}",true,{"bContinueOnError":true,"iDelayAfter":100,"iDelayBefore":100})
@@ -55,7 +60,6 @@ Try
     Catch Ex 
         TracePrint []&"a"
     End Try
-
 
 
 
