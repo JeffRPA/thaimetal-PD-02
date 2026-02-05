@@ -493,8 +493,8 @@
             "type": "task",
             "id": "3686f559-9928-4edd-9ce5-86030ac45a22",
             "rect": {
-                "x": 1212,
-                "y": 1710,
+                "x": 1292,
+                "y": 1730,
                 "width": 268,
                 "height": 78
             },
@@ -552,7 +552,7 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1525,
+            "left": 1685,
             "top": 2962
         },
         "zoom": 1.2
@@ -627,6 +627,7 @@
                 },
                 {
                     "type": "border",
+                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -681,8 +682,7 @@
                                         "enableClose": false,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             },
                             {
                                 "type": "tabset",
@@ -706,7 +706,8 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ]
+                                ],
+                                "active": true
                             }
                         ]
                     },

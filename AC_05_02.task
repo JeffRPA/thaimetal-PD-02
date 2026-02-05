@@ -57,18 +57,9 @@ Try
         TracePrint(sRet)
         // Grid_221_0_grid 
 
-        // table_header = UiElement.GetSelect(@ui"","text",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-
+        
         
 
-        tableId = Split(sRet, '_')[1]
-        TracePrint(tableId)
-
-        table = UiElement.GetChildren(arrElement[0],2, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        
-        TracePrint(table[-1])
-
-        rows = UiElement.GetChildren(table[-1],1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         arrayRet = Mage.ExtractSingleTableRow(objTableData,1)
 
         //(for testing)
@@ -78,16 +69,16 @@ Try
         hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         sRet = WebBrowser.RunJS(hWeb,"function(){const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){c.getAttribute('aria-checked')!=="&'"true"&&c.click()}else{!c.checked&&c.click()}}});'&" return 123}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         
-        WebBrowser.SetScroll(hWeb,{"ScrollLeft": 0,"ScrollTop": 0},{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        // WebBrowser.SetScroll(hWeb,{"ScrollLeft": 0,"ScrollTop": 0},{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
+        Mouse.Wheel(100,"up", [],{"iDelayAfter":300, "iDelayBefore":200})
+
+
         Keyboard.Press("Enter", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
 
         arrSelItem = UiElement.GetSelect(@ui"","text",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
 
-        For Each value In arrayRet
-            TracePrint(value)
-            // UiElement.SetCheck(@ui"{Checkbox from Excel by PO number}",true,{"bContinueOnError":true,"iDelayAfter":100,"iDelayBefore":100})
-        Next
     Catch Ex 
         TracePrint []&"a"
     End Try
