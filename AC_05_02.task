@@ -59,9 +59,9 @@ Try
         
         transformedArrayRet = utils.array_to_array_string(['PO26-011721', 'PO26-01114'])
 
-        test = ['PO26-011721', 'PO26-01114']
-        test1 = utils.remove_item(test, 'PO26-011721')
-        TracePrint(test1)
+        // test = ['PO26-011721', 'PO26-01114']
+        // test1 = utils.remove_item_from_list(test, 'PO26-011721')
+        // TracePrint(test1)
 
         // function(){const checked_values=[];const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){if(c.getAttribute('aria-checked')!=="&'"true"){c.click();checked_values.append(i.value.trim())}}else{!c.checked&&c.click()}}else{return "not found"}});'&" return checked_value}
 //         const checked_values=[];const input_values=['PO26-011721', 'PO26-01114'];[...document.querySelectorAll('div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="Purchase order"]')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="row"]')||i.closest('div');const c=r&&(r.querySelector('div[role="checkbox"][aria-label="Include"]')||r.querySelector('input[type="checkbox"]'));if(c){if(c.getAttribute){if(c.getAttribute('aria-checked')!=="true"){c.click();checked_values.push(i.value.trim());}}else{!c.checked&&c.click()}}})
