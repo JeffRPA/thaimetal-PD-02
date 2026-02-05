@@ -619,7 +619,6 @@
                                 "type": "tabset",
                                 "id": "#441d598f-08ae-4f21-8b96-359b4eb65735",
                                 "weight": 55.1007556675063,
-                                "selected": 1,
                                 "children": [
                                     {
                                         "type": "tab",
