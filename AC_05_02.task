@@ -31,14 +31,8 @@ Try
     Try 
         PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
         objExcelWorkBook = Excel.OpenExcel(PO_file_path,true,"Excel","","")
-
         arrayRet = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C2",true)
-
-        test = ['1',3,'2']
-        reverseArray = utils.reverse_array(test)
-
-        TracePrint(reverseArray)
-        // TracePrint(Len(arrayRet))
+        reverseArray = utils.reverse_array(arrayRet)
 
         Delay(300)
         sRet = Sys.Command("taskkill /F /IM excel.exe")
@@ -60,13 +54,7 @@ Try
         TracePrint(sRet)
         // Grid_221_0_grid 
 
-        
-        
-
-
-        //(for testing)
-        arrayRet = ["PO26-01172","PO26-01121"]
-        transformedArrayRet = utils.array_to_array_string(arrayRet) 
+        transformedArrayRet = utils.array_to_array_string(reverseArray) 
 
         hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         sRet = WebBrowser.RunJS(hWeb,"function(){const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){c.getAttribute('aria-checked')!=="&'"true"&&c.click()}else{!c.checked&&c.click()}}});'&" return 123}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
