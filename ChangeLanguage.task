@@ -1,3 +1,2 @@
 
-
 checkandchangelangENG_iPID = App.Run(project_path & '''\cpp_commands\checklanguageandswitchtoENG.exe''', 0, 1)

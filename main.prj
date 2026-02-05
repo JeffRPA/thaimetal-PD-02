@@ -276,9 +276,7 @@
             "desc": "main work",
             "editorMode": "sourceCode",
             "breakpoints": {
-                "31": null,
-                "41": "enable",
-                "44": null
+                "42": "enable"
             },
             "out": "Result_Of_MainWork"
         },
@@ -485,8 +483,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1206,
-            "top": 2685
+            "left": 949,
+            "top": 2544
         },
         "zoom": 1.2
     },
@@ -511,7 +509,6 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -561,7 +558,7 @@
                 },
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -622,7 +619,6 @@
                                 "type": "tabset",
                                 "id": "#441d598f-08ae-4f21-8b96-359b4eb65735",
                                 "weight": 61.85125735687534,
-                                "selected": 1,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -631,7 +627,7 @@
                                         "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Login.task",
                                         "component": "taskNodeEditor",
                                         "config": {
-                                            "selfControl": true,
+                                            "selfControl": false,
                                             "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
                                             "type": "task",
                                             "selector": [
