@@ -276,7 +276,7 @@
             "desc": "main work",
             "editorMode": "sourceCode",
             "breakpoints": {
-                "43": "enable"
+                "43": null
             },
             "out": "Result_Of_MainWork"
         },
