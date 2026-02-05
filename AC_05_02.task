@@ -49,9 +49,9 @@ Try
     // Checkbox from Excel by PO number
     Try
         arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_IncludeInvoiceaccountNamePu",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-
-        TracePrint(arrElement)
-
+        sRet = UiElement.GetAttribute(arrElement[0],"id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        tableId = sRet.Split('_')[1]
+        TracePrint(tableId)
 
         For Each value In arrayRet
             TracePrint(value)
