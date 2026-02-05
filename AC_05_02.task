@@ -57,7 +57,7 @@ Try
         TracePrint(sRet)
         // Grid_221_0_grid 
 
-        table_header = UiElement.GetSelect(@ui"","text",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        // table_header = UiElement.GetSelect(@ui"","text",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
         
 
@@ -70,6 +70,11 @@ Try
 
         rows = UiElement.GetChildren(table[-1],1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         arrayRet = Mage.ExtractSingleTableRow(objTableData,1)
+
+        // sRet = WebBrowser.RunJS(hWeb,"function(){const input_values=["&'"PO26-00976","PO26-00977"];[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('&"'[role="&'"row"]'&')||i.closest('&"div');const c=r&&(r.querySelector('div[role="&'checkbox"][aria-label="Include"]'&')||r.querySelector('&'input[type="checkbox"]'&'));if(c){if(c.getAttribute){c.getAttribute('&"aria-checked')!=="&'true'&"&&c.click()}else{!c.checked&&c.click()}}});return 123}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
+        sRet = WebBrowser.RunJS(hWeb,"function(){const input_values=["&'"PO26-00976","PO26-00977"];[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){c.getAttribute('aria-checked')!=="&'"true"&&c.click()}else{!c.checked&&c.click()}}});'&" return 123}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        
 
 
         For Each value In arrayRet
@@ -177,7 +182,3 @@ If error <> null
     End Try
 
 End If
-
-
-arrayData = UiElement.DataScrap({"wnd":[{"cls":"Chrome_WidgetWin_1","title":"*","app":"msedge"}],"html":[{"tag":"DIV","parentid":"Grid_221_0-row-0"}]},{"ExtractTable":0,"Columns":[{"selecors":{"path":[{"tag":"div"},{"tag":"div","idx":0},{"tag":"div"},{"tag":"div","idx":0},{"tag":"div","idx":0},{"tag":"div","idx":0}],"exact":true,"vprops":["text"]},"props":["text"]}]},{"objNextLinkElement":'',"iMaxNumberOfPage":5,"iMaxNumberOfResult":-1,"iDelayBetweenMS":1000,"bContinueOnError":False})
-TracePrint(arrayData)
