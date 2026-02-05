@@ -41,6 +41,10 @@ Try
     // Click Download
     Try 3
         Mouse.Action(@ui"Button<button>_Download1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        bRet = UiElement.Exists(@ui"Blocklevelelement<div>_VSD-0007-00",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+
+    
+    
     Catch Ex 
         TracePrint []&"a"
     End Try
