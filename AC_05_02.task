@@ -32,9 +32,10 @@ Try
         PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
         objExcelWorkBook = Excel.OpenExcel(PO_file_path,true,"Excel","","")
 
-        arrayRet = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C1",true)
+        arrayRet = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C2",true)
 
         TracePrint(arrayRet)
+        TracePrint(Len(arrayRet))
 
         Delay(300)
         sRet = Sys.Command("taskkill /F /IM excel.exe")
