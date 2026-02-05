@@ -1,5 +1,4 @@
 //main work
-Dim arrayData
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name = 'ThaiMetal_AC_05'
 PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
@@ -35,8 +34,8 @@ Try
         arrayRet = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C2",true)
 
 
-        test = Array(3,['1',3,'2'])
-        reverseArray = test.reverseArray
+        test = ['1',3,'2']
+        reverseArray = utils.reverse_array(test)
 
         TracePrint(reverseArray)
         // TracePrint(Len(arrayRet))
@@ -66,7 +65,7 @@ Try
 
 
         //(for testing)
-        // arrayRet = ["PO26-01172","PO26-01121"]
+        arrayRet = ["PO26-01172","PO26-01121"]
         transformedArrayRet = utils.array_to_array_string(arrayRet) 
 
         hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
