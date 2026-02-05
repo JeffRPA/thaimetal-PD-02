@@ -53,6 +53,10 @@ Try
         TracePrint(arrElement)
 
         sRet = UiElement.GetAttribute(arrElement[0],"id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        TracePrint(sRet)
+        // Grid_221_0_grid 
+        
+
         tableId = Split(sRet, '_')[1]
         TracePrint(tableId)
 
@@ -61,7 +65,8 @@ Try
         TracePrint(table[-1])
 
         rows = UiElement.GetChildren(table[-1],1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        
+        arrayRet = Mage.ExtractSingleTableRow(objTableData,1)
+
 
         For Each value In arrayRet
             TracePrint(value)
