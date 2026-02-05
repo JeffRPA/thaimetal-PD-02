@@ -536,7 +536,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1536,
-            "top": 2662
+            "top": 2462
         },
         "zoom": 1.2
     },
@@ -611,7 +611,7 @@
                 },
                 {
                     "type": "border",
-                    "selected": 1,
+                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -651,8 +651,8 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 34.86172348945357,
-                                "selected": 2,
+                                "weight": 25.59360675689152,
+                                "selected": 1,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -683,31 +683,13 @@
                                         },
                                         "enableClose": true,
                                         "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
-                                        "name": "AC_05_01",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\AC_05_01.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
-                                            "type": "task",
-                                            "selector": [
-                                                "26ec7500-023c-11f1-9b15-c7ae3b0dc761"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             },
                             {
                                 "type": "tabset",
                                 "id": "#84f97b93-9460-4aa2-8af4-692a2d955cc7",
-                                "weight": 21.97989151713109,
+                                "weight": 31.24800824969314,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -726,7 +708,8 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ]
+                                ],
+                                "active": true
                             }
                         ]
                     },

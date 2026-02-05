@@ -1,6 +1,7 @@
 //main work
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
-project_name ='ThaiMetal_AC_05'
+project_name = 'ThaiMetal_AC_05'
+PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
 
 Try 
     // AC-05-02-01 : ????????????? Pending vendor invoices
@@ -19,12 +20,27 @@ Try
     // AC-05-02-02 : ?????????? Pending invoice
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Click From product receipt
-
+    
     Try 3
         Mouse.Action(@ui"Button<button>_Fromproductreceipt","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         UiElement.Wait(@ui"Blocklevelelement<div>_Selectproductreceipt","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     Catch Ex 
         TracePrint []&"a"
+    End Try
+
+    Try 
+        PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
+        objExcelWorkBook = Excel.OpenExcel(PO_file_path,true,"Excel","","")
+
+        arrayRet = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C1",true)
+
+        TracePrint(arrayRet)
+
+        Delay(300)
+        sRet = Sys.Command("taskkill /F /IM excel.exe")
+        Delay(100)
+    Catch Ex
+        TracePrint(Ex)
     End Try
 
     // AC-05-02-03 : ????? Purchase Order ???????????????? Excel
