@@ -561,7 +561,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 1,
+                    "selected": 0,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -646,13 +646,12 @@
                     {
                         "type": "row",
                         "id": "#2c0b9fb1-cebb-4491-aae4-fea53e7e6c77",
-                        "weight": 103.97489539748953,
+                        "weight": 157.7405857740586,
                         "children": [
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 25.59360675689152,
-                                "selected": 1,
+                                "weight": 19.173947919199463,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -666,30 +665,14 @@
                                         },
                                         "enableClose": false,
                                         "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
-                                        "name": "Login",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Login.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
-                                            "type": "task",
-                                            "selector": [
-                                                "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
                                     }
-                                ]
+                                ],
+                                "active": true
                             },
                             {
                                 "type": "tabset",
                                 "id": "#84f97b93-9460-4aa2-8af4-692a2d955cc7",
-                                "weight": 31.24800824969314,
+                                "weight": 37.6676670873852,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -708,16 +691,15 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             }
                         ]
                     },
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 96.02510460251047,
-                        "height": 459,
+                        "weight": 42.25941422594142,
+                        "height": 202,
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,
