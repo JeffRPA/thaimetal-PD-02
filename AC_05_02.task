@@ -54,11 +54,14 @@ Try
         // TracePrint(sRet)
         // Grid_221_0_grid 
 
+
         transformedArrayRet = utils.array_to_array_string(reverseArray) 
-
-        // hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        // sRet = WebBrowser.RunJS(hWeb,"function(){const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){c.getAttribute('aria-checked')!=="&'"true"&&c.click()}else{!c.checked&&c.click()}}});'&" return 123}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-
+        
+        transformedArrayRet = ['PO26-01172', 'PO26-01114']
+        
+        hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        sRet = WebBrowser.RunJS(hWeb,"function(){const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){c.getAttribute('aria-checked')!=="&'"true"&&c.click()}else{!c.checked&&c.click()}}});'&" return 123}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        TracePrint(sRet)
         
         Do Until UiElement.Exists(@ui"Blocklevelelement<div>1",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":true})
             hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
