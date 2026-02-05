@@ -47,17 +47,21 @@ Try
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Checkbox from Excel by PO number
     Try
-        UiElement.Wait(@ui"Blocklevelelement<div>_Selectproductreceipt","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+        UiElement.Wait(@ui"Blocklevelelement<div>_Selectproductreceipt1","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})      
         arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_IncludeInvoiceaccountNamePu",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         
         TracePrint(arrElement)
 
         sRet = UiElement.GetAttribute(arrElement[0],"id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         tableId = Split(sRet, '_')[1]
-        // TracePrint(tableId)
+        TracePrint(tableId)
 
-        tableRows = UiElement.GetChildren(arrElement[0],1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        TracePrint(tableRows)
+        table = UiElement.GetChildren(arrElement[0],2, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        
+        TracePrint(table[-1])
+
+        rows = UiElement.GetChildren(table[-1],1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        
 
         For Each value In arrayRet
             TracePrint(value)
