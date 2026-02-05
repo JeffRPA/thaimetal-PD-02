@@ -1,4 +1,5 @@
 //main work
+Dim arrayData
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name = 'ThaiMetal_AC_05'
 PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
@@ -178,3 +179,5 @@ If error <> null
 End If
 
 
+arrayData = UiElement.DataScrap({"wnd":[{"cls":"Chrome_WidgetWin_1","title":"*","app":"msedge"}],"html":[{"tag":"DIV","parentid":"Grid_221_0-row-0"}]},{"ExtractTable":0,"Columns":[{"selecors":{"path":[{"tag":"div"},{"tag":"div","idx":0},{"tag":"div"},{"tag":"div","idx":0},{"tag":"div","idx":0},{"tag":"div","idx":0}],"exact":true,"vprops":["text"]},"props":["text"]}]},{"objNextLinkElement":'',"iMaxNumberOfPage":5,"iMaxNumberOfResult":-1,"iDelayBetweenMS":1000,"bContinueOnError":False})
+TracePrint(arrayData)
