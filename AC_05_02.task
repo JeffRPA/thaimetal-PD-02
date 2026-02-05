@@ -34,8 +34,8 @@ Try
 
         arrayRet = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C2",true)
 
-        TracePrint(arrayRet)
-        TracePrint(Len(arrayRet))
+        // TracePrint(arrayRet)
+        // TracePrint(Len(arrayRet))
 
         Delay(300)
         sRet = Sys.Command("taskkill /F /IM excel.exe")
@@ -47,14 +47,13 @@ Try
     // AC-05-02-03 : ????? Purchase Order ???????????????? Excel
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Checkbox from Excel by PO number
-    Try 3
-
-        UiElement.SetCheck(@ui"{Checkbox from Excel by PO number}",true,{"bContinueOnError":true,"iDelayAfter":100,"iDelayBefore":100})
-
+    Try 
+        For Each value In arrayRet
+            TracePrint(value)
+            // UiElement.SetCheck(@ui"{Checkbox from Excel by PO number}",true,{"bContinueOnError":true,"iDelayAfter":100,"iDelayBefore":100})
+        Next
     Catch Ex 
-
         TracePrint []&"a"
-
     End Try
 
 
