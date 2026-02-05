@@ -555,7 +555,6 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -644,7 +643,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 20.94240837696335,
+                                "weight": 17.312819195066325,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -664,8 +663,8 @@
                             {
                                 "type": "tabset",
                                 "id": "#441d598f-08ae-4f21-8b96-359b4eb65735",
-                                "weight": 79.05759162303664,
-                                "selected": 3,
+                                "weight": 43.15838499341534,
+                                "selected": 2,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -717,7 +716,14 @@
                                         },
                                         "enableClose": true,
                                         "className": ""
-                                    },
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "tabset",
+                                "id": "#84f97b93-9460-4aa2-8af4-692a2d955cc7",
+                                "weight": 39.52879581151832,
+                                "children": [
                                     {
                                         "type": "tab",
                                         "id": "182c6b10-0241-11f1-9b15-c7ae3b0dc761",
