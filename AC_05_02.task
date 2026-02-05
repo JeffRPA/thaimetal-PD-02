@@ -58,8 +58,10 @@ Try
 
         // remaining_po = reverseArray
         remaining_po = ['PO26-01172', 'PO26-01114']
+        u_bound = UBound(remaining_po)
         
-        Do Until Len(remaining_po) = 0 
+        Do Until UBound(remaining_po)+1 = 0 
+
             remaining_po = ['PO26-011721', 'PO26-01114']
             transformedArrayRet = utils.array_to_array_string(remaining_po) 
             TracePrint(transformedArrayRet)
