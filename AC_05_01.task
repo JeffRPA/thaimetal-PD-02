@@ -42,22 +42,19 @@ Try
     Try 3
         Mouse.Action(@ui"Button<button>_Download1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         bRet = UiElement.Exists(@ui"Text<span>_downloadfinishedbanner",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
-       
-    
+       If bRet
+            // Check downloaded file
+            Try 
+                Delay(50)
+                variable1 = Sys.Command("echo %USERPROFILE%\\Downloads")
+                variable1 = Trim(variable1)&'''\'''
+                variable2 = Sys.PowerShell("Get-ChildItem -Path \"$env:USERPROFILE\\Downloads\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1 | ForEach-Object { $_.Name }")
+                file_path = Trim(variable1&Trim(variable2))
+            Catch Ex
+            End Try
+       End If
     Catch Ex 
         TracePrint []&"a"
-    End Try
-
-
-    // Check downloaded file
-    Try 
-        Delay(50)
-        variable1 = Sys.Command("echo %USERPROFILE%\\Downloads")
-        variable1 = Trim(variable1)&'''\'''
-        variable2 = Sys.PowerShell("Get-ChildItem -Path \"$env:USERPROFILE\\Downloads\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1 | ForEach-Object { $_.Name }")
-        file_path = Trim(variable1&Trim(variable2))
-    Catch Ex
-        
     End Try
     
 Catch error
