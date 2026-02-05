@@ -1,3 +1,4 @@
+
 //main work
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name = 'ThaiMetal_AC_05'
@@ -32,7 +33,6 @@ Try
         objExcelWorkBook = Excel.OpenExcel(PO_file_path,true,"Excel","","")
 
         arrayRet = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C2",true)
-
 
         test = ['1',3,'2']
         reverseArray = utils.reverse_array(test)
