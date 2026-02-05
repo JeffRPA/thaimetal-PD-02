@@ -74,7 +74,7 @@ Try
         
         Do Until UiElement.Exists(@ui"Blocklevelelement<div>1",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":true})
             Keyboard.Press("PageUp", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
-        Loop
+        Loop 
  
 
 
