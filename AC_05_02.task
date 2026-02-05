@@ -55,6 +55,9 @@ Try
         sRet = UiElement.GetAttribute(arrElement[0],"id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         TracePrint(sRet)
         // Grid_221_0_grid 
+
+        table_header = UiElement.GetSelect(@ui"","text",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
         
 
         tableId = Split(sRet, '_')[1]
