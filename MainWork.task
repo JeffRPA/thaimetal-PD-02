@@ -1,5 +1,6 @@
 //main work
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
+project_name ='ThaiMetal_AC_05'
 
 // AC-05-01-01 : ????????????? Product receipts not invoiced
 
