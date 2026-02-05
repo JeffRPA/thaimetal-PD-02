@@ -471,7 +471,7 @@
             "id": "182c6b10-0241-11f1-9b15-c7ae3b0dc761",
             "rect": {
                 "x": 920,
-                "y": 1710,
+                "y": 1730,
                 "width": 268,
                 "height": 78
             },
@@ -552,7 +552,7 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1536,
+            "left": 1525,
             "top": 2962
         },
         "zoom": 1.2
@@ -627,7 +627,6 @@
                 },
                 {
                     "type": "border",
-                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -682,7 +681,8 @@
                                         "enableClose": false,
                                         "className": ""
                                     }
-                                ]
+                                ],
+                                "active": true
                             },
                             {
                                 "type": "tabset",
@@ -706,8 +706,7 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             }
                         ]
                     },

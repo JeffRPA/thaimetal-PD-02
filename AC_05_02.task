@@ -81,8 +81,7 @@ Try
         WebBrowser.SetScroll(hWeb,{"ScrollLeft": 0,"ScrollTop": 0},{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         Keyboard.Press("Enter", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
 
-
-
+        arrSelItem = UiElement.GetSelect(@ui"","text",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
 
         For Each value In arrayRet
