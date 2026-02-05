@@ -57,13 +57,14 @@ Try
 
 
         // remaining_po = reverseArray
-        remaining_po = ['PO26-011721', 'PO26-01114']
+        remaining_po = ['PO26-01172', 'PO26-01114']
         
-        Do Until UiElement.Exists(@ui"Blocklevelelement<div>1",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":true})
+        Do Until Len(remaining_po) = 0 
+            remaining_po = ['PO26-011721', 'PO26-01114']
             transformedArrayRet = utils.array_to_array_string(remaining_po) 
             TracePrint(transformedArrayRet)
             hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            sRet = WebBrowser.RunJS(hWeb,"function(){const checked_values=[];const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){if(c.getAttribute('aria-checked')!=="&'"true"){c.click();checked_values.push(i.value.trim())}}else{!c.checked&&c.click()}}});'&" return checked_values}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            sRet = WebBrowser.RunJS(hWeb,"function(){const checked_values=[];const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){checked_values.push(i.value.trim());if(c.getAttribute('aria-checked')!=="&'"true"){c.click();}}else{!c.checked&&c.click()}}});'&" return checked_values}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
             TracePrint(sRet)
 
             remaining_po = utils.remove_items_from_list(remaining_po, sRet)
