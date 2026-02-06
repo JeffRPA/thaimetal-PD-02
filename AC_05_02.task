@@ -79,7 +79,17 @@ Try
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Enter Value from Excel
     Try 
-        Keyboard.InputText(@ui"{Enter Value from Excel}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+        remainingArray = arrayRet
+        Do Until Len(remainingArray) < 1 Or count = 2
+            transformedArrayRet = utils.array_to_array_string(remaining_po) 
+            hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            sRet = WebBrowser.RunJS(hWeb,"function(){const checked_values=[];const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){checked_values.push(i.value.trim());if(c.getAttribute('aria-checked')!=="&'"true"){c.click();}}else{!c.checked&&c.click()}}});'&" return checked_values}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            // remainingArray = utils.remove_items_from_list(remaining_po, sRet)
+            Keyboard.Press("PageDown", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+            If UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":False})
+                count = count + 1
+            End If
+        Loop     
     Catch Ex 
         TracePrint []&"a"
     End Try
