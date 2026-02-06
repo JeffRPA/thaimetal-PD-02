@@ -658,109 +658,43 @@
                 "id": "body",
                 "children": [
                     {
-                        "type": "row",
-                        "id": "#2c0b9fb1-cebb-4491-aae4-fea53e7e6c77",
+                        "type": "tabset",
+                        "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                         "weight": 144.76987447698744,
+                        "selected": 1,
                         "children": [
                             {
-                                "type": "tabset",
-                                "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 20.467847458229777,
-                                "selected": 2,
-                                "children": [
-                                    {
-                                        "type": "tab",
-                                        "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
-                                        "name": "AC_05",
-                                        "helpText": "C:\\Greenmoons\\ตัวอย่าง_project\\project_template\\laiye_projects_code\\credit_card_reimbursement\\main.prj",
-                                        "component": "flowEditor",
-                                        "config": {
-                                            "type": "project",
-                                            "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
-                                        },
-                                        "enableClose": false,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
-                                        "name": "Login",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Login.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
-                                            "type": "task",
-                                            "selector": [
-                                                "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
-                                        "name": "ChangeBgRed",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\ChangeBgRed.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "2c99fbd4-397f-4865-a4c3-8e1335012704",
-                                            "type": "task",
-                                            "selector": [
-                                                "2c99fbd4-397f-4865-a4c3-8e1335012704"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    }
-                                ]
+                                "type": "tab",
+                                "id": "5ff71df0-ba61-11f0-81f8-7befb543be84",
+                                "name": "AC_05",
+                                "helpText": "C:\\Greenmoons\\ตัวอย่าง_project\\project_template\\laiye_projects_code\\credit_card_reimbursement\\main.prj",
+                                "component": "flowEditor",
+                                "config": {
+                                    "type": "project",
+                                    "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
+                                },
+                                "enableClose": false,
+                                "className": ""
                             },
                             {
-                                "type": "tabset",
-                                "id": "#84f97b93-9460-4aa2-8af4-692a2d955cc7",
-                                "weight": 36.37376754835485,
-                                "selected": 1,
-                                "children": [
-                                    {
-                                        "type": "tab",
-                                        "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
-                                        "name": "AC_05_01",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\AC_05_01.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
-                                            "type": "task",
-                                            "selector": [
-                                                "26ec7500-023c-11f1-9b15-c7ae3b0dc761"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "182c6b10-0241-11f1-9b15-c7ae3b0dc761",
-                                        "name": "AC_05_02",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\AC_05_02.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "182c6b10-0241-11f1-9b15-c7ae3b0dc761",
-                                            "type": "task",
-                                            "selector": [
-                                                "182c6b10-0241-11f1-9b15-c7ae3b0dc761"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    }
-                                ],
-                                "active": true
+                                "type": "tab",
+                                "id": "182c6b10-0241-11f1-9b15-c7ae3b0dc761",
+                                "name": "AC_05_02",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\AC_05_02.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "182c6b10-0241-11f1-9b15-c7ae3b0dc761",
+                                    "type": "task",
+                                    "selector": [
+                                        "182c6b10-0241-11f1-9b15-c7ae3b0dc761"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
                             }
-                        ]
+                        ],
+                        "active": true
                     },
                     {
                         "type": "tabset",
