@@ -59,7 +59,7 @@ Try
         // remaining_po = reverseArray
         remaining_po = ['PO26-01172', 'PO26-01114']
         
-        Do Until Len(remaining_po) < 1
+        Do Until Len(remaining_po) < 1 Or 
             transformedArrayRet = utils.array_to_array_string(remaining_po) 
             TracePrint(transformedArrayRet)
             hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
