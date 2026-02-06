@@ -33,6 +33,7 @@ Try
         objExcelWorkBook = Excel.OpenExcel(PO_file_path,true,"Excel","","")
         rowCount = Excel.GetRowsCount(objExcelWorkBook,"Sheet1")
         arrayRet = Excel.ReadRange(objExcelWorkBook,"Sheet1","A1:H"&rowCount,true)
+        TracePrint(arrayRet)
         poColumn = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C2",true)
         reverseArray = utils.reverse_array(poColumn)
         Delay(300)
@@ -78,6 +79,31 @@ Try
     // AC-05-02-04 : ????????????????????????? Purchase Order ????????
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Enter Value from Excel
+
+    MOCKEXCEL = [[
+		"VSD-0007-00",
+		"Sankyo Tateyama Alloy (Thailand) Co.,Ltd.",
+		"PO26-00976",
+		"DN2601/001",
+		"29/01/2026",
+		"",
+		"",
+		""
+	],
+	[
+		"VSD-0007-00",
+		"Sankyo Tateyama Alloy (Thailand) Co.,Ltd.",
+		"PO26-00977",
+		"CN2601/002",
+		"29/01/2026",
+		"",
+		"",
+		""
+	]]
+
+    PO_INDEX = 2
+    DATE_INDEX = 4
+
     Try 
         remainingArray = arrayRet
         Do Until Len(remainingArray) < 1 Or count = 2
