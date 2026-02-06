@@ -81,6 +81,7 @@ Try
     // Catch Ex 
     //     TracePrint []&"a"
     // End Try
+    Keyboard.InputText(@ui"Inputcontrol<input>_6/2/2026","3/4/2022",true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
 
 
 
