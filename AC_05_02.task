@@ -45,7 +45,7 @@ Try
     // Checkbox from Excel by PO number
     Try
         UiElement.Wait(@ui"Blocklevelelement<div>_Selectproductreceipt1","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})      
-        arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_IncludeInvoiceaccountNamePu",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        // arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_IncludeInvoiceaccountNamePu",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         
         // TracePrint(arrElement)
 
@@ -54,7 +54,7 @@ Try
         // Grid_221_0_grid 
 
 
-        // remaining_po = reverseArray
+        remaining_po = reverseArray
         // remaining_po = ['PO26-01172', 'PO26-01114','PO26-00688','PO26-00976']
         count = 0
         // bRet = UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
@@ -69,13 +69,10 @@ Try
                 count = count + 1
             End If
         Loop 
-
         TracePrint(remaining_po)
- 
-
 
     Catch Ex 
-        TracePrint []&"a"
+        TracePrint(Ex)
     End Try
 
 
