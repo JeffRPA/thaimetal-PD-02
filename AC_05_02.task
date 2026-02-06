@@ -33,8 +33,6 @@ Try
         objExcelWorkBook = Excel.OpenExcel(PO_file_path,true,"Excel","","")
         arrayRet = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C2",true)
         reverseArray = utils.reverse_array(arrayRet)
-        
-
         Delay(300)
         sRet = Sys.Command("taskkill /F /IM excel.exe")
         Delay(100)
@@ -143,7 +141,7 @@ If error <> null
     //type2.2
     //target: create the log file   paste_values_to_excel  in the same row
     //main header is row1   we insert emptyrow and log at row2
-    xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+    xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\thaimetal_laiye_errorlog.xlsx'''
     sheet_name_errorsummary = "Sheet1"
     row_record_errorsummary = 2  //Insert an empty row at row 2
 
@@ -162,7 +160,7 @@ If error <> null
     Delay(200)
 
     Try
-        file_path = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+        file_path = project_path & '''\log_allprojecterror_bydateandtime\thaimetal_laiye_errorlog.xlsx'''
         sheet_name = '''Sheet1'''
         resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
         //TracePrint(resultlistofarrays)

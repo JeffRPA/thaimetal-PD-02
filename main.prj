@@ -550,8 +550,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1009,
-            "top": 2489
+            "left": 1212,
+            "top": 2689
         },
         "zoom": 1
     },
@@ -660,12 +660,13 @@
                     {
                         "type": "row",
                         "id": "#2c0b9fb1-cebb-4491-aae4-fea53e7e6c77",
-                        "weight": 145.81589958158995,
+                        "weight": 144.76987447698744,
                         "children": [
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 27.379207228302555,
+                                "weight": 26.061264023213432,
+                                "selected": 2,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -719,8 +720,26 @@
                             {
                                 "type": "tabset",
                                 "id": "#84f97b93-9460-4aa2-8af4-692a2d955cc7",
-                                "weight": 29.462407778282095,
+                                "weight": 30.780350983371168,
+                                "selected": 1,
                                 "children": [
+                                    {
+                                        "type": "tab",
+                                        "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
+                                        "name": "AC_05_01",
+                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\AC_05_01.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": true,
+                                            "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
+                                            "type": "task",
+                                            "selector": [
+                                                "26ec7500-023c-11f1-9b15-c7ae3b0dc761"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
+                                    },
                                     {
                                         "type": "tab",
                                         "id": "182c6b10-0241-11f1-9b15-c7ae3b0dc761",
@@ -746,8 +765,8 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 54.18410041841004,
-                        "height": 259,
+                        "weight": 55.23012552301255,
+                        "height": 264,
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,
