@@ -49,7 +49,7 @@ Try
         UiElement.Wait(@ui"Blocklevelelement<div>_Selectproductreceipt1","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})      
         arrElement = UiElement.GetChildren(@ui"Blocklevelelement<div>_IncludeInvoiceaccountNamePu",1, {"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         
-        TracePrint(arrElement)
+        // TracePrint(arrElement)
 
         // sRet = UiElement.GetAttribute(arrElement[0],"id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         // TracePrint(sRet)
@@ -57,27 +57,22 @@ Try
 
 
         // remaining_po = reverseArray
-        remaining_po = ['PO26-01172', 'PO26-01114','PO26-00688']
+        // remaining_po = ['PO26-01172', 'PO26-01114','PO26-00688','PO26-00976']
         count = 0
         // bRet = UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
         
         Do Until Len(remaining_po) < 1 Or count = 2
             transformedArrayRet = utils.array_to_array_string(remaining_po) 
-            TracePrint(transformedArrayRet)
             hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
             sRet = WebBrowser.RunJS(hWeb,"function(){const checked_values=[];const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){checked_values.push(i.value.trim());if(c.getAttribute('aria-checked')!=="&'"true"){c.click();}}else{!c.checked&&c.click()}}});'&" return checked_values}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            TracePrint(sRet)
-
             remaining_po = utils.remove_items_from_list(remaining_po, sRet)
-            TracePrint(remaining_po)
-            
-            
             Keyboard.Press("PageUp", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
-       
             If UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":False})
                 count = count + 1
             End If
         Loop 
+
+        TracePrint(remaining_po)
  
 
 
@@ -98,15 +93,15 @@ Try
 
     // Enter Value from Excel
 
-    Try 3
+    // Try 3
 
-        Keyboard.InputText(@ui"{Enter Value from Excel}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+    //     Keyboard.InputText(@ui"{Enter Value from Excel}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
 
-    Catch Ex 
+    // Catch Ex 
 
-        TracePrint []&"a"
+    //     TracePrint []&"a"
 
-    End Try
+    // End Try
 
 
 
@@ -122,15 +117,15 @@ Try
 
     // Click Save icon
 
-    Try 3
+    // Try 3
 
-        Mouse.Action(@ui"{Click Save icon}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    //     Mouse.Action(@ui"{Click Save icon}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
 
-    Catch Ex 
+    // Catch Ex 
 
-        TracePrint []&"a"
+    //     TracePrint []&"a"
 
-    End Try
+    // End Try
     
 Catch error
 End Try
