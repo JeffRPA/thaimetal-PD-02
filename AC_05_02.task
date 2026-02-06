@@ -60,7 +60,7 @@ Try
         remaining_po = ['PO26-01172', 'PO26-01114','PO26-00688']
         // bRet = UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
         
-        Do Until Len(remaining_po) < 1 Or bRet = UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":True})
+        Do Until Len(remaining_po) < 1 Or UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":False})
             transformedArrayRet = utils.array_to_array_string(remaining_po) 
             TracePrint(transformedArrayRet)
             hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
