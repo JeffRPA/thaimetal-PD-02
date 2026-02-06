@@ -30,7 +30,21 @@ Try
 
     Try 
         PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
+
+
         objExcelWorkBook = Excel.OpenExcel(PO_file_path,true,"Excel","","")
+
+        iRet = Excel.GetRowsCount(objExcelWorkBook,"Sheet1")
+
+        TracePrint(iRet)
+
+
+        arrayRet = Excel.ReadRange(objExcelWorkBook,"Sheet1","A1:H159",true)
+
+        TracePrint(arrayRet)
+
+
+
         arrayRet = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C2",true)
         reverseArray = utils.reverse_array(arrayRet)
         Delay(300)
@@ -65,7 +79,7 @@ Try
     End Try
 
     // Clcik OK
-    Try
+    Try 3
         delay(2000)
         Mouse.Action(@ui"Button<button>_(Alt+Enter)OK","left","click",10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 200, "bSetForeground": true, "sCursorPosition": "Center", "iCursorOffsetX": 0, "iCursorOffsetY": 0, "sKeyModifiers": [],"sSimulate": "simulate", "bMoveSmoothly": false})
     Catch Ex 
@@ -76,14 +90,12 @@ Try
     // AC-05-02-04 : ????????????????????????? Purchase Order ????????
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Enter Value from Excel
-    // Try 3
-    //     Keyboard.InputText(@ui"{Enter Value from Excel}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-    // Catch Ex 
-    //     TracePrint []&"a"
-    // End Try
-    Keyboard.InputText(@ui"Inputcontrol<input>_6/2/2026","3/4/2021",true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
-
-
+    Try 
+        Keyboard.InputText(@ui"{Enter Value from Excel}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
+    
 
 
 
