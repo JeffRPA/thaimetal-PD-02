@@ -83,9 +83,9 @@ Try
     MOCKEXCEL = [[
 		"VSD-0007-00",
 		"Sankyo Tateyama Alloy (Thailand) Co.,Ltd.",
-		"PO26-00976",
+		"PO26-00857",
 		"DN2601/001",
-		"29/01/2026",
+		"29/01/2024",
 		"",
 		"",
 		""
@@ -93,9 +93,9 @@ Try
 	[
 		"VSD-0007-00",
 		"Sankyo Tateyama Alloy (Thailand) Co.,Ltd.",
-		"PO26-00977",
+		"PO26-00863",
 		"CN2601/002",
-		"29/01/2026",
+		"29/01/2022",
 		"",
 		"",
 		""
@@ -113,7 +113,7 @@ Try
             TracePrint(sRet)
             // remainingArray = utils.remove_items_from_list(remaining_po, sRet)
 
-            TracePrint("function(){ const updated_pos = []; const poUpdates = [ { po: 'PO25-12822', date: '12/2/2013' }, { po: 'PO25-13237', date: '15/3/2012' } ] const poMap = {}; poUpdates.forEach(item => { poMap[item.po] = item.date; }); const poInputs = document.querySelectorAll("&'"'&"input[id^='PurchParmTable_PurchId'][id$='_input']"&'"'&"); poInputs.forEach(poInput => { const poValue = poInput.value.trim(); if (poMap[poValue]) { const row = poInput.closest("&'"'&"[role='row']"&'"'&") || poInput.closest("&'"'&"tr"&'"'&") || poInput.parentElement.parentElement.parentElement; if (!row) return; const dateInput = row.querySelector("&'"'&"input[id^='PurchParmTable_TransDate_W'][id$='_input']"&'"'&"); if (dateInput) { dateInput.focus(); dateInput.click(); const nativeSetter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,"&'"'&"value"&'"'&").set; nativeSetter.call(dateInput, poMap[poValue]); dateInput.dispatchEvent(new Event("&'"'&"input"&'"'&", { bubbles: true })); dateInput.dispatchEvent(new Event("&'"'&"change"&'"'&", { bubbles: true })); dateInput.blur(); console.log(`Updated PO ${poValue} ? ${poMap[poValue]}`); } } }); return updated_pos }")
+            TracePrint("function(){ try { const updated_pos = []; // Convert array ? map const poMap = {}; poUpdates.forEach(row => { try { const po = row[PO_INDEX]; const date = row[DATE_INDEX]; if (po && date) { poMap[po] = date; } } catch (mapError) { console.error("&'"'&"Error building poMap:"&'"'&", mapError); } }); const poInputs = document.querySelectorAll( "&'"'&"input[id^='PurchParmTable_PurchId'][id$='_input']"&'"'&" ); poInputs.forEach(poInput => { try { const poValue = poInput.value.trim(); if (poMap[poValue]) { const row = poInput.closest("&'"'&"[role='row']"&'"'&") || poInput.closest("&'"'&"tr"&'"'&") || poInput.parentElement?.parentElement?.parentElement; if (!row) return; const dateInput = row.querySelector( "&'"'&"input[id^='PurchParmTable_TransDate_W'][id$='_input']"&'"'&" ); if (dateInput) { dateInput.focus(); dateInput.click(); const nativeSetter = Object.getOwnPropertyDescriptor( HTMLInputElement.prototype, "&'"'&"value"&'"'&" ).set; nativeSetter.call(dateInput, poMap[poValue]); dateInput.dispatchEvent(new Event("&'"'&"input"&'"'&", { bubbles: true })); dateInput.dispatchEvent(new Event("&'"'&"change"&'"'&", { bubbles: true })); dateInput.blur(); updated_pos.push({ po: poValue, date: poMap[poValue], status: "&'"'&"updated"&'"'&" }); console.log(`Updated PO ${poValue} ? ${poMap[poValue]}`); } } } catch (innerError) { console.error("&'"'&"Error processing PO:"&'"'&", innerError); updated_pos.push({ po: poInput?.value || null, status: "&'"'&"error"&'"'&", error: innerError.message }); } }); return updated_pos; } catch (error) { console.error("&'"'&"Fatal error:"&'"'&", error); return [{ status: "&'"'&"fatal_error"&'"'&", error: error.message }]; }}")
             Keyboard.Press("PageDown", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
             If UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":False})
                 count = count + 1
