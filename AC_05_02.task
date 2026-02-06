@@ -58,9 +58,10 @@ Try
 
         // remaining_po = reverseArray
         remaining_po = ['PO26-01172', 'PO26-01114','PO26-00688']
+        count = 0
         // bRet = UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
         
-        Do Until Len(remaining_po) < 1 Or UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":False})
+        Do Until Len(remaining_po) < 1 Or count = 2
             transformedArrayRet = utils.array_to_array_string(remaining_po) 
             TracePrint(transformedArrayRet)
             hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
@@ -72,6 +73,10 @@ Try
             
             
             Keyboard.Press("PageUp", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+       
+            If UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":False})
+                count = count + 1
+            End If
         Loop 
  
 
