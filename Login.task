@@ -28,23 +28,29 @@ Try
     phase_exception = "Thaimetal portal not response"
     // Open TMC Dashboard
 
-    website_url = '''https://tmc-web.thaimetal.net/?env=rpa1%40thaimetal.net'''
+    Try 
+         website_url = '''https://tmc-web.thaimetal.net/?env=rpa1%40thaimetal.net'''
 
-    hWeb = WebBrowser.Create("edge",website_url,30000,{"bContinueOnError":false,"iDelayAfter":30,"iDelayBefore":20,"sBrowserPath":"","sStartArgs":""})
+        hWeb = WebBrowser.Create("edge",website_url,30000,{"bContinueOnError":false,"iDelayAfter":30,"iDelayBefore":20,"sBrowserPath":"","sStartArgs":""})
 
-    Keyboard.Press("Esc", "press", [],{"iDelayAfter": 30, "iDelayBefore": 20, "sSimulate": "simulate"})
+        Keyboard.Press("Esc", "press", [],{"iDelayAfter": 30, "iDelayBefore": 20, "sSimulate": "simulate"})
 
-    iPID = App.Run(project_path & '''\cpp_commands\maximizecurrentwindows.exe''', 2, 1)
+        iPID = App.Run(project_path & '''\cpp_commands\maximizecurrentwindows.exe''', 2, 1)
 
-    //move mouse to center point  preventing mouse interrupt the sheet selection
+        //move mouse to center point  preventing mouse interrupt the sheet selection
 
-    Mouse.Move(1072, 536, false,{"iDelayAfter": 350, "iDelayBefore": 200})
+        Mouse.Move(1072, 536, false,{"iDelayAfter": 350, "iDelayBefore": 200})
 
-    waitfirstiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        waitfirstiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
-    Delay(1000)
+        Delay(1000)
 
-    waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        
+    Catch Ex
+        TracePrint []&"a"
+    End Try
+   
 
     ///////////////////////////////////////////////////////////////////////////////////////////
     
@@ -138,7 +144,7 @@ If exceptionInformation <> null
     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
 
     
-    TracePrint([]&"a")
+    TracePrint []&"a"
     // Try 
     //     bRet = Outlook.SendMail("","","","","text",['''C:\Users'''],"","")
     // Catch Ex
