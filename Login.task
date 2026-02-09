@@ -31,6 +31,8 @@ Try
 
     Keyboard.Press("Esc", "press", [],{"iDelayAfter": 30, "iDelayBefore": 20, "sSimulate": "simulate"})
 
+    
+
     iPID = App.Run(project_path & '''\cpp_commands\maximizecurrentwindows.exe''', 2, 1)
 
     //move mouse to center point  preventing mouse interrupt the sheet selection
@@ -44,6 +46,9 @@ Try
     waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
     ///////////////////////////////////////////////////////////////////////////////////////////
+
+    iRet = WebBrowser.WaitPage(hWeb,{},60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
 
     // Click MS Dynamic system
     UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
@@ -72,6 +77,13 @@ Try
     // Click Sign In
     Try 3
         Mouse.Action(@ui"Text<span>_Signin","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+        iRet = WebBrowser.WaitPage(hWeb,{},60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
+        bRet = UiElement.Exists(@ui"Text<span>_ThaiMetalAluminiumCo.,Ltd.",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+
+
+    
     Catch Ex 
         TracePrint []&"a"
     End Try
