@@ -7,26 +7,25 @@ PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_63905857178055
 Try 
     // AC-05-02-01 : ????????????? Pending vendor invoices
     ///////////////////////////////////////////////////////////////////////////////////////////
-  
     // Search Top Searchbar
-    // Try 3
-    //     Mouse.Action(@ui"Inputcontrol<input>4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    //     Keyboard.InputText(@ui"Inputcontrol<input>4","Pending vendor invoices",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-    //     Keyboard.PressKey(@ui"Inputcontrol<input>4","Enter",300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "simulate", "sKeyModifiers": [], "bClickBeforeInput": false})
-    // Catch Ex 
-    //     TracePrint(Ex)
-    // End Try
+    Try 3
+        Mouse.Action(@ui"Inputcontrol<input>4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        Keyboard.InputText(@ui"Inputcontrol<input>4","Pending vendor invoices",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+        Keyboard.PressKey(@ui"Inputcontrol<input>4","Enter",300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "simulate", "sKeyModifiers": [], "bClickBeforeInput": false})
+    Catch Ex 
+        TracePrint(Ex)
+    End Try
 
 
     // AC-05-02-02 : ?????????? Pending invoice
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Click From product receipt
     
-    // Try 3
-    //     Mouse.Action(@ui"Button<button>_Fromproductreceipt","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    //  Catch Ex 
-    //     TracePrint(Ex)
-    // End Try
+    Try 3
+        Mouse.Action(@ui"Button<button>_Fromproductreceipt","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+     Catch Ex 
+        TracePrint(Ex)
+    End Try
 
     Try 
         PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
@@ -46,60 +45,40 @@ Try
     // AC-05-02-03 : ????? Purchase Order ???????????????? Excel
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Checkbox from Excel by PO number
-    // Try
-    //     UiElement.Wait(@ui"Blocklevelelement<div>_Selectproductreceipt1","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})      
-    //     remaining_po = reverseArray
-    //     count = 0
+    Try
+        UiElement.Wait(@ui"Blocklevelelement<div>_Selectproductreceipt1","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})      
+        remaining_po = reverseArray
+        count = 0
 
-    //     Do Until Len(remaining_po) < 1 Or count = 2
-    //         transformedArrayRet = utils.array_to_array_string(remaining_po) 
-    //         hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-    //         sRet = WebBrowser.RunJS(hWeb,"function(){const checked_values=[];const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){checked_values.push(i.value.trim());if(c.getAttribute('aria-checked')!=="&'"true"){c.click();}}else{!c.checked&&c.click()}}});'&" return checked_values}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-    //         remaining_po = utils.remove_items_from_list(remaining_po, sRet)
-    //         Keyboard.Press("PageUp", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
-    //         If UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":False})
-    //             count = count + 1
-    //         End If
-    //     Loop 
-    //     TracePrint(remaining_po)
+        Do Until Len(remaining_po) < 1 Or count = 2
+            transformedArrayRet = utils.array_to_array_string(remaining_po) 
+            hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            sRet = WebBrowser.RunJS(hWeb,"function(){const checked_values=[];const input_values="& transformedArrayRet &';[...document.querySelectorAll('&"'div._xyda97.fixedDataTableLayout_main.public_fixedDataTable_main input[aria-label="&'"Purchase order"]'&"')].filter(i=>input_values.includes(i.value.trim())).forEach(i=>{const r=i.closest('[role="&'"row"]'&"')||i.closest('div');const c=r&&(r.querySelector('div[role="&'"checkbox"][aria-label="Include"]'&"')||r.querySelector('input[type="&'"checkbox"]'&"'));if(c){if(c.getAttribute){checked_values.push(i.value.trim());if(c.getAttribute('aria-checked')!=="&'"true"){c.click();}}else{!c.checked&&c.click()}}});'&" return checked_values}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            remaining_po = utils.remove_items_from_list(remaining_po, sRet)
+            Keyboard.Press("PageUp", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+            If UiElement.Exists(@ui"Blocklevelelement<div>2",{"bContinueOnError":false,"iDelayAfter":0,"iDelayBefore":0,"bWaitDOMReady":False})
+                count = count + 1
+            End If
+        Loop 
+        TracePrint(remaining_po)
 
-    // Catch Ex 
-    //     TracePrint(Ex)
-    // End Try
+    Catch Ex 
+        TracePrint(Ex)
+    End Try
 
     // Clcik OK
-    // Try 3
-    //     delay(2000)
-    //     Mouse.Action(@ui"Button<button>_(Alt+Enter)OK","left","click",10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 200, "bSetForeground": true, "sCursorPosition": "Center", "iCursorOffsetX": 0, "iCursorOffsetY": 0, "sKeyModifiers": [],"sSimulate": "simulate", "bMoveSmoothly": false})
-    // Catch Ex 
-    //     TracePrint(Ex)
-    // End Try
+    Try 3
+        delay(2000)
+        Mouse.Action(@ui"Button<button>_(Alt+Enter)OK","left","click",10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 200, "bSetForeground": true, "sCursorPosition": "Center", "iCursorOffsetX": 0, "iCursorOffsetY": 0, "sKeyModifiers": [],"sSimulate": "simulate", "bMoveSmoothly": false})
+    Catch Ex 
+        TracePrint(Ex)
+    End Try
 
 
     // AC-05-02-04 : ????????????????????????? Purchase Order ????????
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Enter Value from Excel
 
-    // MOCKEXCEL = [[
-	// 	"VSD-0007-00",
-	// 	"Sankyo Tateyama Alloy (Thailand) Co.,Ltd.",
-	// 	"PO26-00857",
-	// 	"DN2601/001",
-	// 	"29/01/2024",
-	// 	"",
-	// 	"",
-	// 	""
-	// ],
-	// [
-	// 	"VSD-0007-00",
-	// 	"Sankyo Tateyama Alloy (Thailand) Co.,Ltd.",
-	// 	"PO26-00863",
-	// 	"CN2601/002",
-	// 	"29/01/2022",
-	// 	"",
-	// 	"",
-	// 	""
-	// ]]
     PO_INDEX = 2
     DATE_INDEX = 4
     INVOICE_NUMBER_INDEX = 3
