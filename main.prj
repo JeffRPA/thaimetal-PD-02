@@ -602,6 +602,7 @@
             "borders": [
                 {
                     "type": "border",
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -651,6 +652,7 @@
                 },
                 {
                     "type": "border",
+                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -686,6 +688,7 @@
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                         "weight": 119.41031941031942,
+                        "selected": 2,
                         "children": [
                             {
                                 "type": "tab",
@@ -767,6 +770,40 @@
                                 },
                                 "enableClose": true,
                                 "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "5ff74500-ba61-11f0-81f8-7befb543be84",
+                                "name": "DeleteGenPy",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\DeleteGenPy.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "5ff74500-ba61-11f0-81f8-7befb543be84",
+                                    "type": "task",
+                                    "selector": [
+                                        "5ff74500-ba61-11f0-81f8-7befb543be84"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "d1ce9fcd-0b8b-4d41-9f3a-05c5a5b42810",
+                                "name": "Block2",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Block2.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "d1ce9fcd-0b8b-4d41-9f3a-05c5a5b42810",
+                                    "type": "task",
+                                    "selector": [
+                                        "d1ce9fcd-0b8b-4d41-9f3a-05c5a5b42810"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
                             }
                         ],
                         "active": true
@@ -775,9 +812,10 @@
                         "type": "tabset",
                         "id": "button",
                         "weight": 80.58968058968058,
-                        "height": 328,
+                        "height": 32,
+                        "selected": -1,
                         "config": {
-                            "height": 464,
+                            "height": 328,
                             "selected": 0
                         },
                         "enableDrop": false,
