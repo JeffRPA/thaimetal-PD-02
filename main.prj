@@ -625,7 +625,6 @@
                 },
                 {
                     "type": "border",
-                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -660,12 +659,12 @@
                     {
                         "type": "row",
                         "id": "#a78e4ac5-668c-407c-a7d5-d96499a9514a",
-                        "weight": 41.84100418410042,
+                        "weight": 92.88702928870293,
                         "children": [
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 49.28945400149588,
+                                "weight": 49.37027707808564,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -702,7 +701,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#e9d7238f-ac50-47a0-9445-8267ea3e25f5",
-                                "weight": 50.71054599850412,
+                                "weight": 50.62972292191436,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -729,8 +728,8 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 158.15899581589957,
-                        "height": 756,
+                        "weight": 107.11297071129707,
+                        "height": 512,
                         "config": {
                             "height": 364,
                             "selected": 0
