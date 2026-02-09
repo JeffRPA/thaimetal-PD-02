@@ -5,6 +5,8 @@ Dim objExcelWorkBook
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects\'''
 project_name ='ThaiMetal_AC_05'
 
+phase_exception = ""
+
 //// Credentials ////
 Try
     objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")
@@ -46,8 +48,8 @@ Try
 
     ///////////////////////////////////////////////////////////////////////////////////////////
     
-    phase_exception = 'E01 - ระบบ MS Dynamics ล่ม'
-    
+    phase_exception = "E01 - ระบบ MS Dynamics ล่ม"
+
     // Click MS Dynamic system
     UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
 
@@ -57,7 +59,9 @@ Try
         TracePrint []&"a"
     End Try
 
+    UiElement.Wait(@ui"Blocklevelelement<div>_Signin","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
 
+    phase_exception = "E04 - Login ไม่สำเร็จ"
 
     // Enter Username
     // Try 3
@@ -79,9 +83,7 @@ Try
 
         iRet = WebBrowser.WaitPage(hWeb,{},60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
-        bRet = UiElement.Exists(@ui"Text<span>_ThaiMetalAluminiumCo.,Ltd.",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
-
-
+        bRet = UiElement.Exists(@ui"Text<span>_ThaiMetalAluminiumCo.,Ltd.",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})  
     
     Catch Ex 
         TracePrint []&"a"
@@ -127,7 +129,7 @@ If error <> null
     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
 
     
-
+    TracePrint([]&"a")
     // Try 
     //     bRet = Outlook.SendMail("","","","","text",['''C:\Users'''],"","")
     // Catch Ex

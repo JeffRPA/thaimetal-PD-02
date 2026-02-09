@@ -3,6 +3,7 @@ project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name ='ThaiMetal_AC_05'
 
 Try 
+    phase_exception = ""
     // AC-05-01-01 : ????????????? Product receipts not invoiced
     // Search Top Searchbar
     Try 3
