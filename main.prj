@@ -460,7 +460,7 @@
             "file": "AC_05_01.task",
             "caption": "AC_05_01",
             "desc": "AC-05-01",
-            "editorMode": "sourceCode",
+            "editorMode": "visual",
             "breakpoints": {
                 "43": null
             },
@@ -661,7 +661,7 @@
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                         "weight": 183.64611260053618,
-                        "selected": 1,
+                        "selected": 2,
                         "children": [
                             {
                                 "type": "tab",
