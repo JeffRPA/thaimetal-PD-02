@@ -551,7 +551,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1212,
-            "top": 2689
+            "top": 2289
         },
         "zoom": 1
     },
@@ -660,7 +660,7 @@
                     {
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                        "weight": 157.32217573221757,
+                        "weight": 130.7531380753138,
                         "selected": 1,
                         "children": [
                             {
@@ -716,8 +716,13 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 42.67782426778243,
-                        "height": 204,
+                        "weight": 69.24686192468619,
+                        "height": 32,
+                        "selected": -1,
+                        "config": {
+                            "height": 331,
+                            "selected": 0
+                        },
                         "enableDrop": false,
                         "enableDrag": false,
                         "enableDivide": false,
