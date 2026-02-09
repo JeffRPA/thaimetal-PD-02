@@ -143,10 +143,7 @@ If exceptionInformation <> null
 
     
     TracePrint []&"a"
-    // Try 
-    //     bRet = Outlook.SendMail("","","","","text",['''C:\Users'''],"","")
-    // Catch Ex
-    // End Try
+    
     
 End If
 
