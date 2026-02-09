@@ -7,24 +7,22 @@ project_name ='ThaiMetal_AC_05'
 
 phase_exception = ""
 
-//// Credentials ////
-Try
-    objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")
-
-    username = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
-    password = Excel.ReadCell(objExcelWorkBook,"credentials","B2",true)
-
-    // TracePrint(username)
-    // TracePrint(password)
-
-    Delay(300)
-    sRet = Sys.Command("taskkill /F /IM excel.exe")
-    Delay(100)
-Catch error    
-End Try
-
 //// Start browser ////
 Try 
+    //// Credentials ////
+    Try
+        objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")
+
+        username = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
+        password = Excel.ReadCell(objExcelWorkBook,"credentials","B2",true)
+
+        Delay(300)
+        sRet = Sys.Command("taskkill /F /IM excel.exe")
+        Delay(100)
+    Catch Ex
+        TracePrint []&"a"    
+    End Try    
+
     phase_exception = "Thaimetal portal not response"
     // Open TMC Dashboard
 
@@ -118,11 +116,11 @@ If exceptionInformation <> null
     currenttime_string = errorlogedit.currenttime()
 
     //blocknamestring
-    blocknamestring = error["File"]
+    blocknamestring = exceptionInformation["File"]
     blocknamestring = Replace(blocknamestring,".task","",false)
 
     //errorsummarystring
-    errorsummarystring = "errorLine: "&error["Line"]&" ("&Trim(error["Message"])&")"
+    errorsummarystring = "errorLine: "&exceptionInformation["Line"]&" ("&Trim(exceptionInformation["Message"])&")"
 
 
     //type2.2
