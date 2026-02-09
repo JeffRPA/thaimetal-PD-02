@@ -15,12 +15,17 @@ Try
         TracePrint []&"a"
     End Try
 
+    bRet = UiElement.Exists(@ui"Blocklevelelement<div>_ExporttoExcelfinished",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+    If bRet 
+        Delay(5000)
+    End If
+
 
     // AC-05-01-02 : Download file Excel
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Click export icon
 
-    Try 3
+    Try 3    
         UiElement.Wait(@ui"Text<span>1","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
         Mouse.Action(@ui"Text<span>","left","click",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
