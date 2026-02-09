@@ -23,6 +23,7 @@ End Try
 
 //// Start browser ////
 Try 
+    phase_exception = "Thaimetal portal not response"
     // Open TMC Dashboard
 
     website_url = '''https://tmc-web.thaimetal.net/?env=rpa1%40thaimetal.net'''
@@ -30,8 +31,6 @@ Try
     hWeb = WebBrowser.Create("edge",website_url,30000,{"bContinueOnError":false,"iDelayAfter":30,"iDelayBefore":20,"sBrowserPath":"","sStartArgs":""})
 
     Keyboard.Press("Esc", "press", [],{"iDelayAfter": 30, "iDelayBefore": 20, "sSimulate": "simulate"})
-
-    
 
     iPID = App.Run(project_path & '''\cpp_commands\maximizecurrentwindows.exe''', 2, 1)
 
@@ -47,9 +46,8 @@ Try
 
     ///////////////////////////////////////////////////////////////////////////////////////////
 
-    iRet = WebBrowser.WaitPage(hWeb,{},60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-
-
+    phase_exception = 'E01 - ระบบ MS Dynamics ล่ม'
+    
     // Click MS Dynamic system
     UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
 
