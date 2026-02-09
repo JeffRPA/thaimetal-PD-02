@@ -51,17 +51,26 @@ Try
     phase_exception = "E01 - ระบบ MS Dynamics ล่ม"
 
     // Click MS Dynamic system
-    UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
-
+    Try 3
+        UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
+    
     Try 3
         Mouse.Action(@ui"URL<a>_MicrosoftDynamics365SB1(น้ำเงิน)","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
         TracePrint []&"a"
     End Try
 
-    UiElement.Wait(@ui"Blocklevelelement<div>_Signin","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+    Try 3
+        UiElement.Wait(@ui"Blocklevelelement<div>_Signin","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
 
     phase_exception = "E04 - Login ไม่สำเร็จ"
+    
 
     // Enter Username
     // Try 3
@@ -94,7 +103,7 @@ End Try
 
 
 
-If error <> null
+If exceptionInformation <> null
 
     //todaywithoutslash_datestring
     todaydate_string = errorlogedit.get_date_string_without_slash()

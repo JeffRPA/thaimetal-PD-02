@@ -566,6 +566,12 @@
             "value": "null",
             "description": "File path of downloaded excel",
             "type": "none"
+        },
+        {
+            "name": "phase_exception",
+            "value": "\"\"",
+            "description": "Track error phase",
+            "type": "none"
         }
     ],
     "flowConfig": {
@@ -645,6 +651,7 @@
                 },
                 {
                     "type": "border",
+                    "selected": 1,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
