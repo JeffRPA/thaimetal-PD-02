@@ -176,22 +176,4 @@ If error <> null
 
     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
 
-    // API errorlog send to server
-    Delay(200)
-
-    Try
-        file_path = project_path & '''\log_allprojecterror_bydateandtime\thaimetal_laiye_errorlog.xlsx'''
-        sheet_name = '''Sheet1'''
-        resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
-        //TracePrint(resultlistofarrays)
-        resultlistofarrays_notincludeheaderrow = splice(resultlistofarrays,1,Len(resultlistofarrays)-1)
-        //TracePrint(resultlistofarrays_notincludeheaderrow)
-        resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
-        //TracePrint(resultlistofarrays_allstring)
-        APIjsonsRet = HTTP.PostJson(main_API_url & "/api/" & main_companyname, {"data": resultlistofarrays_allstring}, 60000)
-
-    Catch Ex
-        
-    End Try
-
 End If

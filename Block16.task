@@ -30,33 +30,6 @@ Try
     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_processsummary, sheet_name_processsummary, row_record_processsummary, variables_processsummary)
 
 
-
-    //API errorlog send to server
-
-    Delay(100)
-
-    Try
-        
-        file_path = project_path & '''\log_allprocess_bydateandtime\mazuma_laiye_processlog.xlsx'''
-        sheet_name = '''Sheet1'''
-        resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
-        //TracePrint(resultlistofarrays)
-        resultlistofarrays_notincludeheaderrow = splice(resultlistofarrays,1,Len(resultlistofarrays)-1)
-        //TracePrint(resultlistofarrays_notincludeheaderrow)
-        resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
-        //TracePrint(resultlistofarrays_allstring)
-
-        //python method
-        target_url = main_API_url & "/api/bot/" & main_companyname
-        APIjsonsRet = pythonAPI.send_api_data(target_url, resultlistofarrays_allstring)
-
-
-    Catch Ex
-        
-
-    End Try
-
-
 Catch Ex
     
 End Try

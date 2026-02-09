@@ -550,8 +550,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1212,
-            "top": 2289
+            "left": 1261,
+            "top": 2653
         },
         "zoom": 1
     },
@@ -626,6 +626,7 @@
                 },
                 {
                     "type": "border",
+                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -665,7 +666,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 24.103831891223734,
+                                "weight": 75.46746447270007,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -679,23 +680,6 @@
                                         },
                                         "enableClose": false,
                                         "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "3686f559-9928-4edd-9ce5-86030ac45a22",
-                                        "name": "Block",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Block.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "3686f559-9928-4edd-9ce5-86030ac45a22",
-                                            "type": "task",
-                                            "selector": [
-                                                "3686f559-9928-4edd-9ce5-86030ac45a22"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
                                     }
                                 ],
                                 "active": true
@@ -703,7 +687,8 @@
                             {
                                 "type": "tabset",
                                 "id": "#e9d7238f-ac50-47a0-9445-8267ea3e25f5",
-                                "weight": 75.89616810877627,
+                                "weight": 24.532535527299924,
+                                "selected": 1,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -717,6 +702,23 @@
                                             "type": "task",
                                             "selector": [
                                                 "182c6b10-0241-11f1-9b15-c7ae3b0dc761"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
+                                    },
+                                    {
+                                        "type": "tab",
+                                        "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
+                                        "name": "AC_05_01",
+                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\AC_05_01.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": true,
+                                            "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
+                                            "type": "task",
+                                            "selector": [
+                                                "26ec7500-023c-11f1-9b15-c7ae3b0dc761"
                                             ]
                                         },
                                         "enableClose": true,
