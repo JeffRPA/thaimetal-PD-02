@@ -32,7 +32,7 @@ Try
         PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
         objExcelWorkBook = Excel.OpenExcel(PO_file_path,true,"Excel","","")
         rowCount = Excel.GetRowsCount(objExcelWorkBook,"Sheet1")
-        arrayRet = Excel.ReadRange(objExcelWorkBook,"Sheet1","A1:H"&rowCount,true)
+        arrayRet = Excel.ReadRange(objExcelWorkBook,"Sheet1","A2:H"&rowCount,true)
         TracePrint(arrayRet)
         poColumn = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C2",true)
         reverseArray = utils.reverse_array(poColumn)
