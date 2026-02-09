@@ -385,7 +385,7 @@
             },
             "next": {
                 "vertices": [],
-                "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
+                "refId": "26ec7500-023c-11f1-9b15-c7ae3b0dc761"
             },
             "exception": {
                 "vertices": [],
@@ -447,14 +447,14 @@
             "type": "task",
             "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
             "rect": {
-                "x": 920,
-                "y": 1620,
+                "x": 740,
+                "y": 1640,
                 "width": 268,
                 "height": 78
             },
             "next": {
                 "vertices": [],
-                "refId": ""
+                "refId": "182c6b10-0241-11f1-9b15-c7ae3b0dc761"
             },
             "exception": {},
             "file": "AC_05_01.task",
@@ -470,14 +470,14 @@
             "type": "task",
             "id": "182c6b10-0241-11f1-9b15-c7ae3b0dc761",
             "rect": {
-                "x": 920,
-                "y": 1730,
+                "x": 740,
+                "y": 1750,
                 "width": 268,
                 "height": 78
             },
             "next": {
                 "vertices": [],
-                "refId": ""
+                "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
             },
             "exception": {},
             "file": "AC_05_02.task",
@@ -491,8 +491,8 @@
             "type": "task",
             "id": "3686f559-9928-4edd-9ce5-86030ac45a22",
             "rect": {
-                "x": 1292,
-                "y": 1730,
+                "x": 1054,
+                "y": 1740,
                 "width": 268,
                 "height": 78
             },
@@ -550,8 +550,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1363,
-            "top": 2689
+            "left": 1196,
+            "top": 2389
         },
         "zoom": 1
     },
@@ -625,6 +625,7 @@
                 },
                 {
                     "type": "border",
+                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -660,7 +661,7 @@
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                         "weight": 183.64611260053618,
-                        "selected": 2,
+                        "selected": 3,
                         "children": [
                             {
                                 "type": "tab",
@@ -704,6 +705,23 @@
                                     "type": "task",
                                     "selector": [
                                         "182c6b10-0241-11f1-9b15-c7ae3b0dc761"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
+                                "name": "Login",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Login.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
+                                    "type": "task",
+                                    "selector": [
+                                        "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9"
                                     ]
                                 },
                                 "enableClose": true,
