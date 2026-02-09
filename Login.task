@@ -85,23 +85,16 @@ If error <> null
 
     //todaywithoutslash_datestring
     todaydate_string = errorlogedit.get_date_string_without_slash()
-    //TracePrint(date_string)
 
     //currenttime_string
     currenttime_string = errorlogedit.currenttime()
-    //TracePrint(currenttime_string)
-
-    //project_name
-    //TracePrint(project_name)
 
     //blocknamestring
     blocknamestring = error["File"]
     blocknamestring = Replace(blocknamestring,".task","",false)
-    //TracePrint(blocknamestring)
 
     //errorsummarystring
     errorsummarystring = "errorLine: "&error["Line"]&" ("&Trim(error["Message"])&")"
-    //TracePrint(errorsummarystring)
 
 
     //type2.2
