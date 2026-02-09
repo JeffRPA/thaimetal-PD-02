@@ -80,32 +80,32 @@ Try
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Enter Value from Excel
 
-    MOCKEXCEL = [[
-		"VSD-0007-00",
-		"Sankyo Tateyama Alloy (Thailand) Co.,Ltd.",
-		"PO26-00857",
-		"DN2601/001",
-		"29/01/2024",
-		"",
-		"",
-		""
-	],
-	[
-		"VSD-0007-00",
-		"Sankyo Tateyama Alloy (Thailand) Co.,Ltd.",
-		"PO26-00863",
-		"CN2601/002",
-		"29/01/2022",
-		"",
-		"",
-		""
-	]]
+    // MOCKEXCEL = [[
+	// 	"VSD-0007-00",
+	// 	"Sankyo Tateyama Alloy (Thailand) Co.,Ltd.",
+	// 	"PO26-00857",
+	// 	"DN2601/001",
+	// 	"29/01/2024",
+	// 	"",
+	// 	"",
+	// 	""
+	// ],
+	// [
+	// 	"VSD-0007-00",
+	// 	"Sankyo Tateyama Alloy (Thailand) Co.,Ltd.",
+	// 	"PO26-00863",
+	// 	"CN2601/002",
+	// 	"29/01/2022",
+	// 	"",
+	// 	"",
+	// 	""
+	// ]]
     PO_INDEX = 2
     DATE_INDEX = 4
     INVOICE_NUMBER_INDEX = 3
 
     Try 
-        remainingArray = MOCKEXCEL
+        remainingArray = arrayRet
         count = 0
         Do Until Len(remainingArray) < 1 Or count = 2
             transformedArrayRet = utils.array_to_array_string(remainingArray) 
