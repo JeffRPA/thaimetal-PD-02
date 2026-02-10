@@ -55,7 +55,7 @@ Try
 
     ///////////////////////////////////////////////////////////////////////////////////////////
     
-    phase_exception = "E01 - ระบบ MS Dynamics ล่ม"
+    phase_exception = "N01 - ระบบ MS Dynamics ล่ม"
 
     // Click MS Dynamic system
     Try 3
@@ -76,7 +76,7 @@ Try
         TracePrint []&"a"
     End Try
 
-    phase_exception = "E04 - Login ไม่สำเร็จ"
+    phase_exception = "N04 - Login ไม่สำเร็จ"
     
 
     // Enter Username
