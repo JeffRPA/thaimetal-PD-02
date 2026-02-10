@@ -1,5 +1,9 @@
 TracePrint('Error Handling: '&phase_exception)
 
+
+Mail.SendExt({"host":"","port":25,"ssl":false,"authentication":false,"user":"","password":""},"","","","","","",[])
+
+
 If exception_information <> null
 
     //todaywithoutslash_datestring
