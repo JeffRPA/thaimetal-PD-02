@@ -602,8 +602,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1452,
-            "top": 2463
+            "left": 1590,
+            "top": 2963
         },
         "zoom": 1
     },
@@ -628,7 +628,6 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -678,6 +677,7 @@
                 },
                 {
                     "type": "border",
+                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -717,7 +717,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 32.26205191594561,
+                                "weight": 40.7911001236094,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -744,23 +744,6 @@
                                             "type": "task",
                                             "selector": [
                                                 "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
-                                        "name": "AC_05_01",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\AC_05_01.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": true,
-                                            "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
-                                            "type": "task",
-                                            "selector": [
-                                                "26ec7500-023c-11f1-9b15-c7ae3b0dc761"
                                             ]
                                         },
                                         "enableClose": true,
@@ -823,7 +806,8 @@
                             {
                                 "type": "tabset",
                                 "id": "#a165cef7-85fb-4bb5-a9b9-12f5296801e0",
-                                "weight": 67.7379480840544,
+                                "weight": 59.2088998763906,
+                                "selected": 1,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -837,6 +821,23 @@
                                             "type": "task",
                                             "selector": [
                                                 "b4a3b988-4f77-42bc-8478-a38dc7d962e4"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
+                                    },
+                                    {
+                                        "type": "tab",
+                                        "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
+                                        "name": "AC_05_01",
+                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\AC_05_01.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": false,
+                                            "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
+                                            "type": "task",
+                                            "selector": [
+                                                "26ec7500-023c-11f1-9b15-c7ae3b0dc761"
                                             ]
                                         },
                                         "enableClose": true,

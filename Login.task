@@ -11,8 +11,6 @@ phase_exception = "Open credential excel"
 Try 
     //// Credentials ////
     Try
-        
-        TracePrint []&"a"
         objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")
 
         username = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)

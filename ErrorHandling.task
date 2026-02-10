@@ -1,19 +1,19 @@
 TracePrint('Error Handling: '&phase_exception)
 
-Try 
-    sServer = "smtp.gmail.com"
-    iPort   = 465
-    bSsl    = true
-    sUid    = "rpajgm@gmail.com"
-    sPwd    = "ptwo ehdt kkxt pait"
-    sSender = sUid
-    sTo  = ["jeffrey@greenmoons.co.th"]
-    sCc  = []
+// Try 
+//     sServer = "smtp.gmail.com"
+//     iPort   = 465
+//     bSsl    = true
+//     sUid    = "rpajgm@gmail.com"
+//     sPwd    = ""
+//     sSender = sUid
+//     sTo  = ["jeffrey@greenmoons.co.th"]
+//     sCc  = []
 
-    bRet = Mail.SendEx(sServer,iPort,bSsl,sUid,sPwd,sSender,sTo,sCc,"Error Handling", phase_exception,[])
-Catch error
-    TracePrint error
-End Try
+//     bRet = Mail.SendEx(sServer,iPort,bSsl,sUid,sPwd,sSender,sTo,sCc,"Error Handling", phase_exception,[])
+// Catch error
+//     TracePrint error
+// End Try
 
 If exception_information <> null
 
