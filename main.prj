@@ -717,7 +717,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 40.7911001236094,
+                                "weight": 52.07808564231738,
                                 "selected": 1,
                                 "children": [
                                     {
@@ -789,12 +789,12 @@
                             {
                                 "type": "row",
                                 "id": "#71bfcbef-c10b-4423-97f3-062748c14bda",
-                                "weight": 59.2088998763906,
+                                "weight": 47.92191435768262,
                                 "children": [
                                     {
                                         "type": "tabset",
                                         "id": "#c600c443-6afd-4029-9576-1574e71c0002",
-                                        "weight": 50,
+                                        "weight": 38.028169014084504,
                                         "children": [
                                             {
                                                 "type": "tab",
@@ -818,7 +818,7 @@
                                     {
                                         "type": "tabset",
                                         "id": "#a165cef7-85fb-4bb5-a9b9-12f5296801e0",
-                                        "weight": 50,
+                                        "weight": 61.971830985915496,
                                         "children": [
                                             {
                                                 "type": "tab",
@@ -848,7 +848,8 @@
                         "type": "tabset",
                         "id": "button",
                         "weight": 52.30125523012552,
-                        "height": 250,
+                        "height": 32,
+                        "selected": -1,
                         "config": {
                             "height": 250,
                             "selected": 0
