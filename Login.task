@@ -11,49 +11,47 @@ phase_exception = "Open credential excel"
 Try 
     //// Credentials ////
     Try
-        // objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")
+        objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")
 
-        // username = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
-        // password = Excel.ReadCell(objExcelWorkBook,"credentials","B2",true)
+        username = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
+        password = Excel.ReadCell(objExcelWorkBook,"credentials","B2",true)
 
-        // Delay(300)
-        // sRet = Sys.Command("taskkill /F /IM excel.exe")
-        // Delay(100)
+        Delay(300)
+        sRet = Sys.Command("taskkill /F /IM excel.exe")
+        Delay(100)
 
         
-        TracePrint []&"a"
     Catch Ex
-        TracePrint "enter throw 1"
         Throw Ex
     End Try    
 
     phase_exception = "Thaimetal portal not response"
     // Open TMC Dashboard
 
-    // Try 
-    //      website_url = '''https://tmc-web.thaimetal.net/?env=rpa1%40thaimetal.net'''
+    Try 
+         website_url = '''https://tmc-web.thaimetal.net/?env=rpa1%40thaimetal.net'''
 
-    //     hWeb = WebBrowser.Create("edge",website_url,30000,{"bContinueOnError":false,"iDelayAfter":30,"iDelayBefore":20,"sBrowserPath":"","sStartArgs":""})
+        hWeb = WebBrowser.Create("edge",website_url,30000,{"bContinueOnError":false,"iDelayAfter":30,"iDelayBefore":20,"sBrowserPath":"","sStartArgs":""})
 
-    //     Keyboard.Press("Esc", "press", [],{"iDelayAfter": 30, "iDelayBefore": 20, "sSimulate": "simulate"})
+        Keyboard.Press("Esc", "press", [],{"iDelayAfter": 30, "iDelayBefore": 20, "sSimulate": "simulate"})
 
-    //     iPID = App.Run(project_path & '''\cpp_commands\maximizecurrentwindows.exe''', 2, 1)
+        iPID = App.Run(project_path & '''\cpp_commands\maximizecurrentwindows.exe''', 2, 1)
 
-    //     //move mouse to center point  preventing mouse interrupt the sheet selection
+        //move mouse to center point  preventing mouse interrupt the sheet selection
 
-    //     Mouse.Move(1072, 536, false,{"iDelayAfter": 350, "iDelayBefore": 200})
+        Mouse.Move(1072, 536, false,{"iDelayAfter": 350, "iDelayBefore": 200})
 
-    //     waitfirstiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        waitfirstiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
-    //     Delay(1000)
+        Delay(1000)
 
-    //     waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
         
-        
-    // Catch Ex
-    //     Throw Ex
-    // End Try
+        TracePrint []&'a'
+    Catch Ex
+        Throw Ex
+    End Try
    
 
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -61,52 +59,52 @@ Try
     phase_exception = "E01 - ระบบ MS Dynamics ล่ม"
 
     // Click MS Dynamic system
-    // Try 3
-    //     UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
-    // Catch Ex 
-    //     TracePrint []&"a"
-    // End Try
+    Try 3
+        UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
     
-    // Try 3
-    //     Mouse.Action(@ui"URL<a>_MicrosoftDynamics365SB1(น้ำเงิน)","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    // Catch Ex 
-    //     TracePrint []&"a"
-    // End Try
+    Try 3
+        Mouse.Action(@ui"URL<a>_MicrosoftDynamics365SB1(น้ำเงิน)","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
 
-    // Try 3
-    //     UiElement.Wait(@ui"Blocklevelelement<div>_Signin","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
-    // Catch Ex 
-    //     TracePrint []&"a"
-    // End Try
+    Try 3
+        UiElement.Wait(@ui"Blocklevelelement<div>_Signin","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
 
-    // phase_exception = "E04 - Login ไม่สำเร็จ"
+    phase_exception = "E04 - Login ไม่สำเร็จ"
     
 
-    // // Enter Username
-    // // Try 3
-    // //     Keyboard.InputText(@ui"Inputcontrol<input>", username,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-    // // Catch Ex 
-    // //     TracePrint []&"a"
-    // // End Try
-
-    // // // Enter Password
-    // // Try 3
-    // //     Keyboard.InputPwd(@ui"Inputcontrol<input>1",password,true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
-    // // Catch Ex 
-    // //     TracePrint []&"a"
-    // // End Try
-
-    // // Click Sign In
+    // Enter Username
     // Try 3
-    //     Mouse.Action(@ui"Text<span>_Signin","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
-    //     iRet = WebBrowser.WaitPage(hWeb,{},60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-
-    //     bRet = UiElement.Exists(@ui"Text<span>_ThaiMetalAluminiumCo.,Ltd.",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})  
-    
+    //     Keyboard.InputText(@ui"Inputcontrol<input>", username,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     // Catch Ex 
     //     TracePrint []&"a"
     // End Try
+
+    // // Enter Password
+    // Try 3
+    //     Keyboard.InputPwd(@ui"Inputcontrol<input>1",password,true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
+    // Catch Ex 
+    //     TracePrint []&"a"
+    // End Try
+
+    // Click Sign In
+    Try 3
+        Mouse.Action(@ui"Text<span>_Signin","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+        iRet = WebBrowser.WaitPage(hWeb,{},60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
+        bRet = UiElement.Exists(@ui"Text<span>_ThaiMetalAluminiumCo.,Ltd.",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})  
+    
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
 
 Catch exception_information
     Throw exception_information
