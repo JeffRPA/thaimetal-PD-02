@@ -14,7 +14,7 @@ Try
         Keyboard.Press("Enter", "press", [],{"iDelayAfter": 0, "iDelayBefore": 0, "sSimulate": "simulate"})
         Delay(2000)
     Catch Ex 
-        TracePrint(Ex)
+        TracePrint []&"a"
     End Try
 
 
@@ -25,7 +25,7 @@ Try
     Try 3
         Mouse.Action(@ui"Button<button>_Fromproductreceipt","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
      Catch Ex 
-        TracePrint(Ex)
+        TracePrint []&"a"
     End Try
 
     Try 
@@ -40,7 +40,7 @@ Try
         sRet = Sys.Command("taskkill /F /IM excel.exe")
         Delay(100)
     Catch Ex
-        TracePrint(Ex)
+        TracePrint []&"a"
     End Try
 
     // AC-05-02-03 : ????? Purchase Order ???????????????? Excel
@@ -61,18 +61,18 @@ Try
                 count = count + 1
             End If
         Loop 
-        TracePrint(remaining_po)
+        // TracePrint(remaining_po)
 
     Catch Ex 
-        TracePrint(Ex)
+        TracePrint []&"a"
     End Try
 
-    // Clcik OK
-    Try 3
+    // Click OK
+    Try 
         delay(2000)
         Mouse.Action(@ui"Button<button>_(Alt+Enter)OK","left","click",10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 200, "bSetForeground": true, "sCursorPosition": "Center", "iCursorOffsetX": 0, "iCursorOffsetY": 0, "sKeyModifiers": [],"sSimulate": "simulate", "bMoveSmoothly": false})
     Catch Ex 
-        TracePrint(Ex)
+        TracePrint []&"a"
     End Try
 
 
@@ -100,9 +100,9 @@ Try
             
             Delay(3000)
         Loop    
-        TracePrint(remainingArray) 
+        // TracePrint(remainingArray) 
     Catch Ex 
-        TracePrint Ex
+        TracePrint []&"a"
     End Try
     
 
@@ -115,38 +115,9 @@ Try
     Try 3
         Mouse.Action(@ui"Text<span>_Save","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
-        TracePrint Ex
+        TracePrint []&"a"
     End Try
     
-Catch error
+Catch exception_information
+    TracePrint []&"a"
 End Try
-
-If error <> null
-    todaydate_string = errorlogedit.get_date_string_without_slash()
-
-    currenttime_string = errorlogedit.currenttime()
-
-    blocknamestring = error["File"]
-    blocknamestring = Replace(blocknamestring,".task","",false)
-
-    errorsummarystring = "errorLine: "&error["Line"]&" ("&Trim(error["Message"])&")"
-
-    //type2.2
-    //target: create the log file   paste_values_to_excel  in the same row
-    //main header is row1   we insert emptyrow and log at row2
-    xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\thaimetal_laiye_errorlog.xlsx'''
-    sheet_name_errorsummary = "Sheet1"
-    row_record_errorsummary = 2  //Insert an empty row at row 2
-
-    //input Value1 into the column A of row2
-    variables_errorsummary = [
-        [todaydate_string, "A"], 
-        [currenttime_string, "B"],     
-        [project_name, "C"],   
-        [blocknamestring, "D"],      
-        [errorsummarystring, "E"]
-    ]
-
-    errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
-
-End If
