@@ -848,8 +848,7 @@
                         "type": "tabset",
                         "id": "button",
                         "weight": 52.30125523012552,
-                        "height": 32,
-                        "selected": -1,
+                        "height": 250,
                         "config": {
                             "height": 250,
                             "selected": 0
