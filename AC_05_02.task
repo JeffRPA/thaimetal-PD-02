@@ -2,7 +2,7 @@
 //main work
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name = 'ThaiMetal_AC_05'
-// PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
+PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639058571780556594.xlsx'''
 
 Try 
     // AC-05-02-01 : ????????????? Pending vendor invoices
@@ -29,15 +29,18 @@ Try
     End Try
 
     Try 
-        objExcelWorkBook = Excel.OpenExcel(PO_file_path,true,"Excel","","")
-        rowCount = Excel.GetRowsCount(objExcelWorkBook,"Sheet1")
-        arrayRet = Excel.ReadRange(objExcelWorkBook,"Sheet1","A2:H"&rowCount,true)
-        // TracePrint(arrayRet)
+        arrayRet = utils.get_list_of_arrays_firstrowheader_and_secondrowonwards(PO_file_path, 'Sheet1', 'name')
+        // objExcelWorkBook = Excel.OpenExcel(PO_file_path,true,"Excel","","")
+        // rowCount = Excel.GetRowsCount(objExcelWorkBook,"Sheet1")
+        // arrayRet = Excel.ReadRange(objExcelWorkBook,"Sheet1","A2:H"&rowCount,true)
+        TracePrint(arrayRet)
         poColumn = Excel.ReadColumn(objExcelWorkBook,"Sheet1","C2",true)
         reverseArray = utils.reverse_array(poColumn)
         Delay(300)
         sRet = Sys.Command("taskkill /F /IM excel.exe")
         Delay(100)
+
+        
     Catch Ex
         TracePrint []&"a"
     End Try
