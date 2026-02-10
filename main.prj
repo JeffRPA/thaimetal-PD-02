@@ -471,8 +471,7 @@
             "desc": "PD_02_01",
             "editorMode": "sourceCode",
             "breakpoints": {
-                "19": null,
-                "43": null
+                "19": null
             },
             "out": "Result_Of_PD_02_01"
         },

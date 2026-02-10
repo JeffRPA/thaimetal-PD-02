@@ -47,7 +47,10 @@ Try
         day = Time.DatePart("d", dTime)
         month = Time.DatePart("m", dTime)
         full_year = Time.DatePart("yyyy", dTime)
-        year = SubString(full_year, 2, 3)
+        year = SubStr(CStr(full_year), 1,2)
+        
+        TracePrint(Type(full_year) )
+        TracePrint(year)
 
         start_date = '1/'&month&'/'&year
         end_date = day&'/'&month&'/'&year
