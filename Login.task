@@ -49,7 +49,7 @@ Try
         TracePrint []&"a"
         
     Catch Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
    
 
