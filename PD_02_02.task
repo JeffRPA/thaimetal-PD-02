@@ -1,0 +1,263 @@
+
+//main work
+project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
+project_name = 'ThaiMetal_PD_02'
+
+Try 
+    // PD-02-02-01 : ????????????? All production order
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    // Click on Search
+
+    Try 3
+
+        Mouse.Action(@ui"{Click on Search}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // Input All Productions orders
+
+    Try 3
+
+        Keyboard.InputText(@ui"{Input All Productions orders}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // PD-02-02-02 : ?????????????? Status
+
+    Try 3
+
+        Mouse.Action(@ui"{PD-02-02-02 : ?????????????? Status}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // Click Status header
+
+    Try 3
+
+        Mouse.Action(@ui"{Click Status header}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // Select Started
+
+    Try 3
+
+        UiElement.SetSelect(@ui"{Select Started}","","text",{"bContinueOnError":true,"iDelayAfter":100,"iDelayBefore":100})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // Click Apply
+
+    Try 3
+
+        Mouse.Action(@ui"{Click Apply}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // PD-02-02-03 : ?????????????? CW Report remainder as finished
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    // Click CW Report remainder as finished
+
+    Try 3
+
+        Mouse.Action(@ui"{Click CW Report remainder as finished}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // Enter 0
+
+    Try 3
+
+        Keyboard.InputText(@ui"{Enter 0}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // Click Apply
+
+    Try 3
+
+        Mouse.Action(@ui"{Click Apply}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // PD-02-02-04 : ???????????????????????????????? Pivot
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    // Click check from Excel
+
+    Try 3
+
+        Mouse.Action(@ui"{Click check from Excel}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // PD-02-02-05 : ????????????
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    // Click Production Order
+
+    Try 3
+
+        Mouse.Action(@ui"{Click Production Order}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // Click Report as finished
+
+    Try 3
+
+        Mouse.Action(@ui"{Click Report as finished}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // Wait for Report as finished text
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    // Check column CW good qty, Good quantity, CW error qty, Error quantity is 0 or empty
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    // Click OK
+
+    Try 3
+
+        Mouse.Action(@ui"{Click OK}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // Check Row Reported as finished status
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    // PD-02-02-07 : ??????
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    // Click Report as finished
+
+    Try 3
+
+        Mouse.Action(@ui"{Click Report as finished}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+
+    // Click OK
+
+    Try 3
+
+        Mouse.Action(@ui"{Click OK}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+    Catch Ex 
+
+        TracePrint []&"a"
+
+    End Try
+
+
+    
+Catch exception_information
+    TracePrint []&"a"
+End Try
