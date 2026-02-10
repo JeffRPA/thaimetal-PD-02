@@ -294,9 +294,12 @@
             },
             "next": {
                 "vertices": [],
-                "refId": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2"
+                "refId": "4f6754e0-0648-11f1-b05a-578d89020414"
             },
-            "exception": {},
+            "exception": {
+                "vertices": [],
+                "refId": ""
+            },
             "file": "CloseERP.task",
             "caption": "CloseERP",
             "desc": "close major ERP",
@@ -405,7 +408,7 @@
             "type": "task",
             "id": "7e0592b0-eb79-11f0-99cf-51d0dc7a2065",
             "rect": {
-                "x": 1054,
+                "x": 1180,
                 "y": 1879,
                 "width": 268,
                 "height": 78
@@ -522,7 +525,10 @@
                 "width": 268,
                 "height": 78
             },
-            "next": {},
+            "next": {
+                "vertices": [],
+                "refId": "866cfc0a-ad99-410f-a76b-c06d86024bf0"
+            },
             "exception": {},
             "file": "ErrorHandling.task",
             "caption": "ErrorHandling",
@@ -533,33 +539,16 @@
         },
         {
             "type": "task",
-            "id": "d1ce9fcd-0b8b-4d41-9f3a-05c5a5b42810",
-            "rect": {
-                "x": 1134,
-                "y": 328,
-                "width": 268,
-                "height": 78
-            },
-            "next": {},
-            "exception": {},
-            "file": "Block2.task",
-            "caption": "Block2",
-            "desc": "Block2",
-            "editorMode": "visual",
-            "breakpoints": {}
-        },
-        {
-            "type": "task",
             "id": "4f6754e0-0648-11f1-b05a-578d89020414",
             "rect": {
-                "x": 740,
-                "y": 1988,
+                "x": 736,
+                "y": 1998,
                 "width": 268,
                 "height": 78
             },
             "next": {
                 "vertices": [],
-                "refId": ""
+                "refId": "fc7edc10-d87f-41fe-ad45-8846cc49c1e2"
             },
             "exception": {},
             "file": "CloseBrowser1.task",
@@ -626,8 +615,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1207,
-            "top": 3362
+            "left": 1234,
+            "top": 3172
         },
         "zoom": 1
     },
@@ -742,6 +731,7 @@
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                                 "weight": 50,
+                                "selected": 2,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -768,6 +758,23 @@
                                             "type": "task",
                                             "selector": [
                                                 "5ff74500-ba61-11f0-81f8-7befb543be84"
+                                            ]
+                                        },
+                                        "enableClose": true,
+                                        "className": ""
+                                    },
+                                    {
+                                        "type": "tab",
+                                        "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
+                                        "name": "Block16",
+                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Block16.task",
+                                        "component": "taskNodeEditor",
+                                        "config": {
+                                            "selfControl": true,
+                                            "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
+                                            "type": "task",
+                                            "selector": [
+                                                "c7582570-d75b-4817-857d-d5d14fb116e9"
                                             ]
                                         },
                                         "enableClose": true,

@@ -15,7 +15,7 @@ Try
     //type2.2
     //target: create the log file   paste_values_to_excel  in the same row
     //main header is row1   we insert emptyrow and log at row2
-    xlsx_filepath_processsummary = project_path & '''\log_allprocess_bydateandtime\mazuma_laiye_processlog.xlsx'''
+    xlsx_filepath_processsummary = project_path & '''\log_allprocess_bydateandtime\thaimetal_laiye_processlog.xlsx'''
     sheet_name_processsummary = "Sheet1"
     row_record_processsummary = 2  //Insert an empty row at row 2
 
