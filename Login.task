@@ -20,7 +20,7 @@ Try
         sRet = Sys.Command("taskkill /F /IM excel.exe")
         Delay(100)
     Catch Ex
-        TracePrint []&"a"    
+        TracePrint []&"a"
     End Try    
 
     phase_exception = "Thaimetal portal not response"
@@ -44,6 +44,9 @@ Try
         Delay(1000)
 
         waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
+        
+        TracePrint []&"a"
         
     Catch Ex
         TracePrint []&"a"
@@ -103,6 +106,7 @@ Try
     End Try
 
 Catch exceptionInformation
+    
 End Try
 
 
@@ -141,9 +145,7 @@ If exceptionInformation <> null
 
     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
 
-    
-    TracePrint []&"a"
-    
+    Throw Ex
     
 End If
 

@@ -184,9 +184,12 @@
             },
             "next": {
                 "vertices": [],
-                "refId": "2c99fbd4-397f-4865-a4c3-8e1335012704"
+                "refId": ""
             },
-            "exception": {},
+            "exception": {
+                "vertices": [],
+                "refId": ""
+            },
             "file": "OpenTaskbar.task",
             "caption": "OpenTaskbar",
             "desc": "opentaskbarstring",
@@ -219,8 +222,8 @@
             "type": "task",
             "id": "e40adcbe-2c17-48ca-a32d-85edcbb62fc3",
             "rect": {
-                "x": 944,
-                "y": 1300,
+                "x": 1008,
+                "y": 1298,
                 "width": 268,
                 "height": 78
             },
@@ -261,8 +264,8 @@
             "type": "task",
             "id": "fcef859b-c9c1-4a8c-a149-63ad9bc7eee3",
             "rect": {
-                "x": 1134,
-                "y": 1378,
+                "x": 1306,
+                "y": 1298,
                 "width": 268,
                 "height": 78
             },
@@ -523,6 +526,23 @@
             "desc": "Error Handling",
             "editorMode": "sourceCode",
             "breakpoints": {}
+        },
+        {
+            "type": "task",
+            "id": "d1ce9fcd-0b8b-4d41-9f3a-05c5a5b42810",
+            "rect": {
+                "x": 1134,
+                "y": 328,
+                "width": 268,
+                "height": 78
+            },
+            "next": {},
+            "exception": {},
+            "file": "Block2.task",
+            "caption": "Block2",
+            "desc": "Block2",
+            "editorMode": "visual",
+            "breakpoints": {}
         }
     ],
     "variables": [
@@ -576,8 +596,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1093,
-            "top": 2290
+            "left": 1125,
+            "top": 2190
         },
         "zoom": 1
     },
@@ -709,7 +729,7 @@
                                 "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Login.task",
                                 "component": "taskNodeEditor",
                                 "config": {
-                                    "selfControl": true,
+                                    "selfControl": false,
                                     "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
                                     "type": "task",
                                     "selector": [
@@ -760,7 +780,7 @@
                                 "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Block1.task",
                                 "component": "taskNodeEditor",
                                 "config": {
-                                    "selfControl": true,
+                                    "selfControl": false,
                                     "id": "b4a3b988-4f77-42bc-8478-a38dc7d962e4",
                                     "type": "task",
                                     "selector": [
@@ -811,8 +831,7 @@
                         "type": "tabset",
                         "id": "button",
                         "weight": 80.58968058968058,
-                        "height": 32,
-                        "selected": -1,
+                        "height": 328,
                         "config": {
                             "height": 328,
                             "selected": 0
