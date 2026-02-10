@@ -606,7 +606,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1590,
-            "top": 2963
+            "top": 2063
         },
         "zoom": 1
     },
@@ -720,7 +720,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 44.269521410579344,
+                                "weight": 37.468513853904284,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -774,12 +774,12 @@
                             {
                                 "type": "row",
                                 "id": "#71bfcbef-c10b-4423-97f3-062748c14bda",
-                                "weight": 55.730478589420656,
+                                "weight": 62.531486146095716,
                                 "children": [
                                     {
                                         "type": "tabset",
                                         "id": "#c600c443-6afd-4029-9576-1574e71c0002",
-                                        "weight": 38.028169014084504,
+                                        "weight": 35.102925243770315,
                                         "children": [
                                             {
                                                 "type": "tab",
@@ -803,7 +803,7 @@
                                     {
                                         "type": "tabset",
                                         "id": "#a165cef7-85fb-4bb5-a9b9-12f5296801e0",
-                                        "weight": 61.971830985915496,
+                                        "weight": 64.89707475622969,
                                         "selected": 1,
                                         "children": [
                                             {
@@ -851,7 +851,8 @@
                         "type": "tabset",
                         "id": "button",
                         "weight": 52.30125523012552,
-                        "height": 250,
+                        "height": 32,
+                        "selected": -1,
                         "config": {
                             "height": 250,
                             "selected": 0

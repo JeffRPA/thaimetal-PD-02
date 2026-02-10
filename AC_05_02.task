@@ -100,7 +100,8 @@ Try
             
             Delay(3000)
         Loop    
-        // TracePrint(remainingArray) 
+        
+        TracePrint []&"a"
     Catch Ex 
         TracePrint []&"a"
     End Try
