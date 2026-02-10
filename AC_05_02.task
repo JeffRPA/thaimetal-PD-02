@@ -101,7 +101,6 @@ Try
             Delay(3000)
         Loop    
         
-        TracePrint []&"a"
     Catch Ex 
         TracePrint []&"a"
     End Try
