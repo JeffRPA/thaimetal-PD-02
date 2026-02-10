@@ -1,8 +1,19 @@
 TracePrint('Error Handling: '&phase_exception)
 
 
-Mail.SendExt({"host":"","port":25,"ssl":false,"authentication":false,"user":"","password":""},"","","","","","",[])
+Try 
+    sServer = "smtp.gmail.com"
+    iPort   = 465
+    bSsl    = true
+    sUid    = "yourgmail@gmail.com"
+    sPwd    = "GMAIL_APP_PASSWORD"
+    sSender = sUid
+    sTo  = ["jeffrey@greenmoons.co.th"]
+    sCc  = []
 
+    bRet = Mail.SendEx(sServer,iPort,bSsl,sUid,sPwd,sSender,sTo,sCc,"Test from Laiye", "Hello from Gmail SMTP",[])
+Catch error
+End Try
 
 If exception_information <> null
 
