@@ -1,1 +1,0 @@
-Keyboard.InputText(@ui"","",true,300,10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 500, "bSetForeground": true, "sSimulate": "message", "bValidate": false, "bClickBeforeInput": false})
