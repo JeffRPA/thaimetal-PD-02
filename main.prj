@@ -779,7 +779,7 @@
                                     {
                                         "type": "tabset",
                                         "id": "#c600c443-6afd-4029-9576-1574e71c0002",
-                                        "weight": 35.102925243770315,
+                                        "weight": 71.63120567375887,
                                         "children": [
                                             {
                                                 "type": "tab",
@@ -798,12 +798,13 @@
                                                 "enableClose": true,
                                                 "className": ""
                                             }
-                                        ]
+                                        ],
+                                        "active": true
                                     },
                                     {
                                         "type": "tabset",
                                         "id": "#a165cef7-85fb-4bb5-a9b9-12f5296801e0",
-                                        "weight": 64.89707475622969,
+                                        "weight": 28.368794326241133,
                                         "selected": 1,
                                         "children": [
                                             {
@@ -840,8 +841,7 @@
                                                 "enableClose": true,
                                                 "className": ""
                                             }
-                                        ],
-                                        "active": true
+                                        ]
                                     }
                                 ]
                             }
@@ -851,8 +851,7 @@
                         "type": "tabset",
                         "id": "button",
                         "weight": 52.30125523012552,
-                        "height": 32,
-                        "selected": -1,
+                        "height": 250,
                         "config": {
                             "height": 250,
                             "selected": 0
