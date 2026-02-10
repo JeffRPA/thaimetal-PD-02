@@ -1,4 +1,5 @@
 TracePrint('Error Handling: '&phase_exception)
+
 If exception_information <> null
 
     //todaywithoutslash_datestring

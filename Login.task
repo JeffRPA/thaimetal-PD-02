@@ -107,7 +107,6 @@ Try
     End Try
 
 Catch exception_information
-    exception_information = exception_information
     TracePrint []&"a"
 End Try
 
