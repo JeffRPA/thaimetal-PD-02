@@ -461,7 +461,7 @@
             },
             "exception": {
                 "vertices": [],
-                "refId": ""
+                "refId": "b4a3b988-4f77-42bc-8478-a38dc7d962e4"
             },
             "file": "AC_05_01.task",
             "caption": "AC_05_01",
@@ -718,6 +718,7 @@
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                                 "weight": 40.7911001236094,
+                                "selected": 1,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -730,23 +731,6 @@
                                             "id": "5ff71df0-ba61-11f0-81f8-7befb543be84"
                                         },
                                         "enableClose": false,
-                                        "className": ""
-                                    },
-                                    {
-                                        "type": "tab",
-                                        "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
-                                        "name": "Login",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Login.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": false,
-                                            "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
-                                            "type": "task",
-                                            "selector": [
-                                                "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9"
-                                            ]
-                                        },
-                                        "enableClose": true,
                                         "className": ""
                                     },
                                     {
@@ -800,48 +784,61 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             },
                             {
-                                "type": "tabset",
-                                "id": "#a165cef7-85fb-4bb5-a9b9-12f5296801e0",
+                                "type": "row",
+                                "id": "#71bfcbef-c10b-4423-97f3-062748c14bda",
                                 "weight": 59.2088998763906,
-                                "selected": 1,
                                 "children": [
                                     {
-                                        "type": "tab",
-                                        "id": "b4a3b988-4f77-42bc-8478-a38dc7d962e4",
-                                        "name": "ErrorHandling",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\ErrorHandling.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": false,
-                                            "id": "b4a3b988-4f77-42bc-8478-a38dc7d962e4",
-                                            "type": "task",
-                                            "selector": [
-                                                "b4a3b988-4f77-42bc-8478-a38dc7d962e4"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
+                                        "type": "tabset",
+                                        "id": "#c600c443-6afd-4029-9576-1574e71c0002",
+                                        "weight": 50,
+                                        "children": [
+                                            {
+                                                "type": "tab",
+                                                "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
+                                                "name": "Login",
+                                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\Login.task",
+                                                "component": "taskNodeEditor",
+                                                "config": {
+                                                    "selfControl": false,
+                                                    "id": "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9",
+                                                    "type": "task",
+                                                    "selector": [
+                                                        "bd8f40d4-7e5f-47d8-a164-df0e9eef0ff9"
+                                                    ]
+                                                },
+                                                "enableClose": true,
+                                                "className": ""
+                                            }
+                                        ]
                                     },
                                     {
-                                        "type": "tab",
-                                        "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
-                                        "name": "AC_05_01",
-                                        "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\AC_05_01.task",
-                                        "component": "taskNodeEditor",
-                                        "config": {
-                                            "selfControl": false,
-                                            "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
-                                            "type": "task",
-                                            "selector": [
-                                                "26ec7500-023c-11f1-9b15-c7ae3b0dc761"
-                                            ]
-                                        },
-                                        "enableClose": true,
-                                        "className": ""
+                                        "type": "tabset",
+                                        "id": "#a165cef7-85fb-4bb5-a9b9-12f5296801e0",
+                                        "weight": 50,
+                                        "children": [
+                                            {
+                                                "type": "tab",
+                                                "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
+                                                "name": "AC_05_01",
+                                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\AC_05\\AC_05_01.task",
+                                                "component": "taskNodeEditor",
+                                                "config": {
+                                                    "selfControl": false,
+                                                    "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
+                                                    "type": "task",
+                                                    "selector": [
+                                                        "26ec7500-023c-11f1-9b15-c7ae3b0dc761"
+                                                    ]
+                                                },
+                                                "enableClose": true,
+                                                "className": ""
+                                            }
+                                        ],
+                                        "active": true
                                     }
                                 ]
                             }
