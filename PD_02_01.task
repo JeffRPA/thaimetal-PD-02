@@ -46,9 +46,13 @@ Try
         dTime = Time.Date()
         day = Time.DatePart("d", dTime)
         month = Time.DatePart("m", dTime)
-        year = Time.DatePart("yyyy", dTime)
-        TracePrint(day&'/'&month&'/'&year)
+        full_year = Time.DatePart("yyyy", dTime)
+        year = SubString(full_year, 2, 3)
 
+        start_date = '1/'&month&'/'&year
+        end_date = day&'/'&month&'/'&year
+        TracePrint(start_date)
+        TracePrint(end_date)  
 
         Keyboard.InputText(@ui"{Input End date}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     Catch Ex 
