@@ -11,6 +11,7 @@ phase_exception = "Open credential excel"
 Try 
     //// Credentials ////
     Try
+        TracePrint []&"a"
         objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")
 
         username = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
@@ -60,7 +61,6 @@ Try
     // Click MS Dynamic system
     Try 3
         UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
-        TracePrint []&"a"
     Catch Ex 
         TracePrint []&"a"
     End Try
@@ -107,6 +107,7 @@ Try
     End Try
 
 Catch exception_information
+    exception_information = exception_information
     TracePrint []&"a"
 End Try
 

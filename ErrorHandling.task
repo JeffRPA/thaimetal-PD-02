@@ -1,7 +1,4 @@
 TracePrint('Error Handling: '&phase_exception)
-TracePrint('Exception Info: ')
-TracePrint(exception_information)
-
 If exception_information <> null
 
     //todaywithoutslash_datestring
@@ -15,7 +12,7 @@ If exception_information <> null
     blocknamestring = Replace(blocknamestring,".task","",false)
 
     //errorsummarystring
-    errorsummarystring = "errorLine: "&exception_information["Line"]&" ("&Trim(exceptionInformation["Message"])&")"
+    errorsummarystring = "errorLine: "&exception_information["Line"]&" ("&Trim(exception_information["Message"])&")"
 
 
     //type2.2
@@ -35,7 +32,5 @@ If exception_information <> null
     ]
 
     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
-
-    Throw Ex
-    
+ 
 End If
