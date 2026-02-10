@@ -20,7 +20,6 @@ Try
         sRet = Sys.Command("taskkill /F /IM excel.exe")
         Delay(100)
 
-        
     Catch Ex
         TracePrint []&"a"
     End Try    
