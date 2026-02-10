@@ -43,7 +43,7 @@ Try
     Catch Ex 
         TracePrint []&"a"
     End Try
-// sRet = WebBrowser.RunJS(hWeb,"function(){return 123}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+    // sRet = WebBrowser.RunJS(hWeb,"function(){return 123}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
 
 
