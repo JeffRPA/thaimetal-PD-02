@@ -1,0 +1,39 @@
+TracePrint('Error Handling: '&phase_exception)
+
+If exception_information <> null
+
+    //todaywithoutslash_datestring
+    todaydate_string = errorlogedit.get_date_string_without_slash()
+
+    //currenttime_string
+    currenttime_string = errorlogedit.currenttime()
+
+    //blocknamestring
+    blocknamestring = exception_information["File"]
+    blocknamestring = Replace(blocknamestring,".task","",false)
+
+    //errorsummarystring
+    errorsummarystring = "errorLine: "&exception_information["Line"]&" ("&Trim(exceptionInformation["Message"])&")"
+
+
+    //type2.2
+    //target: create the log file   paste_values_to_excel  in the same row
+    //main header is row1   we insert emptyrow and log at row2
+    xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\thaimetal_laiye_errorlog.xlsx'''
+    sheet_name_errorsummary = "Sheet1"
+    row_record_errorsummary = 2  //Insert an empty row at row 2
+
+    //input Value1 into the column A of row2
+    variables_errorsummary = [
+        [todaydate_string, "A"], 
+        [currenttime_string, "B"],     
+        [project_name, "C"],   
+        [blocknamestring, "D"],      
+        [errorsummarystring, "E"]
+    ]
+
+    errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
+
+    Throw Ex
+    
+End If

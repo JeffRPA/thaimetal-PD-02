@@ -1,6 +1,0 @@
-TracePrint('Error Handling: '&phase_exception)
-
-// Try 
-//     bRet = Outlook.SendMail("","","","","text",['''C:\Users'''],"","")
-// Catch Ex
-// End Try
