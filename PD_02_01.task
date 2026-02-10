@@ -9,21 +9,17 @@ project_name ='ThaiMetal_PD_02'
 Try 
     Try 3
         Mouse.Action(@ui"Inputcontrol<input>4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        Keyboard.InputText(@ui"Inputcontrol<input>4","Pending vendor invoices",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+        Keyboard.InputText(@ui"Inputcontrol<input>4","Transactions",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
         Keyboard.Press("Enter", "press", [],{"iDelayAfter": 0, "iDelayBefore": 0, "sSimulate": "simulate"})
         Delay(2000)
     Catch Ex 
         TracePrint []&"a"
     End Try
 
-
-
-    // Input Transactions
-    Try 3
-        Keyboard.InputText(@ui"{Input Transactions}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
+    bRet = UiElement.Exists(@ui"Blocklevelelement<div>_ExporttoExcelfinished",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+    If bRet 
+        Delay(5000)
+    End If
 
     // PD-02-01-02 : ?????????????? Physical date
     ///////////////////////////////////////////////////////////////////////////////////////////
