@@ -22,7 +22,7 @@ Try
 
         
     Catch Ex
-        Throw Ex
+        TracePrint []&"a"
     End Try    
 
     phase_exception = "Thaimetal portal not response"
@@ -48,9 +48,8 @@ Try
         waitsecondiRet = WebBrowser.WaitPage(hWeb,{},30000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
         
-        TracePrint []&'a'
     Catch Ex
-        Throw Ex
+        TracePrint []&"a"
     End Try
    
 
@@ -61,6 +60,7 @@ Try
     // Click MS Dynamic system
     Try 3
         UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+        TracePrint []&"a"
     Catch Ex 
         TracePrint []&"a"
     End Try
@@ -107,7 +107,7 @@ Try
     End Try
 
 Catch exception_information
-    Throw exception_information
+    TracePrint []&"a"
 End Try
 
 

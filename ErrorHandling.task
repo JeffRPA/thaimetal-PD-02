@@ -1,4 +1,6 @@
 TracePrint('Error Handling: '&phase_exception)
+TracePrint('Exception Info: ')
+TracePrint(exception_information)
 
 If exception_information <> null
 
