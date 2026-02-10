@@ -11,18 +11,19 @@ phase_exception = "Open credential excel"
 Try 
     //// Credentials ////
     Try
-        objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")
+        // objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")
 
-        username = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
-        password = Excel.ReadCell(objExcelWorkBook,"credentials","B2",true)
+        // username = Excel.ReadCell(objExcelWorkBook,"credentials","B1",true)
+        // password = Excel.ReadCell(objExcelWorkBook,"credentials","B2",true)
 
-        Delay(300)
-        sRet = Sys.Command("taskkill /F /IM excel.exe")
-        Delay(100)
+        // Delay(300)
+        // sRet = Sys.Command("taskkill /F /IM excel.exe")
+        // Delay(100)
 
         
         TracePrint []&"a"
     Catch Ex
+        TracePrint "enter throw 1"
         Throw Ex
     End Try    
 
