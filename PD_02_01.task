@@ -82,31 +82,19 @@ Try
     End Try
 
 
-
     // PD-02-01-04 : Download File Excel
-
     ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
     // Click Download icon
 
     Try 3
-
-        Mouse.Action(@ui"{Click Download icon}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
+        Mouse.Action(@ui"Button<button>_OpeninMicrosoftOffice","left","click",4000,{"bContinueOnError":false,"iDelayAfter":200,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        Mouse.Action(@ui"Button<button>_Gridname:GridInventorytransactionso","left","click",4000,{"bContinueOnError":false,"iDelayAfter":200,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
-
         TracePrint []&"a"
-
     End Try
 
-
-
     // Click Download
-
     Try 3
-
         Mouse.Action(@ui"{Click Download}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
 
     Catch Ex 
