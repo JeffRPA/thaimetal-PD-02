@@ -35,8 +35,6 @@ Try
         TracePrint []&"a"
     End Try
 
-
-
     // Select Started
     Try 3
         UiElement.SetSelect(@ui"{Select Started}","","text",{"bContinueOnError":true,"iDelayAfter":100,"iDelayBefore":100})
