@@ -632,8 +632,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1150,
-            "top": 2375
+            "left": 1047,
+            "top": 2875
         },
         "zoom": 1
     },
@@ -708,7 +708,6 @@
                 },
                 {
                     "type": "border",
-                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -743,13 +742,12 @@
                     {
                         "type": "row",
                         "id": "#6db91347-56e7-4cbe-aa97-5c2070a12424",
-                        "weight": 111.2970711297071,
+                        "weight": 146.86192468619248,
                         "children": [
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                                 "weight": 38.66866118175019,
-                                "selected": 1,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -831,8 +829,8 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 88.7029288702929,
-                        "height": 424,
+                        "weight": 53.13807531380753,
+                        "height": 254,
                         "config": {
                             "height": 424,
                             "selected": 0
