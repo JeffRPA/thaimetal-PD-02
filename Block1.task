@@ -51,7 +51,7 @@ Try
     Try 3
         Mouse.Action(@ui"Button<button>_Download1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         bRet = UiElement.Exists(@ui"Text<span>_downloadfinishedbanner",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
-       If bRet
+        If bRet
             // Check downloaded file
             Try 
                 Delay(50)
@@ -62,7 +62,7 @@ Try
                 // TracePrint(PO_file_path)
             Catch Ex
             End Try
-       End If
+        End If
     Catch Ex 
         TracePrint []&"a"
     End Try
