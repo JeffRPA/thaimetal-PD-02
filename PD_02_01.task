@@ -98,7 +98,11 @@ Try
         UiElement.Wait(@ui"Blocklevelelement<div>_ExporttoExcel","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
         Mouse.Action(@ui"Button<button>_Download3","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         Delay(5000)
-        
+        bRet = UiElement.Exists(@ui"Text<span>_ExportingdatatoExcel",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+        Do While bRet
+            Delay(1000)
+            bRet = UiElement.Exists(@ui"Text<span>_ExportingdatatoExcel",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+        Loop
     Catch Ex 
         TracePrint []&"a"
     End Try
