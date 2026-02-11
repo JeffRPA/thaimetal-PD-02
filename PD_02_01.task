@@ -115,6 +115,7 @@ Try
         PO_file_path = Trim(variable1&Trim(variable2))
         // TracePrint(PO_file_path)
     Catch Ex
+        TracePrint []&"a"
     End Try
 
     // PD-02-01-05 : Pivot ?? Number ?????????????
@@ -123,7 +124,11 @@ Try
     // Group CW Quantity by number
     ///////////////////////////////////////////////////////////////////////////////////////////
 
-
+    Try 
+        excel_grouping_column.grouping_column(PO_file_path,'Number', 'CW quantity')
+    Catch Ex
+        TracePrint []&"a"
+    End Try
     
 Catch exceptionInformation
     TracePrint []&'a'
