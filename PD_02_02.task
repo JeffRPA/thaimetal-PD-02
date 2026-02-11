@@ -21,32 +21,11 @@ Try
         Delay(5000)
     End If
 
-
-
-    // Input All Productions orders
-
-    Try 3
-
-        Keyboard.InputText(@ui"{Input All Productions orders}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-
-    Catch Ex 
-
-        TracePrint []&"a"
-
-    End Try
-
-
-
     // PD-02-02-02 : ?????????????? Status
-
     Try 3
-
-        Mouse.Action(@ui"{PD-02-02-02 : ?????????????? Status}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
+        Mouse.Action(@ui"Blocklevelelement<div>_Status","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
-
         TracePrint []&"a"
-
     End Try
 
 
