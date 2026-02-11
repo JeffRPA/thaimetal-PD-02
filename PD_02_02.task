@@ -2,6 +2,7 @@
 //main work
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name = 'ThaiMetal_PD_02'
+PO_file_path = '''C:\Users\RPA1\Downloads\Vendor product receipts_639063992675582416.xlsx'''
 
 Try 
     // PD-02-02-01 : ????????????? All production order
@@ -45,15 +46,10 @@ Try
 
 
     // Click Apply
-
     Try 3
-
         Mouse.Action(@ui"{Click Apply}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
     Catch Ex 
-
         TracePrint []&"a"
-
     End Try
 
 

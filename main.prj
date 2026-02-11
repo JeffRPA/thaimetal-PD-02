@@ -632,8 +632,8 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1168,
-            "top": 2685
+            "left": 773,
+            "top": 2485
         },
         "zoom": 1
     },
@@ -707,6 +707,7 @@
                 },
                 {
                     "type": "border",
+                    "selected": 1,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -741,12 +742,12 @@
                     {
                         "type": "row",
                         "id": "#6db91347-56e7-4cbe-aa97-5c2070a12424",
-                        "weight": 192.46861924686192,
+                        "weight": 133.68200836820083,
                         "children": [
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 29.159978598180846,
+                                "weight": 29.4275013376137,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -766,7 +767,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#bed4d9e3-f603-48ac-9f20-b35a5163c293",
-                                "weight": 70.84002140181916,
+                                "weight": 70.57249866238631,
                                 "selected": 2,
                                 "children": [
                                     {
@@ -793,7 +794,7 @@
                                         "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\PD_02\\PD_02_01.task",
                                         "component": "taskNodeEditor",
                                         "config": {
-                                            "selfControl": true,
+                                            "selfControl": false,
                                             "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
                                             "type": "task",
                                             "selector": [
@@ -828,10 +829,11 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 7.531380753138075,
-                        "height": 36,
+                        "weight": 66.31799163179916,
+                        "height": 32,
+                        "selected": -1,
                         "config": {
-                            "height": 254,
+                            "height": 317,
                             "selected": 0
                         },
                         "enableDrop": false,
