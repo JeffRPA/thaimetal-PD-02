@@ -120,14 +120,15 @@ Try
         Mouse.Action(@ui"Button<button>_Productionorder","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         For Each value In all_number
             Keyboard.InputText(@ui"Inputcontrol<input>12",value,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-            Keyboard.Press("Enter", "press", [],{"iDelayAfter": 1000, "iDelayBefore": 0, "sSimulate": "simulate"})
-        
-            
-            hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            WebBrowser.RunJS(hWeb,"function(){try { const firstInput = document.querySelector("&'"'&"input[id^='ProdTable_ProdId_']"&'"'&"); if (!firstInput) { return false; } let parent = firstInput.parentElement; while (parent && !parent.querySelector("&'"'&"div[role='checkbox']"&'"'&")) { parent = parent.parentElement; } if (!parent) { return false; } const checkbox = parent.querySelector("&'"'&"div[role='checkbox']"&'"'&"); if (checkbox && checkbox.getAttribute("&'"'&"aria-checked"&'"'&") === "&'"'&"false"&'"'&") { checkbox.click(); return true; } return false; } catch (error) { return false; }}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            sRet = UiElement.GetAttribute(@ui"Button<button>_Reportasfinished1","disabled",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            Keyboard.Press("Enter", "press", [],{"iDelayAfter": 500, "iDelayBefore": 0, "sSimulate": "simulate"})            
+            sRet = UiElement.GetAttribute(@ui"Button<button>_Reportasfinished1","disabled",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200}) 
+            If sRet = ""
+                hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                jsRun = WebBrowser.RunJS(hWeb,"function(){try { const firstInput = document.querySelector("&'"'&"input[id^='ProdTable_ProdId_']"&'"'&"); if (!firstInput) { return false; } let parent = firstInput.parentElement; while (parent && !parent.querySelector("&'"'&"div[role='checkbox']"&'"'&")) { parent = parent.parentElement; } if (!parent) { return false; } const checkbox = parent.querySelector("&'"'&"div[role='checkbox']"&'"'&"); if (checkbox && checkbox.getAttribute("&'"'&"aria-checked"&'"'&") === "&'"'&"false"&'"'&") { checkbox.click(); return true; } return false; } catch (error) { return false; }}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            End If
 
-            TracePrint(sRet)
+
+            
             // Mouse.Action(@ui"Button<button>_Reportasfinished","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         
         next  
