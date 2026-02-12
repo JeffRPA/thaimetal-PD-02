@@ -116,8 +116,10 @@ Try
     Try 3
         remaining_number = ["PDPK26-010129","PDPK26-009539","PDPK26-009306"]   
         count = 0
+        
+        transformedArrayRet = utils.array_to_array_string(remaining_number)
         hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        sRet = WebBrowser.RunJS(hWeb,"function() {try { const codeSet = []; const codeInputs = document.querySelectorAll("&'"'&"input[id^='ProdTable_ProdId_']"&'"'&"); codeInputs.forEach(input => { const codeValue = input.value.trim(); if (codeSet.has(codeValue)) { const row = input.closest('[role="&'"'&"row"&'"'&"]') || input.closest('div[role="&'"'&"gridcell"&'"'&"]')?.parentElement; if (!row) return; const checkbox = row.querySelector('div[role="&'"'&"checkbox"&'"'&"]'); if (checkbox && checkbox.getAttribute("&'"'&"aria-checked"&'"'&") === "&'"'&"false"&'"'&") { checkbox.click(); console.log("&'"'&"Checked:"&'"'&", codeValue); } } }); } catch (error) { console.error("&'"'&"Error checking rows:"&'"'&", error); }}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        sRet = WebBrowser.RunJS(hWeb,"function() {try { const codeSet = "&transformedArrayRet&"; const codeInputs = document.querySelectorAll("&'"'&"input[id^='ProdTable_ProdId_']"&'"'&"); codeInputs.forEach(input => { const codeValue = input.value.trim(); if (codeSet.has(codeValue)) { const row = input.closest('[role="&'"'&"row"&'"'&"]') || input.closest('div[role="&'"'&"gridcell"&'"'&"]')?.parentElement; if (!row) return; const checkbox = row.querySelector('div[role="&'"'&"checkbox"&'"'&"]'); if (checkbox && checkbox.getAttribute("&'"'&"aria-checked"&'"'&") === "&'"'&"false"&'"'&") { checkbox.click(); console.log("&'"'&"Checked:"&'"'&", codeValue); } } }); } catch (error) { console.error("&'"'&"Error checking rows:"&'"'&", error); }}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         TracePrint sRet
         
         
