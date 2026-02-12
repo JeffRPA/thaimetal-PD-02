@@ -38,9 +38,8 @@ Try
 
     // Select Started
     Try 3
-        Mouse.Action(@ui"Inputcontrol<input>_Started","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        Keyboard.InputText(@ui"Inputcontrol<input>_Started","Started",true,20,10000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-        Keyboard.Press("Enter", "press", [],{"iDelayAfter": 0, "iDelayBefore": 0, "sSimulate": "simulate"})
+        Mouse.Action(@ui"Blocklevelelement<div>_","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        Mouse.Action(@ui"Listitem<li>_Started","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
         TracePrint []&"a"
     End Try
@@ -54,35 +53,20 @@ Try
 
 
     // PD-02-02-03 : ?????????????? CW Report remainder as finished
-
     ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
     // Click CW Report remainder as finished
-
+    
     Try 3
-
-        Mouse.Action(@ui"{Click CW Report remainder as finished}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
+        Mouse.Action(@ui"Blocklevelelement<div>_CWreportremainderasfinished","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
-
         TracePrint []&"a"
-
     End Try
 
-
-
     // Enter 0
-
     Try 3
-
-        Keyboard.InputText(@ui"{Enter 0}","",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-
+        Keyboard.InputText(@ui"Inputcontrol<input>9","0",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     Catch Ex 
-
         TracePrint []&"a"
-
     End Try
 
 
