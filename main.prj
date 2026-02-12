@@ -742,7 +742,7 @@
                     {
                         "type": "row",
                         "id": "#6db91347-56e7-4cbe-aa97-5c2070a12424",
-                        "weight": 162.97071129707112,
+                        "weight": 160.6694560669456,
                         "children": [
                             {
                                 "type": "tabset",
@@ -780,8 +780,7 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             },
                             {
                                 "type": "tabset",
@@ -840,15 +839,16 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ]
+                                ],
+                                "active": true
                             }
                         ]
                     },
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 37.02928870292887,
-                        "height": 177,
+                        "weight": 39.33054393305439,
+                        "height": 188,
                         "config": {
                             "height": 135,
                             "selected": 0
