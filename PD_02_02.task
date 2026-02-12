@@ -69,28 +69,37 @@ Try
         TracePrint []&"a"
     End Try
 
-
-
     // Click Apply
-
     Try 3
-
-        Mouse.Action(@ui"{Click Apply}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
+        Mouse.Action(@ui"Button<button>_Apply3","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
-
         TracePrint []&"a"
-
     End Try
 
 
+    // Click Production
+    Try 3
+        Mouse.Action(@ui"Blocklevelelement<div>_Production","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
+
+    // Enter PDPK
+    Try 3
+        Keyboard.InputText(@ui"Inputcontrol<input>10","PDPK",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
+
+    // Click Apply
+    Try 3
+        Mouse.Action(@ui"Button<button>_Apply4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
 
     // PD-02-02-04 : ???????????????????????????????? Pivot
-
     ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
     // Click check from Excel
 
     Try 3
