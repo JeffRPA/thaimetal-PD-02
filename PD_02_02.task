@@ -113,6 +113,17 @@ Try
         TracePrint []&"a"
     End Try
 
+    Try 3
+        remaining_po = ["PDPK25-059991","PDPK25-060095","PDPK25-072580"]   
+        count = 0
+    Catch Ex 
+        TracePrint []&"a"
+    End Try
+
+
+
+
+
     // PD-02-02-05 : ????????????
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Click Production Order
