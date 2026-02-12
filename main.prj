@@ -746,7 +746,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 37.49049429657795,
+                                "weight": 29.106474050294274,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -766,8 +766,8 @@
                             {
                                 "type": "tabset",
                                 "id": "#bed4d9e3-f603-48ac-9f20-b35a5163c293",
-                                "weight": 62.50950570342205,
-                                "selected": 1,
+                                "weight": 70.89352594970572,
+                                "selected": 2,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -829,7 +829,8 @@
                         "type": "tabset",
                         "id": "button",
                         "weight": 41.92546583850932,
-                        "height": 135,
+                        "height": 32,
+                        "selected": -1,
                         "config": {
                             "height": 135,
                             "selected": 0
