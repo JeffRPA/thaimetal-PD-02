@@ -64,7 +64,8 @@ Try
 
     // Enter PDPK
     Try 3
-        Mouse.Action(@ui"Button<button>_SortAtoZ","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})        Keyboard.InputText(@ui"Inputcontrol<input>10","PDPK",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+        Mouse.Action(@ui"Button<button>_SortAtoZ","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})      
+        Keyboard.InputText(@ui"Inputcontrol<input>10","PDPK",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     Catch Ex 
         TracePrint []&"a"
     End Try
@@ -120,8 +121,12 @@ Try
         For Each value In all_number
             Keyboard.InputText(@ui"Inputcontrol<input>12",value,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
             hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-            sRet = WebBrowser.RunJS(hWeb,"function(){}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-       
+            sRet = WebBrowser.RunJS(hWeb,"function(){try { const firstInput = document.querySelector("&'"'&"input[id^='ProdTable_ProdId_']"&'"'&"); if (!firstInput) { return false; } let parent = firstInput.parentElement; while (parent && !parent.querySelector("&'"'&"div[role='checkbox']"&'"'&")) { parent = parent.parentElement; } if (!parent) { return false; } const checkbox = parent.querySelector("&'"'&"div[role='checkbox']"&'"'&"); if (checkbox && checkbox.getAttribute("&'"'&"aria-checked"&'"'&") === "&'"'&"false"&'"'&") { checkbox.click(); return true; } return false; } catch (error) { return false; }}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            sRet = UiElement.GetAttribute(@ui"Blocklevelelement<div>_Reportasfinished","",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
+            Mouse.Action(@ui"Button<button>_Reportasfinished","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})sRet = UiElement.GetAttribute(@ui"","",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+
+        
         next  
     Catch Ex 
         TracePrint(Ex)
