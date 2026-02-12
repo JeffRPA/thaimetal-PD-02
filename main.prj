@@ -707,6 +707,7 @@
                 },
                 {
                     "type": "border",
+                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -761,7 +762,8 @@
                                         "enableClose": false,
                                         "className": ""
                                     }
-                                ]
+                                ],
+                                "active": true
                             },
                             {
                                 "type": "tabset",
@@ -820,8 +822,7 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             }
                         ]
                     },
