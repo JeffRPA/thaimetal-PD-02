@@ -747,7 +747,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 32.79828785446763,
+                                "weight": 17.442482611021937,
                                 "selected": 1,
                                 "children": [
                                     {
@@ -785,7 +785,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#bed4d9e3-f603-48ac-9f20-b35a5163c293",
-                                "weight": 67.20171214553237,
+                                "weight": 82.55751738897807,
                                 "selected": 2,
                                 "children": [
                                     {
