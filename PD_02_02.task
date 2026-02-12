@@ -116,19 +116,13 @@ Try
 
 
     Try 
+        Mouse.Action(@ui"Button<button>_Productionorder","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         For Each value In all_number
             Keyboard.InputText(@ui"Inputcontrol<input>12",value,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-    
-
-        next
-
-        // Do Until Len(remaining_number) < 1
-        //     transformedArrayRet = utils.array_to_array_string(remaining_number) 
-        //     hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        //     sRet = WebBrowser.RunJS(hWeb,"function() {try { const codeSet = "& transformedArrayRet &"; const checked = []; const codeInputs = document.querySelectorAll("&'"'&"input[id^='ProdTable_ProdId_']"&'"'&"); codeInputs.forEach(input => { const codeValue = input.value.trim(); if (codeSet.includes(codeValue)) { const row = input.closest('[role="&'"'&"row"&'"'&"]') || input.closest('div[role="&'"'&"gridcell"&'"'&"]')?.parentElement; if (!row) return; const checkbox = row.querySelector('div[role="&'"'&"checkbox"&'"'&"]'); if (checkbox && checkbox.getAttribute("&'"'&"aria-checked"&'"'&") === "&'"'&"false"&'"'&") { checkbox.click(); console.log("&'"'&"Checked:"&'"'&", codeValue); } } }); return checked; } catch (error) { console.error("&'"'&"Error checking rows:"&'"'&", error); }}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        //     remaining_number = utils.remove_items_from_list(remaining_number, sRet)
-        //     Keyboard.Press("PageDown", "press", [],{"iDelayAfter": 1000, "iDelayBefore": 1000, "sSimulate": "simulate"})
-        // Loop    
+            hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+            sRet = WebBrowser.RunJS(hWeb,"function(){}",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+       
+        next  
     Catch Ex 
         TracePrint(Ex)
         TracePrint []&"a"
