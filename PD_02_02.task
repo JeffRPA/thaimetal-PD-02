@@ -43,8 +43,6 @@ Try
         TracePrint []&"a"
     End Try
 
-
-
     // Click Apply
     Try 3
         Mouse.Action(@ui"{Click Apply}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
@@ -53,6 +51,7 @@ Try
     End Try
 
 
+    TracePrint []&"a"
 
     // PD-02-02-03 : ?????????????? CW Report remainder as finished
 
