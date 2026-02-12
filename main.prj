@@ -708,6 +708,7 @@
                 },
                 {
                     "type": "border",
+                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -742,7 +743,7 @@
                     {
                         "type": "row",
                         "id": "#6db91347-56e7-4cbe-aa97-5c2070a12424",
-                        "weight": 190.06211180124222,
+                        "weight": 145.18828451882845,
                         "children": [
                             {
                                 "type": "tabset",
@@ -847,8 +848,8 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 9.937888198757763,
-                        "height": 200,
+                        "weight": 54.81171548117155,
+                        "height": 262,
                         "config": {
                             "height": 200,
                             "selected": 0
