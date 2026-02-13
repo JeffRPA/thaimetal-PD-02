@@ -28,6 +28,7 @@ Try
     Try 3
         Mouse.Action(@ui"Blocklevelelement<div>_Physicaldate","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
+        TracePrint Ex
         TracePrint []&"a"
     End Try
 
@@ -48,6 +49,7 @@ Try
         Keyboard.InputText(@ui"Inputcontrol<input>5",start_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
         Keyboard.InputText(@ui"Inputcontrol<input>6",end_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     Catch Ex 
+        TracePrint Ex
         TracePrint []&"a"
     End Try
 
@@ -55,6 +57,7 @@ Try
     Try 3
         Mouse.Action(@ui"Button<button>_Apply","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
+        TracePrint Ex
         TracePrint []&"a"
     End Try
 
@@ -64,6 +67,7 @@ Try
     Try 3
         Mouse.Action(@ui"Blocklevelelement<div>_Number","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
+        TracePrint Ex
         TracePrint []&"a"
     End Try
 
@@ -71,6 +75,7 @@ Try
     Try 3
         Keyboard.InputText(@ui"Inputcontrol<input>7","pdpk",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     Catch Ex 
+        TracePrint Ex
         TracePrint []&"a"
     End Try
 
@@ -78,6 +83,7 @@ Try
     Try 3
         Mouse.Action(@ui"Button<button>_Apply1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
+        TracePrint Ex
         TracePrint []&"a"
     End Try
 
@@ -91,6 +97,7 @@ Try
         UiElement.Wait(@ui"Text<span>_ExporttoExcel","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
         Mouse.Action(@ui"Button<button>_Gridname:GridInventorytransactionso","left","click",4000,{"bContinueOnError":false,"iDelayAfter":200,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
+        TracePrint Ex
         TracePrint []&"a"
     End Try
 
@@ -105,6 +112,7 @@ Try
             bRet = UiElement.Exists(@ui"Text<span>_ExportingdatatoExcel",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
         Loop
     Catch Ex 
+        TracePrint Ex
         TracePrint []&"a"
     End Try
 
@@ -116,6 +124,7 @@ Try
         PO_file_path = Trim(variable1&Trim(variable2))
         TracePrint(PO_file_path)
     Catch Ex
+        TracePrint Ex
         TracePrint []&"a"
     End Try
 
@@ -128,6 +137,7 @@ Try
     Try 
         excel_grouping_column.grouping_column(PO_file_path,'Number', 'CW quantity')
     Catch Ex
+        TracePrint Ex
         TracePrint []&"a"
     End Try
     
