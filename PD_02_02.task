@@ -131,8 +131,8 @@ Try
                 Delay(500)
                 
                 
-                sRet = UiElement.GetAttribute(@ui"Inputcontrol<input>14","",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-
+                CWQty = UiElement.GetAttribute(@ui"Inputcontrol<input>14","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                TracePrint(CWQty)
                 
                 Mouse.Action(@ui"Button<button>_Cancel","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                 Delay(500)
