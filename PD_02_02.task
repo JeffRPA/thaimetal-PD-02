@@ -132,7 +132,10 @@ Try
                 
                 
                 CWQty = UiElement.GetAttribute(@ui"Inputcontrol<input>14","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                TracePrint(CWQty)
+                GoodQty = UiElement.GetAttribute(@ui"Inputcontrol<input>15","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                CWErrorQty = UiElement.GetAttribute(@ui"Inputcontrol<input>16","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                GoodErrorQty = UiElement.GetAttribute(@ui"Inputcontrol<input>17","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                TracePrint(CWQty, GoodQty, CWErrorQty, GoodErrorQty)
                 
                 Mouse.Action(@ui"Button<button>_Cancel","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                 Delay(500)
