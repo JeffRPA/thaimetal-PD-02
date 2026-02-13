@@ -2,7 +2,7 @@
 //main work
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name = 'ThaiMetal_PD_02'
-PO_file_path = '''C:\Users\RPA1\Downloads\Inventory transactions originator_639065541280124491.xlsx'''
+// PO_file_path = '''C:\Users\RPA1\Downloads\Inventory transactions originator_639065541280124491.xlsx'''
 
 Try 
     // PD-02-02-01 : ????????????? All production order
