@@ -634,7 +634,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 878,
-            "top": 2631
+            "top": 2731
         },
         "zoom": 1
     },
@@ -786,7 +786,7 @@
                                 "type": "tabset",
                                 "id": "#bed4d9e3-f603-48ac-9f20-b35a5163c293",
                                 "weight": 59.096774193548384,
-                                "selected": 1,
+                                "selected": 2,
                                 "children": [
                                     {
                                         "type": "tab",

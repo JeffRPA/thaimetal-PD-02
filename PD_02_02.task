@@ -240,27 +240,16 @@ Try
     // Click Report as finished
 
     Try 3
-
         Mouse.Action(@ui"{Click Report as finished}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
     Catch Ex 
-
         TracePrint []&"a"
-
     End Try
 
-
-
     // Click OK
-
     Try 3
-
         Mouse.Action(@ui"{Click OK}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
     Catch Ex 
-
         TracePrint []&"a"
-
     End Try
 
 
