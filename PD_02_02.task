@@ -136,10 +136,15 @@ Try
                 CWErrorQty = UiElement.GetAttribute(@ui"Inputcontrol<input>16","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                 GoodErrorQty = UiElement.GetAttribute(@ui"Inputcontrol<input>17","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                 TracePrint(CWQty, GoodQty, CWErrorQty, GoodErrorQty)
-                
-                Mouse.Action(@ui"Button<button>_Cancel","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
+                If (CWQty = "" Or CWQty = "0") And (GoodQty = "" Or GoodQty = "0") And (CWErrorQty = "" Or CWErrorQty = "0") And (GoodErrorQty = "" Or GoodErrorQty = "0")
+                    Mouse.Action(@ui"Button<button>_(Alt+Enter)OK1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                    TracePrint(value, 'OK')
+                Else
+                    Mouse.Action(@ui"Button<button>_Cancel","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                    TracePrint(value, 'Cancel')
+                End If
                 Delay(500)
-                TracePrint(value)
             End If
         next  
     Catch Ex 
