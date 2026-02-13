@@ -116,7 +116,7 @@ Try
 
 
     Try 
-        // all_number = ['PDPK26-000358', 'nulllll', 'PDPK26-001746']
+        all_number = ['PDPK26-000358', 'nulllll', 'PDPK26-001746']
         Mouse.Action(@ui"Button<button>_Productionorder","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         For Each value In all_number
             Keyboard.InputText(@ui"Inputcontrol<input>12",value,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
