@@ -23,11 +23,11 @@ Try
     End If
 
     // PD-02-02-02 : ?????????????? Status
-    Try 3
-        Mouse.Action(@ui"Button<button>_View","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
+    // Try 3
+    //     Mouse.Action(@ui"Button<button>_View","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    // Catch Ex 
+    //     TracePrint []&"a"
+    // End Try
 
     // Click Status header
     Try 3
