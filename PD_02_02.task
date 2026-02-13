@@ -2,7 +2,7 @@
 //main work
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name = 'ThaiMetal_PD_02'
-PO_file_path = '''C:\Users\RPA1\Downloads\Inventory transactions originator_639064629910302955.xlsx'''
+// PO_file_path = '''C:\Users\RPA1\Downloads\Inventory transactions originator_639064629910302955.xlsx'''
 
 Try 
     // PD-02-02-01 : ????????????? All production order
@@ -107,7 +107,7 @@ Try
 
     Try 3
         // Mouse.Action(@ui"{Click check from Excel}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        PO_file_path = '''C:\Users\RPA1\Downloads\Inventory transactions originator_639064629910302955.xlsx'''
+        // PO_file_path = '''C:\Users\RPA1\Downloads\Inventory transactions originator_639064629910302955.xlsx'''
         all_number = excel_grouping_column.extract_zero_cw_quantity(PO_file_path)
         // TracePrint(all_number)       
     Catch Ex 
@@ -137,12 +137,15 @@ Try
                 GoodErrorQty = UiElement.GetAttribute(@ui"Inputcontrol<input>17","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                 TracePrint(CWQty, GoodQty, CWErrorQty, GoodErrorQty)
 
+                // Check column CW good qty, Good quantity, CW error qty, Error quantity is 0 or empty
                 If (CWQty = "" Or CWQty = "0") And (GoodQty = "" Or GoodQty = "0") And (CWErrorQty = "" Or CWErrorQty = "0") And (GoodErrorQty = "" Or GoodErrorQty = "0")
                     Mouse.Action(@ui"Button<button>_(Alt+Enter)OK1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                     Delay(500)
                     TracePrint(value, 'OK')
                     status = UiElement.GetAttribute(@ui"Inputcontrol<input>_Started1","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                     count = 0
+
+                    // Check Row Reported as finished status
                     Do While status <> 'Reported as finished' And count < 3
                         jsRun = WebBrowser.RunJS(hWeb,"function(){const firstInput = document.querySelector("&'"'&"input[id^='ProdTable_ProdId_']"&'"'&"); if (firstInput) { let parent = firstInput.parentElement; while (parent && !parent.querySelector("&'"'&"div[role='checkbox']"&'"'&")) { parent = parent.parentElement; } if (parent) { const checkbox = parent.querySelector("&'"'&"div[role='checkbox']"&'"'&"); if (checkbox && checkbox.getAttribute("&'"'&"aria-checked"&'"'&") === "&'"'&"false"&'"'&") { checkbox.click(); } } }; return 123; }",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                         Delay(500) 
@@ -152,6 +155,12 @@ Try
                         Delay(500)
                         count = count + 1
                     Loop
+
+                    If status = 'Reported as finished'
+                        Mouse.Action(@ui"Button<button>_End","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                        Mouse.Action(@ui"Button<button>_(Alt+Enter)OK2","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                       
+                    End If
                 
                 Else
                     Mouse.Action(@ui"Button<button>_Cancel","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
@@ -164,95 +173,6 @@ Try
         TracePrint(Ex)
         TracePrint []&"a"
     End Try
-
-
-
-
-
-    // PD-02-02-05 : ????????????
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    // Click Production Order
-
-    Try 3
-
-        Mouse.Action(@ui"{Click Production Order}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
-    Catch Ex 
-
-        TracePrint []&"a"
-
-    End Try
-
-
-
-    // Click Report as finished
-
-    Try 3
-
-        Mouse.Action(@ui"{Click Report as finished}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
-    Catch Ex 
-
-        TracePrint []&"a"
-
-    End Try
-
-
-
-    // Wait for Report as finished text
-
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-    // Check column CW good qty, Good quantity, CW error qty, Error quantity is 0 or empty
-
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-    // Click OK
-
-    Try 3
-
-        Mouse.Action(@ui"{Click OK}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-
-    Catch Ex 
-
-        TracePrint []&"a"
-
-    End Try
-
-
-
-    // Check Row Reported as finished status
-
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-    // PD-02-02-07 : ??????
-
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-    // Click Report as finished
-
-    Try 3
-        Mouse.Action(@ui"{Click Report as finished}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-    // Click OK
-    Try 3
-        Mouse.Action(@ui"{Click OK}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
-
-
     
 Catch exception_information
     TracePrint []&"a"
