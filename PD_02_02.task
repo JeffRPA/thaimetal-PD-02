@@ -121,9 +121,9 @@ Try
         For Each value In all_number
             Keyboard.InputText(@ui"Inputcontrol<input>12",value,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
             Keyboard.Press("Enter", "press", [],{"iDelayAfter": 1000, "iDelayBefore": 0, "sSimulate": "simulate"})            
-            Mouse.Action(@ui"Text<span>_Allproductionorders","left","click",200,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
             sRet = UiElement.GetAttribute(@ui"Button<button>_Reportasfinished1","disabled",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200}) 
             If sRet = ""
+                Mouse.Action(@ui"Text<span>_Allproductionorders","left","click",200,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                 hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                 jsRun = WebBrowser.RunJS(hWeb,"function(){const firstInput = document.querySelector("&'"'&"input[id^='ProdTable_ProdId_']"&'"'&"); if (firstInput) { let parent = firstInput.parentElement; while (parent && !parent.querySelector("&'"'&"div[role='checkbox']"&'"'&")) { parent = parent.parentElement; } if (parent) { const checkbox = parent.querySelector("&'"'&"div[role='checkbox']"&'"'&"); if (checkbox && checkbox.getAttribute("&'"'&"aria-checked"&'"'&") === "&'"'&"false"&'"'&") { checkbox.click(); } } }; return 123; }",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                 Delay(500) 
