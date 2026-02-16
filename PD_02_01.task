@@ -2,6 +2,8 @@
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name ='ThaiMetal_PD_02'
 
+phase_exception = "N02 ระบบ MS Dynamics ค้าง" 
+
 // PD-02-01-01 : ??????????? Transactions ???? Sidebar
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Click on Search
