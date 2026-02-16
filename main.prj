@@ -708,7 +708,6 @@
                 },
                 {
                     "type": "border",
-                    "selected": 0,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
@@ -748,7 +747,7 @@
                             {
                                 "type": "tabset",
                                 "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                                "weight": 72.98488664987406,
+                                "weight": 42.53611556982344,
                                 "children": [
                                     {
                                         "type": "tab",
@@ -797,13 +796,12 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ],
-                                "active": true
+                                ]
                             },
                             {
                                 "type": "tabset",
                                 "id": "#bed4d9e3-f603-48ac-9f20-b35a5163c293",
-                                "weight": 27.015113350125944,
+                                "weight": 57.46388443017656,
                                 "selected": 1,
                                 "children": [
                                     {
@@ -857,7 +855,8 @@
                                         "enableClose": true,
                                         "className": ""
                                     }
-                                ]
+                                ],
+                                "active": true
                             }
                         ]
                     },
@@ -867,7 +866,7 @@
                         "weight": 58.36820083682009,
                         "height": 279,
                         "config": {
-                            "height": 275,
+                            "height": 279,
                             "selected": 0
                         },
                         "enableDrop": false,
