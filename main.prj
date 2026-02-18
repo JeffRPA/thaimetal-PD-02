@@ -744,6 +744,7 @@
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                         "weight": 141.63179916317992,
+                        "selected": 2,
                         "children": [
                             {
                                 "type": "tab",
@@ -774,6 +775,40 @@
                                 },
                                 "enableClose": true,
                                 "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
+                                "name": "PD_02_01",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\PD_02\\PD_02_01.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "26ec7500-023c-11f1-9b15-c7ae3b0dc761",
+                                    "type": "task",
+                                    "selector": [
+                                        "26ec7500-023c-11f1-9b15-c7ae3b0dc761"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "182c6b10-0241-11f1-9b15-c7ae3b0dc761",
+                                "name": "PD_02_02",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\PD_02\\PD_02_02.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "182c6b10-0241-11f1-9b15-c7ae3b0dc761",
+                                    "type": "task",
+                                    "selector": [
+                                        "182c6b10-0241-11f1-9b15-c7ae3b0dc761"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
                             }
                         ],
                         "active": true
@@ -782,7 +817,8 @@
                         "type": "tabset",
                         "id": "button",
                         "weight": 58.36820083682009,
-                        "height": 279,
+                        "height": 32,
+                        "selected": -1,
                         "config": {
                             "height": 279,
                             "selected": 0
