@@ -629,6 +629,66 @@
             "name": "exception_information",
             "value": "null",
             "type": "none"
+        },
+        {
+            "name": "sandbox_erp_username",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "sandbox_erp_password",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "sandbox_email_username",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "sandbox_email_password",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "sandbox_email_port",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "sandbox_email_server",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "production_erp_username",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "production_erp_password",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "production_email_username",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "production_email_password",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "production_email_port",
+            "value": "null",
+            "type": "none"
+        },
+        {
+            "name": "production_email_server",
+            "value": "null",
+            "type": "none"
         }
     ],
     "flowConfig": {
@@ -708,7 +768,7 @@
                 },
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 280,
                     "minSize": 280,
                     "location": "right",
