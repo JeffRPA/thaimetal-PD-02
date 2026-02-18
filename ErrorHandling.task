@@ -11,8 +11,10 @@ Try
     sCc  = []
     bCc = []
     attachments = []
-    emailSubject = "Bot Error PD_02" + phase_exception
+    emailSubject = "Bot Error PD_02 " + phase_exception
     emailBody = phase_exception
+
+    TracePrint(sServer, iPort, sUid, sPwd)
 
     bRet = Mail.SendExt({"host":sServer,"port":iPort,"ssl":bSsl,"authentication":True,"user":sUid,"password": sPwd},sSender,sTo,sCc,bCc,emailSubject, emailBody, attachments)
 

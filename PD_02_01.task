@@ -139,7 +139,7 @@ Try
     // Copy file to raw folder
     Try 3
         File.CopyFile(PO_file_path,'''R:\OUTPUT\PD02''',true)
-        PO_file_path = 'R:\\OUTPUT\\PD02' & Trim(variable2)
+        PO_file_path = 'R:\\OUTPUT\\PD02\\' & Trim(variable2)
         TracePrint(PO_file_path)
     Catch Ex
         TracePrint Ex
