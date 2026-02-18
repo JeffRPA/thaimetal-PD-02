@@ -9,6 +9,7 @@ phase_exception = "Open credential excel"
 
 //// Start browser ////
 Try 
+    TracePrint [] & "a"
     //// Credentials ////
     Try
         objExcelWorkBook = Excel.OpenExcel(project_path & '''\logincredential\logincredentials.xlsx''',false,"Excel","","")

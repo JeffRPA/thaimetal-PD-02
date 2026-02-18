@@ -41,13 +41,10 @@ Try
         month = Time.DatePart("m", dTime)
         full_year = Time.DatePart("yyyy", dTime)
         year = SubStr(CStr(full_year), 3,2)
-        
-        TracePrint(full_year)
 
         start_date = '1/'&month&'/'&year
         end_date = day&'/'&month&'/'&year
-        TracePrint(start_date)
-        TracePrint(end_date)  
+        
         Keyboard.InputText(@ui"Inputcontrol<input>5",start_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
         Keyboard.InputText(@ui"Inputcontrol<input>6",end_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     Catch Ex 
