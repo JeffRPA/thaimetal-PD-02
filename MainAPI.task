@@ -5,8 +5,8 @@
 main_API_url = File.Read(project_path & '''\main_api_url.txt''',"auto")
 TracePrint(main_API_url)
 
-main_process_log_filepath = project_path & '''\log_allprocess_bydateandtime\mazuma_laiye_processlog.xlsx'''
-main_error_log_filepath = project_path & '''\log_allprojecterror_bydateandtime\mazuma_laiye_errorlog.xlsx'''
+main_process_log_filepath = project_path & '''\log_allprocess_bydateandtime\thaimetal_laiye_processlog.xlsx'''
+main_error_log_filepath = project_path & '''\log_allprojecterror_bydateandtime\thaimetal_laiye_errorlog.xlsx'''
 
 
 

@@ -1,21 +1,27 @@
-TracePrint('Error Handling: '&phase_exception)
+// TracePrint('Error Handling: '&phase_exception)
 
-// Try 
-//     sServer = "smtp.gmail.com"
-//     iPort   = 465
-//     bSsl    = true
-//     sUid    = "rpajgm@gmail.com"
-//     sPwd    = ""
-//     sSender = sUid
-//     sTo  = ["jeffrey@greenmoons.co.th"]
-//     sCc  = []
+Try 
+    sServer = sandbox_email_server
+    iPort   = CInt(sandbox_email_port)
+    bSsl    = true
+    sUid    = sandbox_email_username
+    sPwd    = sandbox_email_password
+    sSender = sUid
+    sTo  = ["rpa1@thaimetal.net"]
+    sCc  = []
+    bCc = []
+    attachments = []
+    emailSubject = "Bot Error PD_02" + phase_exception
+    emailBody = phase_exception
 
-//     bRet = Mail.SendEx(sServer,iPort,bSsl,sUid,sPwd,sSender,sTo,sCc,"Error Handling", phase_exception,[])
-// Catch error
-//     TracePrint error
-// End Try
+    bRet = Mail.SendExt({"host":sServer,"port":iPort,"ssl":bSsl,"authentication":True,"user":sUid,"password": sPwd},sSender,sTo,sCc,bCc,emailSubject, emailBody, attachments)
+
+Catch error
+    TracePrint error
+End Try
 
 If exception_information <> null
+    TracePrint(exception_information)
 
     //todaywithoutslash_datestring
     todaydate_string = errorlogedit.get_date_string_without_slash()
@@ -38,6 +44,7 @@ If exception_information <> null
     sheet_name_errorsummary = "Sheet1"
     row_record_errorsummary = 2  //Insert an empty row at row 2
 
+
     //input Value1 into the column A of row2
     variables_errorsummary = [
         [todaydate_string, "A"], 
@@ -50,3 +57,4 @@ If exception_information <> null
     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
  
 End If
+
