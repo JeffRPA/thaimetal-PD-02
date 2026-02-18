@@ -140,7 +140,7 @@ Try
                 // Check column CW good qty, Good quantity, CW error qty, Error quantity is 0 or empty
                 If (CWQty = "" Or CWQty = "0") And (GoodQty = "" Or GoodQty = "0") And (CWErrorQty = "" Or CWErrorQty = "0") And (GoodErrorQty = "" Or GoodErrorQty = "0")
                     Mouse.Action(@ui"Button<button>_(Alt+Enter)OK1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-                    Delay(500)
+                    Delay(1000)
                     status = UiElement.GetAttribute(@ui"Inputcontrol<input>_Started1","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                     count = 0
 
@@ -151,7 +151,7 @@ Try
                         Mouse.Action(@ui"Button<button>_Reportasfinished","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                         Delay(500)
                         Mouse.Action(@ui"Button<button>_(Alt+Enter)OK1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-                        Delay(500)
+                        Delay(1000)
                         count = count + 1
                     Loop
 
