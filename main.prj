@@ -633,10 +633,10 @@
     ],
     "flowConfig": {
         "scrollbarPosition": {
-            "left": 1107,
-            "top": 2831
+            "left": 1424,
+            "top": 2490
         },
-        "zoom": 1
+        "zoom": 0.85
     },
     "layout": {
         "config": {
@@ -817,8 +817,7 @@
                         "type": "tabset",
                         "id": "button",
                         "weight": 58.36820083682009,
-                        "height": 32,
-                        "selected": -1,
+                        "height": 279,
                         "config": {
                             "height": 279,
                             "selected": 0
