@@ -541,7 +541,7 @@
             "type": "task",
             "id": "4f6754e0-0648-11f1-b05a-578d89020414",
             "rect": {
-                "x": 450,
+                "x": 560,
                 "y": 2000,
                 "width": 268,
                 "height": 78
@@ -694,7 +694,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1172,
-            "top": 2590
+            "top": 2290
         },
         "zoom": 0.85
     },
