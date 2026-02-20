@@ -694,7 +694,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1172,
-            "top": 2490
+            "top": 2590
         },
         "zoom": 0.85
     },
@@ -864,6 +864,57 @@
                                     "type": "task",
                                     "selector": [
                                         "182c6b10-0241-11f1-9b15-c7ae3b0dc761"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "b4a3b988-4f77-42bc-8478-a38dc7d962e4",
+                                "name": "ErrorHandling",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\PD_02\\ErrorHandling.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": false,
+                                    "id": "b4a3b988-4f77-42bc-8478-a38dc7d962e4",
+                                    "type": "task",
+                                    "selector": [
+                                        "b4a3b988-4f77-42bc-8478-a38dc7d962e4"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
+                                "name": "LogProcessStart",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\PD_02\\LogProcessStart.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "ade21187-9b5e-43c0-a9f4-08916ec27d62",
+                                    "type": "task",
+                                    "selector": [
+                                        "ade21187-9b5e-43c0-a9f4-08916ec27d62"
+                                    ]
+                                },
+                                "enableClose": true,
+                                "className": ""
+                            },
+                            {
+                                "type": "tab",
+                                "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
+                                "name": "Block16",
+                                "helpText": "C:\\ThaiMetal_Greenmoons_RPA\\thaimetalprojects\\Laiyeprojectscode\\PD_02\\Block16.task",
+                                "component": "taskNodeEditor",
+                                "config": {
+                                    "selfControl": true,
+                                    "id": "c7582570-d75b-4817-857d-d5d14fb116e9",
+                                    "type": "task",
+                                    "selector": [
+                                        "c7582570-d75b-4817-857d-d5d14fb116e9"
                                     ]
                                 },
                                 "enableClose": true,

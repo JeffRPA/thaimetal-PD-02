@@ -11,10 +11,8 @@ Try
     sCc  = []
     bCc = []
     attachments = []
-    emailSubject = "Bot Error PD_02 " + phase_exception
+    emailSubject = "Bot Error ตั้งหนี้ AC-05" + phase_exception
     emailBody = phase_exception
-
-    TracePrint(sServer, iPort, sUid, sPwd)
 
     bRet = Mail.SendExt({"host":sServer,"port":iPort,"ssl":bSsl,"authentication":True,"user":sUid,"password": sPwd},sSender,sTo,sCc,bCc,emailSubject, emailBody, attachments)
 
@@ -42,21 +40,50 @@ If exception_information <> null
     //type2.2
     //target: create the log file   paste_values_to_excel  in the same row
     //main header is row1   we insert emptyrow and log at row2
-    xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\thaimetal_laiye_errorlog.xlsx'''
+    // xlsx_filepath_errorsummary = project_path & '''\log_allprojecterror_bydateandtime\thaimetal_laiye_errorlog.xlsx'''
+    xlsx_filepath_errorsummary = project_path & '''\log_allprocess_bydateandtime\thaimetal_laiye_processlog.xlsx'''
     sheet_name_errorsummary = "Sheet1"
     row_record_errorsummary = 2  //Insert an empty row at row 2
 
 
     //input Value1 into the column A of row2
+    // variables_errorsummary = [
+    //     [todaydate_string, "A"], 
+    //     [currenttime_string, "B"],     
+    //     [project_name, "C"],   
+    //     [blocknamestring, "D"],      
+    //     [errorsummarystring, "E"]
+    // ]
+
     variables_errorsummary = [
         [todaydate_string, "A"], 
         [currenttime_string, "B"],     
         [project_name, "C"],   
-        [blocknamestring, "D"],      
-        [errorsummarystring, "E"]
+        [errorsummarystring, "D"]
     ]
 
     errorlogeditinsertrow = errorlogedit.insert_empty_row_at_and_write_cells_insamerow(xlsx_filepath_errorsummary, sheet_name_errorsummary, row_record_errorsummary, variables_errorsummary)
  
 End If
 
+// project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
+//API log send to server
+Delay(200)
+Try
+    // main_API_url = '''http://localhost:8080'''
+
+    file_path = project_path & '''\log_allprocess_bydateandtime\thaimetal_laiye_processlog.xlsx'''
+    sheet_name = '''Sheet1'''
+    resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
+    resultlistofarrays_notincludeheaderrow = splice(resultlistofarrays,1,Len(resultlistofarrays)-1)
+    resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
+
+    //python method
+    target_url = main_API_url & "/api/bot/thaimetal"
+
+    APIjsonsRet = pythonAPI.send_api_data(target_url, resultlistofarrays_allstring)
+
+Catch Ex
+    
+
+End Try

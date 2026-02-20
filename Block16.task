@@ -34,3 +34,24 @@ Catch Ex
     
 End Try
 
+// project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
+//API log send to server
+Delay(200)
+Try
+    // main_API_url = '''http://localhost:8080'''
+
+    file_path = project_path & '''\log_allprocess_bydateandtime\thaimetal_laiye_processlog.xlsx'''
+    sheet_name = '''Sheet1'''
+    resultlistofarrays = openpyxluse.read_xlsx_with_cell_objects(file_path, sheet_name)
+    resultlistofarrays_notincludeheaderrow = splice(resultlistofarrays,1,Len(resultlistofarrays)-1)
+    resultlistofarrays_allstring = convertalltostring.convert_all_to_strings(resultlistofarrays_notincludeheaderrow)
+
+    //python method
+    target_url = main_API_url & "/api/bot/thaimetal"
+
+    APIjsonsRet = pythonAPI.send_api_data(target_url, resultlistofarrays_allstring)
+
+Catch Ex
+    
+
+End Try
