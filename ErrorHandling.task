@@ -7,6 +7,14 @@ Try
     sUid    = sandbox_email_username
     sPwd    = sandbox_email_password
     sSender = sUid
+
+// starfact-07@thaimetal.net
+// thitaporn.m@thaimetal.net
+// packing@thaimetal.com
+// ilada.b@thaimetal.net
+// chaleewan.p@thaimetal.net
+// sutthida.s@thaimetal.net
+
     sTo  = ["rpa1@thaimetal.net"]
     sCc  = []
     bCc = []
