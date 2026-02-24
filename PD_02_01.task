@@ -172,7 +172,7 @@ Try
     // Group CW Quantity by number
     ///////////////////////////////////////////////////////////////////////////////////////////
 
-    Try 
+    Try 3
         runExcelGrouping = excel_grouping_column.grouping_column(PO_file_path,'Number')
     Catch Ex
         TracePrint Ex
