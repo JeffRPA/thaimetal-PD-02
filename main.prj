@@ -801,7 +801,7 @@
                     {
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                        "weight": 190.89615931721195,
+                        "weight": 100.99573257467995,
                         "selected": 2,
                         "children": [
                             {
@@ -925,9 +925,8 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 9.103840682788052,
-                        "height": 32,
-                        "selected": -1,
+                        "weight": 99.00426742532005,
+                        "height": 348,
                         "config": {
                             "height": 200,
                             "selected": 0
