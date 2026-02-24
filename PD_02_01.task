@@ -9,14 +9,14 @@ phase_exception = "N02 ระบบ MS Dynamics ค้าง"
 // Click on Search
 
 Try 
-    Try 3
-        Mouse.Action(@ui"Inputcontrol<input>4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        Keyboard.InputText(@ui"Inputcontrol<input>4","Transactions",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-        Keyboard.Press("Enter", "press", [],{"iDelayAfter": 0, "iDelayBefore": 0, "sSimulate": "simulate"})
-        Delay(2000)
-    Catch Ex 
-        TracePrint []&"a"
-    End Try
+    // Try 3
+    //     Mouse.Action(@ui"Inputcontrol<input>4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    //     Keyboard.InputText(@ui"Inputcontrol<input>4","Transactions",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+    //     Keyboard.Press("Enter", "press", [],{"iDelayAfter": 0, "iDelayBefore": 0, "sSimulate": "simulate"})
+    //     Delay(2000)
+    // Catch Ex 
+    //     TracePrint []&"a"
+    // End Try
 
     bRet = UiElement.Exists(@ui"Blocklevelelement<div>_ExporttoExcelfinished",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     If bRet 
@@ -65,13 +65,13 @@ Try
     // Filter Financial Date
     Try 3
         Mouse.Action(@ui"Blocklevelelement<div>_Financialdate","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        Mouse.Action(@ui"Text<span>_matches","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        // Mouse.Action(@ui"Text<span>_matches","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         // Mouse.Action(@ui"Button<button>_matches","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         
-        For i = 1 To 5 Step 1
-            Keyboard.Press("Down", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
-        Next
-        Keyboard.Press("Enter", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+        // For i = 1 To 5 Step 1
+        //     Keyboard.Press("Down", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
+        // Next
+        // Keyboard.Press("Enter", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
         Keyboard.InputText(@ui"Inputcontrol<input>18",'..',true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
         Mouse.Action(@ui"Button<button>_Apply5","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
