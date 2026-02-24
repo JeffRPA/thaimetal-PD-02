@@ -2,29 +2,37 @@
 def grouping_column(file_path, group_by):
 
     import pandas as pd
+    import time
 
-    # file_path = "Inventory transactions originator_639063906271164721.xlsx"
-    # Read the Excel file (first sheet by default, or specify sheet_name="Sheet1")
+    # Write Excel (retry)
+    max_retries=3
+    delay_sec=1
 
     df = pd.read_excel(file_path)
 
     # Make sure CW quantity is numeric
 
     df['CW quantity'] = pd.to_numeric(df['CW quantity'], errors='coerce').fillna(0)
-    df['quantity2'] = pd.to_numeric(df['quantity2'], errors='coerce').fillna(0)
+    df['Quantity2'] = pd.to_numeric(df['Quantity2'], errors='coerce').fillna(0)
 
     # Group by Number and sum CW quantity
     grouped_df = (
         df.groupby(group_by, as_index=False)
           .agg({
               'CW quantity': 'sum',
-              'quantity2': 'sum'
+              'Quantity2': 'sum'
           })
     )
 
-    # Write to a new sheet in the SAME Excel file
-    with pd.ExcelWriter(file_path, engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
-        grouped_df.to_excel(writer, sheet_name='Sheet2', index=False)
+    for attempt in range(1, max_retries + 1):
+        try:
+            with pd.ExcelWriter(file_path, engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
+                grouped_df.to_excel(writer, sheet_name='Sheet2', index=False)
+            return {"status": "success", "message": "group successfully", "rows": len(grouped_df)}
+        except Exception as e:
+            if attempt == max_retries:
+                return {"status": "error", "message": f"write file failure {max_retries} times: {e}"}
+            time.sleep(delay_sec)
 
     return('successfully group column')
 
