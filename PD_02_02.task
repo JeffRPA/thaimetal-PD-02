@@ -174,5 +174,6 @@ Try
     End Try
     
 Catch exception_information
+    TracePrint exception_information
     TracePrint []&"a"
 End Try
