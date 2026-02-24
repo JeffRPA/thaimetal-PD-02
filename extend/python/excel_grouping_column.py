@@ -1,5 +1,5 @@
 
-def grouping_column(file_path, group_by):
+def grouping_column(file_path):
 
     import pandas as pd
     import time
@@ -15,9 +15,11 @@ def grouping_column(file_path, group_by):
     df['CW quantity'] = pd.to_numeric(df['CW quantity'], errors='coerce').fillna(0)
     df['Quantity2'] = pd.to_numeric(df['Quantity2'], errors='coerce').fillna(0)
 
+    df['Prefix'] = df['Number'].astype(str).str[:4]
+
     # Group by Number and sum CW quantity
     grouped_df = (
-        df.groupby(group_by, as_index=False)
+        df.groupby('Number', as_index=False)
           .agg({
               'CW quantity': 'sum',
               'Quantity2': 'sum'
@@ -42,17 +44,22 @@ def extract_zero_cw_quantity(file_path, sheet_name="Sheet2"):
     Read grouped sheet and return a list of Code
     where summed CW quantity is 0
     """
-
-    # Read grouped sheet
     df = pd.read_excel(file_path, sheet_name=sheet_name)
-
-    # Ensure numeric
+    
     df['CW quantity'] = pd.to_numeric(df['CW quantity'], errors='coerce').fillna(0)
+    df['Quantity2'] = pd.to_numeric(df['Quantity2'], errors='coerce').fillna(0)
     
-    # Filter rows where CW quantity == 0
-    zero_df = df[df['CW quantity'] == 0]
+    rules = {
+        'PDCD': lambda r: r['CW quantity'] == 0 and r['Quantity2'] == 0,
+        'PDFA': lambda r: r['Quantity2'] == 0,
+        'PDPK': lambda r: r['CW quantity'] == 0,
+        'PDWG': lambda r: r['CW quantity'] == 0 and r['Quantity2'] == 0,
+    }
     
-    # Extract Code column as list
-    zero_codes = zero_df['Number'].tolist()
+    result = []
+    for _, row in df.iterrows():
+        prefix = row['Prefix']
+        if prefix in rules and rules[prefix](row):
+            result.append(row['Number'])
 
-    return zero_codes
+    return result
