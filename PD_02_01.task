@@ -173,7 +173,7 @@ Try
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     Try 
-        runExcelGrouping = excel_grouping_column.grouping_column(PO_file_path,'Number', 'CW quantity')
+        runExcelGrouping = excel_grouping_column.grouping_column(PO_file_path,'Number')
     Catch Ex
         TracePrint Ex
         TracePrint []&"a"

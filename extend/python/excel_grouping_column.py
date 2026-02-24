@@ -1,5 +1,5 @@
 
-def grouping_column(file_path, group_by, group_field):
+def grouping_column(file_path, group_by):
 
     import pandas as pd
 
@@ -10,12 +10,16 @@ def grouping_column(file_path, group_by, group_field):
 
     # Make sure CW quantity is numeric
 
-    df[group_field] = pd.to_numeric(df[group_field], errors='coerce').fillna(0)
+    df['CW quantity'] = pd.to_numeric(df['CW quantity'], errors='coerce').fillna(0)
+    df['quantity2'] = pd.to_numeric(df['quantity2'], errors='coerce').fillna(0)
 
     # Group by Number and sum CW quantity
     grouped_df = (
-        df.groupby(group_by, as_index=False)[group_field]
-        .sum()
+        df.groupby(group_by, as_index=False)
+          .agg({
+              'CW quantity': 'sum',
+              'quantity2': 'sum'
+          })
     )
 
     # Write to a new sheet in the SAME Excel file
