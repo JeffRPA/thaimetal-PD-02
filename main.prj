@@ -941,7 +941,7 @@
                         "weight": 61.71548117154812,
                         "height": 295,
                         "config": {
-                            "height": 200,
+                            "height": 295,
                             "selected": 0
                         },
                         "enableDrop": false,
