@@ -804,6 +804,7 @@
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                         "weight": 189.82511923688395,
+                        "selected": 2,
                         "children": [
                             {
                                 "type": "tab",
