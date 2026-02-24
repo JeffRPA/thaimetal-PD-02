@@ -470,9 +470,7 @@
             "caption": "PD_02_01",
             "desc": "PD_02_01",
             "editorMode": "sourceCode",
-            "breakpoints": {
-                "19": null
-            },
+            "breakpoints": {},
             "out": "Result_Of_PD_02_01"
         },
         {
