@@ -1,5 +1,4 @@
-
-TracePrint(project_path & '''\cpp_commands\disableCapslock.exe''')
+Delay(30000)
 
 closeallchrome_iPID = App.Run(project_path & '''\cpp_commands\closealledgewindows.exe''', 0, 1)
 

@@ -2,21 +2,21 @@
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name ='ThaiMetal_PD_02'
 
-phase_exception = "N02 ระบบ MS Dynamics ค้าง" 
+phase_exception = "N02 ระบบ MS Dynamics ค้าง: PD-02-01-01 Filter Table For Excel Download" 
 
 // PD-02-01-01 : ??????????? Transactions ???? Sidebar
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Click on Search
 
 Try 
-    // Try 3
-    //     Mouse.Action(@ui"Inputcontrol<input>4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    //     Keyboard.InputText(@ui"Inputcontrol<input>4","Transactions",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-    //     Keyboard.Press("Enter", "press", [],{"iDelayAfter": 0, "iDelayBefore": 0, "sSimulate": "simulate"})
-    //     Delay(2000)
-    // Catch Ex 
-    //     TracePrint []&"a"
-    // End Try
+    Try 3
+        Mouse.Action(@ui"Inputcontrol<input>4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        Keyboard.InputText(@ui"Inputcontrol<input>4","Transactions",true,20,10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+        Keyboard.Press("Enter", "press", [],{"iDelayAfter": 0, "iDelayBefore": 0, "sSimulate": "simulate"})
+        Delay(2000)
+    Catch Ex 
+        Throw Ex
+    End Try
 
     bRet = UiElement.Exists(@ui"Blocklevelelement<div>_ExporttoExcelfinished",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     If bRet 
@@ -33,7 +33,7 @@ Try
         // Mouse.Action(@ui"Button<button>_between","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
         TracePrint Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     // Input Start & End date
@@ -51,7 +51,7 @@ Try
         Keyboard.InputText(@ui"Inputcontrol<input>6",end_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     Catch Ex 
         TracePrint Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     // Click apply
@@ -59,7 +59,7 @@ Try
         Mouse.Action(@ui"Button<button>_Apply","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
         TracePrint Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     // Filter Financial Date
@@ -76,7 +76,7 @@ Try
         Mouse.Action(@ui"Button<button>_Apply5","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
         TracePrint Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     // PD-02-01-03 : ?????????????? Number
@@ -94,7 +94,7 @@ Try
         Mouse.Action(@ui"Button<button>_Apply1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
         TracePrint Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     // PD-02-01-04 : Download File Excel
@@ -107,7 +107,7 @@ Try
         Mouse.Action(@ui"Button<button>_Gridname:GridInventorytransactionso","left","click",4000,{"bContinueOnError":false,"iDelayAfter":200,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
         TracePrint Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     // Click Download
@@ -122,7 +122,7 @@ Try
         Loop
     Catch Ex 
         TracePrint Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     Try 
@@ -143,7 +143,7 @@ Try
         Next
     Catch Ex
         TracePrint Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     // Copy file to raw folder
@@ -153,7 +153,7 @@ Try
         TracePrint(PO_file_path)
     Catch Ex
         TracePrint Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
 
@@ -163,15 +163,17 @@ Try
     // Group CW Quantity by number
     ///////////////////////////////////////////////////////////////////////////////////////////
 
+    phase_exception = "N02 ระบบ MS Dynamics ค้าง: PD-02-01-05 Pivot Grouping" 
+
     Try 3
-        runExcelGrouping = excel_grouping_column.grouping_column(PO_file_path,'Number')
+        runExcelGrouping = excel_grouping_column.grouping_column(PO_file_path)
     Catch Ex
         TracePrint Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
     
-Catch exceptionInformation
-    TracePrint []&'a'
+Catch exception_information
+    Throw exception_information
 End Try
 
 

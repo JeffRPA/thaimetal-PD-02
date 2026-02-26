@@ -40,7 +40,7 @@ Try
         Delay(100)
 
     Catch Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try    
 
     phase_exception = "Thaimetal portal not response"
@@ -67,7 +67,7 @@ Try
 
         
     Catch Ex
-        TracePrint []&"a"
+        Throw Ex
     End Try
    
 
@@ -79,7 +79,7 @@ Try
     Try 3
         UiElement.Wait(@ui"Tablecell<td>_MicrosoftDynamics365SB1(น้ำเงิน)","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     Catch Ex 
-        TracePrint []&"a"
+        Throw Ex
     End Try
     
     Try 3
@@ -88,13 +88,13 @@ Try
         // Prod
         // Mouse.Action(@ui"URL<a>_MicrosoftDynamics365PD(ม่วง)","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     Try 3
         UiElement.Wait(@ui"Blocklevelelement<div>_Signin","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
     Catch Ex 
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     phase_exception = "N04 - Login ไม่สำเร็จ"
@@ -108,7 +108,7 @@ Try
         Delay(2000)
         Keyboard.InputText(@ui"Inputcontrol<input>_TmaRobot##262", sandbox_erp_password,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     Catch Ex 
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     // Click Sign In
@@ -120,9 +120,9 @@ Try
         bRet = UiElement.Exists(@ui"Text<span>_ThaiMetalAluminiumCo.,Ltd.",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})  
     
     Catch Ex 
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
 Catch exception_information
-    TracePrint []&"a"
+    Throw exception_information
 End Try

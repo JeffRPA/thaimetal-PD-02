@@ -2,7 +2,9 @@
 //main work
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name = 'ThaiMetal_PD_02'
-PO_file_path = '''R:\OUTPUT\PD02\Inventory transactions originator_639075115641824729.xlsx'''
+// PO_file_path = '''R:\OUTPUT\PD02\Inventory transactions originator_639075115641824729.xlsx'''
+
+phase_exception = "N02 ระบบ MS Dynamics ค้าง: PD-02-02 Check Production Orders" 
 
 Try 
     // PD-02-02-01 : ????????????? All production order
@@ -14,7 +16,7 @@ Try
         Keyboard.Press("Enter", "press", [],{"iDelayAfter": 0, "iDelayBefore": 0, "sSimulate": "simulate"})
         Delay(2000)
     Catch Ex 
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     bRet = UiElement.Exists(@ui"Blocklevelelement<div>_ExporttoExcelfinished",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
@@ -23,11 +25,11 @@ Try
     End If
 
     // PD-02-02-02 : ?????????????? Status
-    // Try 3
-    //     Mouse.Action(@ui"Button<button>_View","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-    // Catch Ex 
-    //     TracePrint []&"a"
-    // End Try
+    Try 3
+        Mouse.Action(@ui"Button<button>_Productionorder1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+    Catch Ex 
+        Throw Ex
+    End Try
 
     // Click Status header
     Try 3
@@ -37,7 +39,7 @@ Try
         Mouse.Action(@ui"Button<button>_Apply2","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         Delay(2000)
     Catch Ex 
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
 
@@ -47,7 +49,7 @@ Try
     // Try 3
     //     Mouse.Action(@ui"Blocklevelelement<div>_Production","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
     // Catch Ex 
-    //     TracePrint []&"a"
+    //     Throw Ex
     // End Try
 
     // // Enter PDPK
@@ -55,14 +57,14 @@ Try
     //     Mouse.Action(@ui"Button<button>_SortAtoZ","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})      
     //     Keyboard.InputText(@ui"Inputcontrol<input>10","PDPK",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     // Catch Ex 
-    //     TracePrint []&"a"
+    //     Throw Ex
     // End Try
 
     // // Click Apply
     // Try 3
     //     Mouse.Action(@ui"Button<button>_Apply4","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     // Catch Ex 
-    //     TracePrint []&"a"
+    //     Throw Ex
     // End Try
     
     
@@ -73,14 +75,14 @@ Try
         Mouse.Action(@ui"Button<button>_Apply7","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         Delay(2000)
     Catch Ex 
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
     // Click Department
     Try 3
         Mouse.Action(@ui"Blocklevelelement<div>_Department","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
-        Mouse.Action(@ui"Blocklevelelement<div>_Filterfield:Department,oper","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
-        Mouse.Action(@ui"Button<button>_isoneof2","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
+        // Mouse.Action(@ui"Blocklevelelement<div>_Filterfield:Department,oper","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
+        // Mouse.Action(@ui"Button<button>_isoneof2","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
         
         number_list = ['CD-T1', 'PK-T1', 'FA-T1','WG-T1']
         For Each value In number_list 
@@ -91,7 +93,7 @@ Try
         Mouse.Action(@ui"Button<button>_Apply6","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         Delay(2000)
     Catch Ex 
-        TracePrint []&"a"
+        Throw Ex
     End Try
 
 
@@ -103,11 +105,13 @@ Try
         // Mouse.Action(@ui"{Click check from Excel}","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         // PO_file_path = '''C:\Users\RPA1\Downloads\Inventory transactions originator_639064629910302955.xlsx'''
         all_number = excel_grouping_column.extract_zero_cw_quantity(PO_file_path)
-        // TracePrint(all_number)       
+        TracePrint(all_number)
     Catch Ex 
-        TracePrint []&"a"
+        TracePrint Ex
+        Throw Ex
     End Try
 
+    error_cases = []
 
     Try 
         // all_number = ['PDPK26-000358', 'nulllll', 'PDPK26-001746']
@@ -129,8 +133,8 @@ Try
                 GoodQty = UiElement.GetAttribute(@ui"Inputcontrol<input>15","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                 CWErrorQty = UiElement.GetAttribute(@ui"Inputcontrol<input>16","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                 GoodErrorQty = UiElement.GetAttribute(@ui"Inputcontrol<input>17","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                TracePrint(CWQty, GoodQty, CWErrorQty, GoodErrorQty)
-
+                TracePrint(value, CWQty, GoodQty, CWErrorQty, GoodErrorQty)
+    
                 // Check column CW good qty, Good quantity, CW error qty, Error quantity is 0 or empty
                 If (CWQty = "" Or CWQty = "0") And (GoodQty = "" Or GoodQty = "0") And (CWErrorQty = "" Or CWErrorQty = "0") And (GoodErrorQty = "" Or GoodErrorQty = "0")
                     Mouse.Action(@ui"Button<button>_(Alt+Enter)OK1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
@@ -139,14 +143,25 @@ Try
                     count = 0
 
                     // Check Row Reported as finished status
-                    Do While status <> 'Reported as finished' And count < 2
+                    Do While status <> 'Reported as finished' 
                         // jsRun = WebBrowser.RunJS(hWeb,"function(){const firstInput = document.querySelector("&'"'&"input[id^='ProdTable_ProdId_']"&'"'&"); if (firstInput) { let parent = firstInput.parentElement; while (parent && !parent.querySelector("&'"'&"div[role='checkbox']"&'"'&")) { parent = parent.parentElement; } if (parent) { const checkbox = parent.querySelector("&'"'&"div[role='checkbox']"&'"'&"); if (checkbox && checkbox.getAttribute("&'"'&"aria-checked"&'"'&") === "&'"'&"false"&'"'&") { checkbox.click(); } } }; return 123; }",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                        Delay(500) 
-                        Mouse.Action(@ui"Button<button>_Reportasfinished","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-                        Delay(500)
-                        Mouse.Action(@ui"Button<button>_(Alt+Enter)OK1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-                        Delay(1000)
-                        count = count + 1
+                        If count < 1
+                            Delay(500) 
+                            Mouse.Action(@ui"Button<button>_Reportasfinished","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                            Delay(500)
+                            Mouse.Action(@ui"Button<button>_(Alt+Enter)OK1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                            Delay(1000)
+                            count = count + 1
+                        Else
+                            hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                            sRet = WebBrowser.RunJS(hWeb,"function() { const buttons = document.querySelectorAll('.messageBar-collapseButton'); for (let button of buttons) { if (button.getAttribute("&'"'&"aria-expanded"&'"'&") === "&'"'&"false"&'"'&") { button.click(); return "&'"'&"Clicked collapsed button"&'"'&"; } } return "&'"'&"No collapsed button found"&'"'&"; }",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                            Mouse.Action(@ui"Text<span>_Messagedetails","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                            sRet = WebBrowser.RunJS(hWeb,"function getFirstMessageText() { const elements = document.querySelectorAll('.prefixMessage-messageText'); if (elements.length === 0) return "&'"'&"No message found"&'"'&"; return elements[0].textContent.trim(); }",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                            // TracePrint sRet
+                            Push(error_cases, {"Number": value, "reason": sRet, "process":"Report as Finished"})
+
+                            Break
+                        End If 
                     Loop
 
                     If status = 'Reported as finished'
@@ -154,26 +169,56 @@ Try
                         Mouse.Action(@ui"Button<button>_End","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                         Mouse.Action(@ui"Button<button>_(Alt+Enter)OK2","left","click",4000,{"bContinueOnError":false,"iDelayAfter":5000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                         status = UiElement.GetAttribute(@ui"Inputcontrol<input>_Started1","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-
+                        
+                        count = 0
                         Do While status = 'Reported as finished'
-                            Delay(1000)
+                            If count < 1
+                                Delay(500) 
+                                Mouse.Action(@ui"Button<button>_End","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                                Mouse.Action(@ui"Button<button>_(Alt+Enter)OK2","left","click",4000,{"bContinueOnError":false,"iDelayAfter":5000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                                status = UiElement.GetAttribute(@ui"Inputcontrol<input>_Started1","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                                count = count + 1
+                            Else
+                                hWeb = WebBrowser.BindBrowser("edge",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                                sRet = WebBrowser.RunJS(hWeb,"function() { const buttons = document.querySelectorAll('.messageBar-collapseButton'); for (let button of buttons) { if (button.getAttribute("&'"'&"aria-expanded"&'"'&") === "&'"'&"false"&'"'&") { button.click(); return "&'"'&"Clicked collapsed button"&'"'&"; } } return "&'"'&"No collapsed button found"&'"'&"; }",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                                Mouse.Action(@ui"Text<span>_Messagedetails","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                                sRet = WebBrowser.RunJS(hWeb,"function getFirstMessageText() { const elements = document.querySelectorAll('.prefixMessage-messageText'); if (elements.length === 0) return "&'"'&"No message found"&'"'&"; return elements[0].textContent.trim(); }",true,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+                                // TracePrint sRet
+                                Push(error_cases, {"Number": value, "reason": sRet, "process":"End Production Order"})
+
+                                Break
+                            End If
                         Loop 
+
+                        If status <> 'Reported as finished'
+                            Push(error_cases, {"Number": value, "reason": "successful", "process":"End Production Order"})
+                        End If
 
                     End If
                 
                 Else
                     Mouse.Action(@ui"Button<button>_Cancel","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-                    TracePrint(value, 'Cancel')
+                    // TracePrint(value, 'Cancel')
+                    Push(error_cases, {"Number": value, "reason": 'Quantity condition not meet', "process":"Report as Finished"})
                     Delay(500)
                 End If
+                Else
+                    Push(error_cases, {"Number": value, "reason": 'Not found', "process":"Search"})
             End If
-        next  
+        next 
+
+        // TracePrint error_cases
+
+        Try 
+            runstatusexcel = excel_grouping_column.update_grouped_with_response(PO_file_path, error_cases)
+        Catch Ex
+            Throw Ex
+        End Try
+
     Catch Ex 
-        TracePrint(Ex)
-        TracePrint []&"a"
+        Throw Ex
     End Try
     
 Catch exception_information
-    TracePrint exception_information
-    TracePrint []&"a"
+    Throw exception_information
 End Try

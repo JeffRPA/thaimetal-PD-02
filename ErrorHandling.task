@@ -8,18 +8,18 @@ Try
     sPwd    = sandbox_email_password
     sSender = sUid
 
-// starfact-07@thaimetal.net
-// thitaporn.m@thaimetal.net
-// packing@thaimetal.com
-// ilada.b@thaimetal.net
-// chaleewan.p@thaimetal.net
-// sutthida.s@thaimetal.net
+    // starfact-07@thaimetal.net
+    // thitaporn.m@thaimetal.net
+    // packing@thaimetal.com
+    // ilada.b@thaimetal.net
+    // chaleewan.p@thaimetal.net
+    // sutthida.s@thaimetal.net
 
     sTo  = ["rpa1@thaimetal.net"]
     sCc  = []
     bCc = []
     attachments = []
-    emailSubject = "Bot Error ตั้งหนี้ AC-05" + phase_exception
+    emailSubject = "Bot Error PO-02 All Production Orders" + phase_exception
     emailBody = phase_exception
 
     bRet = Mail.SendExt({"host":sServer,"port":iPort,"ssl":bSsl,"authentication":True,"user":sUid,"password": sPwd},sSender,sTo,sCc,bCc,emailSubject, emailBody, attachments)
@@ -28,8 +28,10 @@ Catch error
     TracePrint error
 End Try
 
+
+TracePrint(exception_information)
+
 If exception_information <> null
-    TracePrint(exception_information)
 
     //todaywithoutslash_datestring
     todaydate_string = errorlogedit.get_date_string_without_slash()
@@ -42,7 +44,7 @@ If exception_information <> null
     blocknamestring = Replace(blocknamestring,".task","",false)
 
     //errorsummarystring
-    errorsummarystring = "errorLine: "&exception_information["Line"]&" ("&Trim(exception_information["Message"])&")"
+    errorsummarystring = "Error Block: "&blocknamestring&", Error Line: "&exception_information["Line"]&" ("&Trim(exception_information["Message"])&")"
 
 
     //type2.2
