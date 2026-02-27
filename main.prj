@@ -717,7 +717,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -767,7 +767,6 @@
                 },
                 {
                     "type": "border",
-                    "selected": 0,
                     "size": 440,
                     "minSize": 280,
                     "location": "right",
@@ -803,6 +802,7 @@
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                         "weight": 140.79497907949792,
+                        "selected": 2,
                         "children": [
                             {
                                 "type": "tab",
