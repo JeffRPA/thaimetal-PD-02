@@ -469,7 +469,7 @@
             "file": "PD_02_01.task",
             "caption": "PD_02_01",
             "desc": "PD_02_01",
-            "editorMode": "sourceCode",
+            "editorMode": "visual",
             "breakpoints": {},
             "out": "Result_Of_PD_02_01"
         },
@@ -692,7 +692,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1055,
-            "top": 2338
+            "top": 2238
         },
         "zoom": 0.7
     },
@@ -767,6 +767,7 @@
                 },
                 {
                     "type": "border",
+                    "selected": 0,
                     "size": 440,
                     "minSize": 280,
                     "location": "right",
