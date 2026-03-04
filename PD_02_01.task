@@ -35,7 +35,7 @@ Try
         label_id = UiElement.GetAttribute(@ui"Text<span>_between","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         id = "__"+Split(label_id,'_')[2]+"_0_list"
         TracePrint id
-        Mouse.Action(@ui"Text<span>_between1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        Mouse.Action(@ui"Button<button>_between3","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         
     Catch Ex 
         TracePrint Ex
