@@ -83,7 +83,7 @@ Try
     Try 3
         Mouse.Action(@ui"Blocklevelelement<div>_Department","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
         header_id = UiElement.GetAttribute(@ui"Blocklevelelement<div>_Department","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        header_apply_id = "__SysGen_"+Split(header_id,'_')[2]+"_ApplyFilters"
+        header_apply_id = "__SysGen_"+Split(header_id,'_')[1]+"_ApplyFilters"
 
         Mouse.Action(@ui"Text<span>_beginswith","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
         label_id = UiElement.GetAttribute(@ui"Text<span>_beginswith","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
@@ -95,7 +95,7 @@ Try
             Keyboard.InputText(@ui"Inputcontrol<input>22",value,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
             Mouse.Action(@ui"Blocklevelelement<div>_Department1","left","click",10000,{"bContinueOnError": false, "iDelayAfter": 300, "iDelayBefore": 200, "bSetForeground": true, "sCursorPosition": "Center", "iCursorOffsetX": 0, "iCursorOffsetY": 0, "sKeyModifiers": [],"sSimulate": "simulate", "bMoveSmoothly": false})
         Next
-        Mouse.Action(@ui"Button<button>_Apply6","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        Mouse.Action(@ui"Button<button>_Apply10","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         Delay(2000)
     Catch Ex 
         Throw Ex
