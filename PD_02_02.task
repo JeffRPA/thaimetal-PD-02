@@ -138,10 +138,12 @@ Try
                 GoodQty = UiElement.GetAttribute(@ui"Inputcontrol<input>15","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                 CWErrorQty = UiElement.GetAttribute(@ui"Inputcontrol<input>16","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                 GoodErrorQty = UiElement.GetAttribute(@ui"Inputcontrol<input>17","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-                TracePrint(value, CWQty, GoodQty, CWErrorQty, GoodErrorQty)
+                // TracePrint(value, CWQty, GoodQty, CWErrorQty, GoodErrorQty)
     
                 // Check column CW good qty, Good quantity, CW error qty, Error quantity is 0 or empty
                 If (CWQty = "" Or CWQty = "0") And (GoodQty = "" Or GoodQty = "0") And (CWErrorQty = "" Or CWErrorQty = "0") And (GoodErrorQty = "" Or GoodErrorQty = "0")
+                    TracePrint value + " store"
+                    Break
                     Mouse.Action(@ui"Button<button>_(Alt+Enter)OK1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                     Delay(10000)
                     status = UiElement.GetAttribute(@ui"Inputcontrol<input>_Started1","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
