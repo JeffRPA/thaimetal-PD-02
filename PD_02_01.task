@@ -29,12 +29,18 @@ Try
 
     Try 3
         UiElement.Wait(@ui"Blocklevelelement<div>_Physicaldate","show",60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
-        Mouse.Action(@ui"Blocklevelelement<div>_Physicaldate","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        UiElement.Wait(@ui"Text<span>_between","show",60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+        
+        Try 6
+            Mouse.Action(@ui"Blocklevelelement<div>_Physicaldate","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+            UiElement.Wait(@ui"Text<span>_between","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+        Catch Ex
+            Throw Ex
+        End Try
+        
         Mouse.Action(@ui"Text<span>_between","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         label_id = UiElement.GetAttribute(@ui"Text<span>_between","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         id = "__"+Split(label_id,'_')[2]+"_0_list"
-        TracePrint id
+        // TracePrint id
         Mouse.Action(@ui"Button<button>_between3","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         
     Catch Ex 
@@ -73,8 +79,13 @@ Try
 
     // Filter Financial Date
     Try 3
-        Mouse.Action(@ui"Blocklevelelement<div>_Financialdate","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        UiElement.Wait(@ui"Text<span>_matches","show",60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+        Try 6
+            Mouse.Action(@ui"Blocklevelelement<div>_Financialdate","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+            UiElement.Wait(@ui"Text<span>_matches","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+        Catch Ex
+            Throw Ex
+        End Try
+        
         Mouse.Action(@ui"Text<span>_matches","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         label_id = UiElement.GetAttribute(@ui"Text<span>_matches","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         id = "__"+Split(label_id,'_')[2]+"_0_list"
@@ -91,8 +102,12 @@ Try
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Click Number header
     Try 3
-        Mouse.Action(@ui"Blocklevelelement<div>_Number","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        UiElement.Wait(@ui"Blocklevelelement<div>_isoneof","show",60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+        Try 6
+            Mouse.Action(@ui"Blocklevelelement<div>_Number","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+            UiElement.Wait(@ui"Blocklevelelement<div>_isoneof","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+        Catch Ex
+            Throw Ex
+        End Try
         Mouse.Action(@ui"Blocklevelelement<div>_isoneof","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         label_id = UiElement.GetAttribute(@ui"Blocklevelelement<div>_isoneof","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         id = "__"+Split(label_id,'_')[2]+"_0_list"
