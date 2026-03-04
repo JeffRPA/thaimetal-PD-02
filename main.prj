@@ -400,7 +400,7 @@
             "file": "Login.task",
             "caption": "Login",
             "desc": "Login",
-            "editorMode": "sourceCode",
+            "editorMode": "visual",
             "breakpoints": {},
             "out": "Result_Of_Login"
         },
@@ -692,7 +692,7 @@
     "flowConfig": {
         "scrollbarPosition": {
             "left": 1055,
-            "top": 2238
+            "top": 1838
         },
         "zoom": 0.7
     },
@@ -803,7 +803,7 @@
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                         "weight": 140.79497907949792,
-                        "selected": 3,
+                        "selected": 2,
                         "children": [
                             {
                                 "type": "tab",
