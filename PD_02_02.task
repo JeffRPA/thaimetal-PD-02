@@ -182,6 +182,7 @@ Try
 
                     If status = 'Reported as finished'
                         Mouse.Action(@ui"Button<button>_","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+                        
                         TracePrint(value, 'OK')
                         Mouse.Action(@ui"Button<button>_End","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                         Mouse.Action(@ui"Button<button>_(Alt+Enter)OK2","left","click",4000,{"bContinueOnError":false,"iDelayAfter":5000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
@@ -207,9 +208,9 @@ Try
                             End If
                         Loop 
 
-                        If status <> 'Reported as finished'
-                            Push(error_cases, {"Number": value, "reason": "successful", "process":"End Production Order"})
-                        End If
+                        // If status <> 'Reported as finished'
+                        //     Push(error_cases, {"Number": value, "reason": "successful", "process":"End Production Order"})
+                        // End If
 
                     End If
                 
