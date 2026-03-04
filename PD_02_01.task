@@ -69,11 +69,10 @@ Try
     Try 3
         Mouse.Action(@ui"Blocklevelelement<div>_Financialdate","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         Mouse.Action(@ui"Text<span>_matches","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        // Mouse.Action(@ui"Button<button>_matches","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        
-        For i = 1 To 5 Step 1
-            Keyboard.Press("Down", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
-        Next
+        label_id = UiElement.GetAttribute(@ui"Text<span>_matches","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        id = "__"+Split(label_id,'_')[2]+"_0_list"
+        Mouse.Action(@ui"Button<button>_isoneof5","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+
         Keyboard.Press("Enter", "press", [],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
         Keyboard.InputText(@ui"Inputcontrol<input>18",'..',true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
         Mouse.Action(@ui"Button<button>_Apply5","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
@@ -88,9 +87,8 @@ Try
     Try 3
         Mouse.Action(@ui"Blocklevelelement<div>_Number","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         Mouse.Action(@ui"Blocklevelelement<div>_isoneof","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        list_id = UiElement.GetAttribute(@ui"Blocklevelelement<div>_isoneof","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        // list_id = Push(Pop(Split(sRet,'_')), "list") 
-        TracePrint list_id
+        label_id = UiElement.GetAttribute(@ui"Blocklevelelement<div>_isoneof","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        id = "__"+Split(label_id,'_')[2]+"_0_list"
         Mouse.Action(@ui"Button<button>_isoneof5","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
 
         number_list = ['PDFA*', 'PDCD*', 'PDPK*','PDWG*']
