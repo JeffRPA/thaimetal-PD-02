@@ -400,7 +400,7 @@
             "file": "Login.task",
             "caption": "Login",
             "desc": "Login",
-            "editorMode": "visual",
+            "editorMode": "sourceCode",
             "breakpoints": {},
             "out": "Result_Of_Login"
         },
@@ -802,7 +802,7 @@
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
                         "weight": 142.7906976744186,
-                        "selected": 3,
+                        "selected": 1,
                         "children": [
                             {
                                 "type": "tab",
@@ -960,8 +960,7 @@
                         "type": "tabset",
                         "id": "button",
                         "weight": 57.2093023255814,
-                        "height": 32,
-                        "selected": -1,
+                        "height": 246,
                         "config": {
                             "height": 246,
                             "selected": 0

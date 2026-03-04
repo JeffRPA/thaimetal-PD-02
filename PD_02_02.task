@@ -2,7 +2,7 @@
 //main work
 project_path = '''C:\ThaiMetal_Greenmoons_RPA\thaimetalprojects'''
 project_name = 'ThaiMetal_PD_02'
-PO_file_path = '''R:\OUTPUT\PD02\Inventory transactions originator_639081964576576900.xlsx'''
+// PO_file_path = '''R:\OUTPUT\PD02\Inventory transactions originator_639081964576576900.xlsx'''
 
 phase_exception = "N02 ระบบ MS Dynamics ค้าง: PD-02-02 Check Production Orders" 
 
@@ -127,7 +127,6 @@ Try
             If input_expanded = "false"
                 Throw "Error"
             End If
-
             Keyboard.Press("Enter", "press", [],{"iDelayAfter": 1000, "iDelayBefore": 0, "sSimulate": "simulate"})            
             sRet = UiElement.GetAttribute(@ui"Button<button>_Reportasfinished1","disabled",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200}) 
             If sRet = ""
@@ -147,9 +146,13 @@ Try
     
                 // Check column CW good qty, Good quantity, CW error qty, Error quantity is 0 or empty
                 If (CWQty = "" Or CWQty = "0") And (GoodQty = "" Or GoodQty = "0") And (CWErrorQty = "" Or CWErrorQty = "0") And (GoodErrorQty = "" Or GoodErrorQty = "0")
+                    
+                    // Test
                     TracePrint value + " store"
                     Mouse.Action(@ui"Button<button>_Cancel1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                     Continue
+                    
+                    
                     Mouse.Action(@ui"Button<button>_(Alt+Enter)OK1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                     Delay(10000)
                     status = UiElement.GetAttribute(@ui"Inputcontrol<input>_Started1","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})

@@ -117,7 +117,9 @@ Try
 
         iRet = WebBrowser.WaitPage(hWeb,{},60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
 
-        bRet = UiElement.Exists(@ui"Text<span>_ThaiMetalAluminiumCo.,Ltd.",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})  
+        UiElement.Wait(@ui"Text<span>_ThaiMetalAluminiumCo.,Ltd.","show",60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
+
+        // bRet = UiElement.Exists(@ui"Text<span>_ThaiMetalAluminiumCo.,Ltd.",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})  
     
         Keyboard.Press(0, "press", ["Ctrl"],{"iDelayAfter": 300, "iDelayBefore": 200, "sSimulate": "simulate"})
 
