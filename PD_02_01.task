@@ -32,10 +32,9 @@ Try
         Mouse.Action(@ui"Blocklevelelement<div>_Physicaldate","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         UiElement.Wait(@ui"Text<span>_between","show",60000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
         Mouse.Action(@ui"Text<span>_between","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        
         label_id = UiElement.GetAttribute(@ui"Text<span>_between","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         id = "__"+Split(label_id,'_')[2]+"_0_list"
-        Mouse.Action(@ui"Button<button>_isoneof5","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        Mouse.Action(@ui"Button<button>_between1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     
     Catch Ex 
         TracePrint Ex
