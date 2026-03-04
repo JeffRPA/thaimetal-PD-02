@@ -208,9 +208,9 @@ Try
                             End If
                         Loop 
 
-                        // If status <> 'Reported as finished'
-                        //     Push(error_cases, {"Number": value, "reason": "successful", "process":"End Production Order"})
-                        // End If
+                        If status <> 'Reported as finished'
+                            Push(error_cases, {"Number": value, "reason": "successful", "process":"End Production Order"})
+                        End If
 
                     End If
                 
