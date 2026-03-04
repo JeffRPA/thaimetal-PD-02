@@ -59,11 +59,11 @@ Try
         start_date = '1/'&month&'/'&year
         end_date = day&'/'&month&'/'&year
         
-        // Keyboard.InputText(@ui"Inputcontrol<input>5",start_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-        // Keyboard.InputText(@ui"Inputcontrol<input>6",end_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+        Keyboard.InputText(@ui"Inputcontrol<input>5",start_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+        Keyboard.InputText(@ui"Inputcontrol<input>6",end_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     
-        Keyboard.InputText(@ui"Inputcontrol<input>5",'1/2/26',true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-        Keyboard.InputText(@ui"Inputcontrol<input>6",'28/2/26',true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+        // Keyboard.InputText(@ui"Inputcontrol<input>5",'1/2/26',true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+        // Keyboard.InputText(@ui"Inputcontrol<input>6",'28/2/26',true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     Catch Ex 
         TracePrint Ex
         Throw Ex
@@ -128,10 +128,9 @@ Try
     ///////////////////////////////////////////////////////////////////////////////////////////
     // Click Download icon
 
-    Try 3
+    Try 6
         Mouse.Action(@ui"Button<button>_OpeninMicrosoftOffice","left","click",4000,{"bContinueOnError":false,"iDelayAfter":5000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         UiElement.Wait(@ui"Text<span>_ExporttoExcel","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
-        Mouse.Action(@ui"Button<button>_Gridname:GridInventorytransactionso","left","click",20000,{"bContinueOnError":false,"iDelayAfter":200,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
     Catch Ex 
         TracePrint Ex
         Throw Ex
@@ -139,6 +138,7 @@ Try
 
     // Click Download
     Try 3
+        Mouse.Action(@ui"Button<button>_Gridname:GridInventorytransactionso","left","click",20000,{"bContinueOnError":false,"iDelayAfter":200,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         UiElement.Wait(@ui"Blocklevelelement<div>_ExporttoExcel","show",10000,{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200,"bWaitDOMReady":true})
         Mouse.Action(@ui"Button<button>_Download3","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
         Delay(5000)
