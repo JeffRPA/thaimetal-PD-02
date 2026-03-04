@@ -82,6 +82,9 @@ Try
     // Click Department
     Try 3
         Mouse.Action(@ui"Blocklevelelement<div>_Department","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
+        header_id = UiElement.GetAttribute(@ui"Blocklevelelement<div>_Department","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        header_apply_id = "__SysGen_"+Split(header_id,'_')[2]+"_ApplyFilters"
+
         Mouse.Action(@ui"Text<span>_beginswith","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
         label_id = UiElement.GetAttribute(@ui"Text<span>_beginswith","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
         id = "__"+Split(label_id,'_')[2]+"_0_list"
