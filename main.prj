@@ -717,7 +717,7 @@
             "borders": [
                 {
                     "type": "border",
-                    "selected": 0,
+                    "selected": 1,
                     "size": 250,
                     "minSize": 250,
                     "enableAutoHide": true,
@@ -802,7 +802,8 @@
                     {
                         "type": "tabset",
                         "id": "#8ee19144-cde8-49b7-8d86-524011a1fec1",
-                        "weight": 120.15306122448979,
+                        "weight": 179.08163265306123,
+                        "selected": 3,
                         "children": [
                             {
                                 "type": "tab",
@@ -959,8 +960,8 @@
                     {
                         "type": "tabset",
                         "id": "button",
-                        "weight": 79.84693877551021,
-                        "height": 313,
+                        "weight": 20.918367346938776,
+                        "height": 82,
                         "config": {
                             "height": 200,
                             "selected": 0
