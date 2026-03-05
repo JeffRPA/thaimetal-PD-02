@@ -64,6 +64,20 @@ Try
         Throw Ex
     End Try
 
+    // Click CW Report remainder as finished
+    Try 3
+        Mouse.Action(@ui"Blocklevelelement<div>_CWreportremainderasfinished2","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
+        header_id = UiElement.GetAttribute(@ui"Blocklevelelement<div>_CWreportremainderasfinished2","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
+        header_apply_id = "__SysGen_"+Split(header_id,'_')[1]+"_ApplyFilters"
+
+        Keyboard.InputText(@ui"Inputcontrol<input>9","0",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
+       
+        Mouse.Action(@ui"Blocklevelelement<div>_Apply","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
+        
+        Delay(2000)
+    Catch Ex 
+        Throw Ex
+    End Try
 
     // PD-02-02-03 : ?????????????? CW Report remainder as finished
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -88,27 +102,6 @@ Try
     // Catch Ex 
     //     Throw Ex
     // End Try
-    
-    
-    // Click CW Report remainder as finished
-    Try 3
-        // Mouse.Action(@ui"Blocklevelelement<div>_CWreportremainderasfinished1","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
-        Mouse.Action(@ui"Blocklevelelement<div>_CWreportremainderasfinished2","left","click",4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":true})
-        column_header_id = UiElement.GetAttribute(@ui"Blocklevelelement<div>_CWreportremainderasfinished2","id",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
-        id_code = Split(column_header_id,'_')[1]
-        apply_id = "__SysGen_"+id_code+"_ApplyFilters"
-
-        Keyboard.InputText(@ui"Inputcontrol<input>9","0",true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-       
-        Mouse.Action(@ui"Blocklevelelement<div>_Apply","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-        
-        Delay(2000)
-    Catch Ex 
-        Throw Ex
-    End Try
-
-    
-
 
     // PD-02-02-04 : ???????????????????????????????? Pivot
     ///////////////////////////////////////////////////////////////////////////////////////////
