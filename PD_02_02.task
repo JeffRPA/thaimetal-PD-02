@@ -187,7 +187,7 @@ Try
                         TracePrint(value, 'OK')
                         Mouse.Action(@ui"Button<button>_End","left","click",4000,{"bContinueOnError":false,"iDelayAfter":1000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
                         Mouse.Action(@ui"Button<button>_(Alt+Enter)OK2","left","click",4000,{"bContinueOnError":false,"iDelayAfter":5000,"iDelayBefore":100,"bSetForeground":true,"sCursorPosition":"Center","iCursorOffsetX":0,"iCursorOffsetY":0,"sKeyModifiers":[],"sSimulate":"simulate","bMoveSmoothly":false})
-                        Delay(5000)
+                        Delay(10000)
                         
                         status = UiElement.GetAttribute(@ui"Inputcontrol<input>_Started1","value",{"bContinueOnError":false,"iDelayAfter":300,"iDelayBefore":200})
                         
