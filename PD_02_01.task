@@ -62,8 +62,6 @@ Try
         Keyboard.InputText(@ui"Inputcontrol<input>5",start_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
         Keyboard.InputText(@ui"Inputcontrol<input>6",end_date,true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     
-        // Keyboard.InputText(@ui"Inputcontrol<input>5",'1/2/26',true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
-        // Keyboard.InputText(@ui"Inputcontrol<input>6",'28/2/26',true,20,4000,{"bContinueOnError":false,"iDelayAfter":100,"iDelayBefore":100,"bSetForeground":true,"sSimulate":"message","bValidate":false,"bClickBeforeInput":false})
     Catch Ex 
         TracePrint Ex
         Throw Ex

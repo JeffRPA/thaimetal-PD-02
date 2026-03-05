@@ -16,6 +16,7 @@ Try
     // sutthida.s@thaimetal.net
 
     sTo  = ["rpa1@thaimetal.net"]
+    // sTo = ["starfact-07@thaimetal.net", "thitaporn.m@thaimetal.net", "packing@thaimetal.com", "ilada.b@thaimetal.net", "chaleewan.p@thaimetal.net", "sutthida.s@thaimetal.net"]
     sCc  = []
     bCc = []
     attachments = []
